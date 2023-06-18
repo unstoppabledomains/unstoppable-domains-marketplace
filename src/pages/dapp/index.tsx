@@ -228,7 +228,7 @@ function AppRatingList(props) {
     return <>
         <Row className="justify-between items-center py-[24px]">
             <h1 className="text-[24px] leading-[32px] font-[500]">{AppStrings.reviewsTitle}</h1>
-            <button className="flex items-center gap-x-[8px] text-transparent bg-clip-text bg-gradient-to-b from-[#8A46FF] to-[#6E38CC] font-bold text-[14px] leading-[18px]" onClick={() => {
+            <button className="flex items-center gap-x-[8px] text-transparent bg-clip-text bg-gradient-to-b from-[#0D67FE] to-[#0D67FE] font-bold text-[14px] leading-[18px]" onClick={() => {
                 if (address) {
                     props.onCreateReivew()
                     return;
@@ -241,8 +241,8 @@ function AppRatingList(props) {
                     <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="url(#paint0_linear_1089_2333)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <defs>
                         <linearGradient id="paint0_linear_1089_2333" x1="12.0607" y1="1.87869" x2="12.0607" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#8A46FF" />
-                            <stop offset="1" stopColor="#6E38CC" />
+                            <stop stopColor="#0D67FE" />
+                            <stop offset="1" stopColor="#0D67FE" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -259,7 +259,7 @@ function AppRatingList(props) {
             {data.data.slice(0, 2).map(review => <ReviewCard review={review} />)}
         </Row>
         {!!data.data.length && <Row className="justify-end my-[16px]">
-            <Link className="text-transparent bg-clip-text bg-gradient-to-b from-[#8A46FF] to-[#6E38CC] font-bold text-[14px] leading-[18px]" href={`dapp/reviews/?id=${props.id}`}>View More</Link>
+            <Link className="text-transparent bg-clip-text bg-gradient-to-b from-[#0D67FE] to-[#0D67FE] font-bold text-[14px] leading-[18px]" href={`dapp/reviews/?id=${props.id}`}>View More</Link>
         </Row>}
         <Divider />
     </>
@@ -416,45 +416,11 @@ function DappList(props) {
                         <Divider />
                     </>)
                     }
-                    <DappDetailSection>
-                        {/* {!!address && isOwner ?
-                            <UpdateDappSection onClick={onClaimButtonClick} /> :
-                            <ClaimDappSection address={address} onClick={onClaimButtonClick} onOpenConnectModal={openConnectModal} minted={dApp.minted} />} */}
 
-
-                        {!(address == undefined) ?
-                            isOwner ?
-                                <UpdateDappSection onClick={onClaimButtonClick} /> :
-                                !((dApp.minted == undefined) || (!dApp.minted)) ? (
-                                    openConnectModal && <p onClick={openConnectModal} className="text-[14px] leading-[24px] underline cursor-pointer">Do you own this dApp? Connect wallet to update</p>
-                                ) :
-                                    <ClaimDappSection address={address} onClick={onClaimButtonClick} onOpenConnectModal={openConnectModal} /> :
-                            <ClaimDappSection address={address} onClick={onClaimButtonClick} onOpenConnectModal={openConnectModal} />
-                        }
-                    </DappDetailSection>
                 </section>
             </div>
             {isReviewModalOpen && <Modal isOpen={isReviewModalOpen} style={reviewModalStyle} onRequestClose={() => setIsReviewModalOpen(false)}><ReviewDialog dappId={dApp.dappId} onRequestClose={() => setIsReviewModalOpen(false)} /></Modal>}
-            {isClaimOpen && <Modal
-                isOpen={isClaimOpen}
-                onRequestClose={() => setClaimOpen(false)}
-                style={modalStyles}
-            >
-                <div className="w-full m-auto">
-                    <div className="flex justify-end ">
-                        <button onClick={() => setClaimOpen(false)}>
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.5291 9L19.8848 16.6459L12.2404 9L10 11.2404L17.6459 18.8848L10 26.5291L12.2404 28.7695L19.8848 21.1236L27.5291 28.7695L29.7695 26.5291L22.1236 18.8848L29.7695 11.2404L27.5291 9Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="bg-canvas-color">
-                        <iframe className="w-full rounded-[16px] min-h-screen" src={getIframeSrc()} />
-                    </div>
-                </div>
-            </Modal>}
+
         </PageLayout>
     );
 }
