@@ -3,7 +3,7 @@ export const App = {
   logo: {
     height: 42,
     width: 115,
-    src: "/slick_logo_transparent.png",
+    src: "/logo_transparent.png",
   },
   menu: [
     // {
@@ -61,5 +61,5 @@ const posConfig: AppConfig = {
 };
 
 export type { AppConfig };
-export {};
+export { };
 export { posConfig };
