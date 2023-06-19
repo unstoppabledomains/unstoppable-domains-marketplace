@@ -17,6 +17,7 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.4",
+    "@uauth/js": "^2.8.0",
     "classnames": "^2.3.2",
     "eth-sig-util": "^3.0.1",
     "ethers": "5.7.2",

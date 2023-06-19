@@ -6,6 +6,9 @@ export const WC_PROJECT_ID = process.env.WC_PROJECT_ID;
 export const BASE_URL = process.env.NEXT_PUBLIC_API_HOST;
 export const HOST_URL = process.env.NEXT_PUBLIC_HOST_PATH;
 
+export const UD_AUTH_KEY = process.env.NEXT_UD_AUTH_KEY;
+export const UD_REDIRECT_URL = process.env.NEXT_UD_REDIRECT_URL;
+export const UD_KEY_SCOPE = process.env.NEXT_UD_KEY_SCOPE;
 // export const BASE_URL = `${API_HOST}/${API_PATH}/${API_VERSION}`;
 
 export const ApiEndpoints = {

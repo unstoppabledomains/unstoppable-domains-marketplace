@@ -7,13 +7,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import { App, } from "../app/constants";
-import { getApp, setApp } from "../features/app/app_slice";
+import { getApp, setAccount, setApp } from "../features/app/app_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
 import { AppStrings } from "../pages/constants";
 import { Button, Card } from "./index";
 import { Row } from "./layout/flex";
 import { FeaturedCard, SliderButton } from "./card";
 import Slider from "react-slick";
+import { connectWithUd, logoutUD } from '../features/wallet_connect'
 
 
 
@@ -42,7 +43,19 @@ function NavBar(props) {
 
                 </NavItem >
             </div >
-            <ConnectButton chainStatus="none" showBalance={false} />
+            {<Button onClick={async () => {
+                const address = await connectWithUd();
+                if (address) {
+                    // dispatch(setAccount(address))
+                }
+            }}>Login</Button>
+                // : <Button onClick={async () => {
+                //     await logoutUD();
+                //     // dispatch(setAccount(''))
+
+                // }}>Logout</Button>
+            }
+            {/* <ConnectButton chainStatus="none" showBalance={false} /> */}
         </Row >
     )
 }
