@@ -1,38 +1,42 @@
 // @ts-nocheck
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
+import Slider from "react-slick";
 import { App, } from "../app/constants";
-import { getApp, setAccount, setApp } from "../features/app/app_slice";
+
+import { getAddress, setAddress } from "../features/app/address_slice";
+import { getApp } from "../features/app/app_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
+import { connectWithUd } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
+import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
 import { Row } from "./layout/flex";
-import { FeaturedCard, SliderButton } from "./card";
-import Slider from "react-slick";
-import { connectWithUd, logoutUD } from '../features/wallet_connect'
 
 
 
 function NavBar(props) {
     const app = useSelector(getApp);
-
+    const address = useSelector(getAddress);
+    console.log("address", address);
     const dispatch = useDispatch();
     const router = useRouter();
-    const onAppConfigClick = (app) => {
-        dispatch(setApp(app))
-        router.push('/')
-    }
+    // const onAppConfigClick = (app) => {
+    //     dispatch(setApp(app))
+    //     router.push('/')
+    // }
     const isActive = (config) => {
         if (app.title === config.title) {
             return "text-[#fff]";
         }
         return "";
     }
+
+
     return (
         <Row center
             className="py-4 px-10 border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
@@ -44,11 +48,11 @@ function NavBar(props) {
                 </NavItem >
             </div >
             {<Button onClick={async () => {
-                const address = await connectWithUd();
-                if (address) {
-                    // dispatch(setAccount(address))
+                const addr = await connectWithUd();
+                if (addr) {
+                    dispatch(setAddress(addr))
                 }
-            }}>Login</Button>
+            }}>Login {address} </Button>
                 // : <Button onClick={async () => {
                 //     await logoutUD();
                 //     // dispatch(setAccount(''))

@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { AppConfig, posConfig } from "../../app/constants";
+import { RootState } from "../../store";
+
 
 export interface AppState {
   config: AppConfig;
@@ -19,6 +21,6 @@ export const appSlice = createSlice({
 
 export const { setApp } = appSlice.actions;
 
-export const getApp = (state: AppState) => (state as any).app;
+export const getApp = (state: RootState) => (state as any).app;
 
 export default appSlice.reducer;

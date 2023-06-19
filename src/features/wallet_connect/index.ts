@@ -1,6 +1,5 @@
 import UAuth from "@uauth/js";
 import { UD_AUTH_KEY, UD_KEY_SCOPE, UD_REDIRECT_URL } from "../../api/constants";
-import { setAccount } from "../app/app_slice";
 
 export const uauth = new UAuth({
     clientID: UD_AUTH_KEY ?? "cc720d3c-4eb6-4f04-9b18-9018f5537fff",
@@ -12,10 +11,9 @@ export const connectWithUd = async () => {
         const authorization = await uauth.loginWithPopup();
         if (authorization) {
             const user = await uauth.user();
-            const address = user.address;
+            const address = user.wallet_address;
             return address;
         }
-        console.log(authorization);
         return undefined;
     } catch (error) {
         console.error(error);
