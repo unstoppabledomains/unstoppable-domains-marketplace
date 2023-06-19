@@ -258,7 +258,7 @@ function CategoryListSmall(props) {
                 setOpenKey(e.category)
                 setIsOpen(!isOpen)
             }}>
-                <div ref={setReferenceElement} className={`relative cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px] ${((query?.categories === e.category)) ? ' rounded-[12px] bg-[#8A46FF] ' : ''}`}>
+                <div ref={setReferenceElement} className={`relative cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px] ${((query?.categories === e.category)) ? ' rounded-[12px] bg-[#212026] ' : 'bg-transparent'}`}>
                     <Link href={`/categories/?categories=${e.category}`} >
                         <div
                             className="capitalize whitespace-nowrap text-[14px] leading-[21px]">{e.subCategory.includes(selected) ? selected : e.category}</div></Link>
@@ -314,7 +314,7 @@ function CategoryListSmall(props) {
         <Row className="lg:hidden overflow-scroll gap-[16px] py-[32px]">
             {
                 [
-                    <div className={`cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px]  ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#8A46FF] ' : ''}`}>
+                    <div className={`cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px]  ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#212026] ' : 'bg-transparent'}`}>
                         <Link href="/#allDappsScroll"  >
                             <div
                                 className="capitalize whitespace-nowrap text-[14px] leading-[21px]">{AppStrings.allDapps}</div></Link>
@@ -370,7 +370,7 @@ export function PageLayout(props) {
                 <aside className={`hidden 2xl:flex lg:flex md:flex-initial w-3/12 border-r border-r-border-color h-full`}>
                     <div className="w-full">
                         <div className='border-b border-b-border-color'>
-                            <div className={` align-middle items-center pt-2 pb-2 mr-4 my-2 ${((router?.asPath == "/history")) ? ' rounded-[12px] bg-[#8A46FF] pl-[16px]' : ''}`}>
+                            <div className={` align-middle items-center pt-2 pb-2 mr-4 my-2 ${((router?.asPath == "/history")) ? ' rounded-[12px] bg-[#212026] pl-[16px]' : ''}`}>
                                 <Link href="/history" >
                                     <svg className="inline-block mr-2 pb-[5px]" width="24" height="25" viewBox="0 0 24 25"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">

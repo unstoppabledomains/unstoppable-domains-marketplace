@@ -3,6 +3,7 @@ import { AppList } from "./app_list";
 import { Card } from './card';
 
 import { default as NXTImage } from 'next/image';
+import { AppStrings } from "../pages/constants";
 
 function Text(props) {
     const element = props.as || 'p';
@@ -24,7 +25,7 @@ function ExpandAbleText(props) {
     const { maxCharacters } = props;
     const [isExpanded, setExpanded] = useState<boolean>(false);
     const maxLines = isExpanded ? undefined : props.maxLines;
-    const label = isExpanded ? "Read Less" : "Read More";
+    const label = isExpanded ? AppStrings.readLess : AppStrings.readMore;
     let text = props.children;
     const requiresTruncation = text.length > maxCharacters
     if (requiresTruncation) {
@@ -35,7 +36,7 @@ function ExpandAbleText(props) {
             <Text className="lg:text-white text-[14px] leading-[21px] font-[500]" maxLines={maxLines}>
                 {text}
             </Text>
-            {requiresTruncation && <button onClick={() => setExpanded(!isExpanded)}>{label}</button>}
+            {requiresTruncation && <button className="py-[10px] text-[#0D67FE]" onClick={() => setExpanded(!isExpanded)}>{label}</button>}
         </>
     )
 }
@@ -56,7 +57,7 @@ function Button(props) {
 function ClaimButton(props) {
     return <button {...props}
         className="flex items-center justify-center py-[10px] px-[40px] rounded-[32px] bg-gradient-to-b
-                              from-[#8A46FF] to-[#6E38CC] hover:from-[#fff] hover:to-[#ddd] hover:text-black
+                              from-[#0D67FE] to-[#0D67FE] hover:from-[#fff] hover:to-[#ddd] hover:text-black
                               disabled:cursor-not-allowed">
         <span className="text-[14px] font-[600] leading-[18px]">{props.children}</span>
     </button>
