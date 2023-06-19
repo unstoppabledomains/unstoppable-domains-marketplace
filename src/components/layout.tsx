@@ -77,7 +77,7 @@ function ExpansionPanel(props) {
         <div className={`pr-4  `}>
 
             <div className=" items-center  justify-between" onClick={() => onClick(category.category)}>
-                <Row className={` grow  align-middle ${((query?.categories === category.category) && (query?.subCategory == undefined)) ? ' rounded-[12px] bg-[#222225] pl-[16px]' : ''} `}>
+                <Row className={` grow  align-middle ${((query?.categories === category.category) && (query?.subCategory == undefined)) ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px]' : ''} `}>
                     <div className='grow'>
                         <Link href={`/categories/?categories=${category.category}`}>
                             <p className="text-[20px] py-[10px] capitalize">{category.category}</p>
@@ -94,7 +94,7 @@ function ExpansionPanel(props) {
             </div>
 
             {open && hasSubCategories && category.subCategory.map((e) =>
-            (<div className={`pl-5 ${query?.subCategory === e ? ' rounded-[12px] bg-[#222225] pl-[16px] ' : ''}`}>
+            (<div className={`pl-5 ${query?.subCategory === e ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px] ' : ''}`}>
 
                 <Link href={`/categories/?categories=${category.category}&subCategory=${e}`}>
                     <p className={`text-[16px] font-[500] py-[10px] hover:text-[#fff] capitalize ${query?.subCategory === e ? ' text-white ' : 'text-[#87868C]'}`}>{e}</p>
@@ -383,7 +383,7 @@ export function PageLayout(props) {
                                 </Link>
                             </div>
                         </div>
-                        <div className={`pt-2 pb-2 mr-4 my-2 ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#222225] pl-[16px]' : ''}`}>
+                        <div className={`pt-2 pb-2 mr-4 my-2 ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px]' : ''}`}>
                             <Link href="/#allDappsScroll"  >
                                 <span className="text-xl">{AppStrings.allDapps}</span>
                             </Link>

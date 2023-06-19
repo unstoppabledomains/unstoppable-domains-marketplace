@@ -1,11 +1,9 @@
-import { useConnectModal } from "@rainbow-me/rainbowkit";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from 'react-modal';
 import { useSelector } from "react-redux";
-import { useAccount } from "wagmi";
 import { BASE_URL, HOST_URL } from "../../api/constants";
 import { Button, ClaimButton, ExpandAbleText, RImage as Image, PageLayout } from "../../components";
 import { ReviewCard } from "../../components/card";
@@ -101,20 +99,7 @@ function DownloadButton(props) {
     </a>;
 }
 
-//Claiming a dapp on meroku .
-function ClaimDappSection(props) {
-    const { onClick, address, onOpenConnectModal, minted } = props;
-    return (
-        <Row className="items-start justify-between">
-            <div className="w-8/12 flex flex-col gap-[16px]">
-                <h2 className="text-[24px] text-[500] leading-[32px]">Claim this dApp</h2>
-                <p className="text-[#87868C]">This dApp has not been claimed by its developers. Click here to open the Meroku platform and claim your .app domain</p>
-                {/* {!address && onOpenConnectModal && <p onClick={onOpenConnectModal} className="text-[14px] leading-[24px] underline cursor-pointer">Do you own this dApp? Connect wallet to update</p>} */}
-            </div>
-            <ClaimButton onClick={onClick}>Claim</ClaimButton>
-        </Row>
-    );
-}
+
 // if the user is owner of the dapp, it shows update dapp button.
 function UpdateDappSection(props) {
     const { onClick } = props;
@@ -167,7 +152,9 @@ export function StarRating(props) {
 function ReviewDialog(props) {
     const [postReview, result, isLoading, isFetching] = usePostReviewMutation();
     const [errors, setErrors] = useState();
-    const { address } = useAccount();
+    //todo update address here
+    const address = ''
+    // const { address } = useAccount();
     const [review, setReview] = useState<Review>({
         dappId: props.dappId,
         userAddress: address,
@@ -220,22 +207,26 @@ function ReviewDialog(props) {
 
 function AppRatingList(props) {
     const { data, isLoading, isFetching } = useGetAppRatingQuery(props.id)
-    const { openConnectModal } = useConnectModal();
+    // TODO: Update connect here
+    // const { openConnectModal } = useConnectModal();
     const dApp = props.dapp;
-
-    const { address } = useAccount();
+    //TODO: update address here
+    const address = ''
+    // const { address } = useAccount();
     if (isLoading || isFetching) return null;
     return <>
         <Row className="justify-between items-center py-[24px]">
             <h1 className="text-[24px] leading-[32px] font-[500]">{AppStrings.reviewsTitle}</h1>
             <button className="flex items-center gap-x-[8px] text-transparent bg-clip-text bg-gradient-to-b from-[#0D67FE] to-[#0D67FE] font-bold text-[14px] leading-[18px]" onClick={() => {
-                if (address) {
-                    props.onCreateReivew()
-                    return;
+                // TODO: replace connect button here
 
-                } else if (openConnectModal) {
-                    openConnectModal();
-                }
+                // if (address) {
+                //     props.onCreateReivew()
+                //     return;
+
+                // } else if (openConnectModal) {
+                //     openConnectModal();
+                // }
             }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="url(#paint0_linear_1089_2333)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -269,7 +260,6 @@ function DappList(props) {
 
     const router = useRouter();
     const [isClaimOpen, setClaimOpen] = useState<boolean>(false);
-    const { openConnectModal } = useConnectModal();
     const app = useSelector(getApp);
     const { query } = useRouter();
     const [isReviewModalOpen, setIsReviewModalOpen] = useState<boolean>(false);
@@ -292,8 +282,9 @@ function DappList(props) {
     }, {
         refetchOnMountOrArgChange: false
     });
-
-    const { address } = useAccount();
+    //TODO: add address here
+    const address = ""
+    // const { address } = useAccount();
 
 
     const {
@@ -341,18 +332,6 @@ function DappList(props) {
 
     const isOwner = isOwnedAppsLoading ? false : (ownedApps?.data?.includes(dApp.dappId) || false)
 
-    const getIframeSrc = (): string => {
-        return isOwner ? 'https://app.meroku.org/update' : 'https://app.meroku.org/app'
-    }
-
-    const onClaimButtonClick = () => {
-        if (!!address) {
-            setClaimOpen(true)
-            return
-        } else if (openConnectModal) {
-            openConnectModal();
-        }
-    };
 
     return (
         <PageLayout>
