@@ -7,6 +7,7 @@ import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { App, } from "../app/constants";
+import Modal from 'react-modal';
 
 import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
 import { getApp } from "../features/app/app_slice";
@@ -15,10 +16,28 @@ import { connectWithUd, logoutUD } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
-import { Row } from "./layout/flex";
+import { Column, Row } from "../components/layout/flex";
 import { UserInfo } from "os";
 import { RandomAvatar } from "react-random-avatars";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+
+const profileModalStyle = {
+    overlay: {
+        background: 'rgba(0,0,0,0.7)'
+    },
+    content: {
+        padding: '24px',
+        top: 'calc(50% - (30vw / 2))',
+        border: 0,
+        width: '350px',
+        height: '350px',
+        margin: '0 auto',
+        background: '#141318',
+        borderRadius: '16px'
+    }
+}
 
 
 function NavBar(props) {
@@ -37,6 +56,7 @@ function NavBar(props) {
         }
         return "";
     }
+    const [isProfileModalOpen, setProfileModalOpen] = useState<boolean>(false);
 
     return (
         <Row center
@@ -48,7 +68,7 @@ function NavBar(props) {
 
                 </NavItem >
             </div >
-            {userInfo === undefined ?
+            {userInfo !== undefined ?
                 <Button onClick={async () => {
                     const user = await connectWithUd();
                     if (user) {
@@ -56,30 +76,34 @@ function NavBar(props) {
                     }
                 }}>Login</Button>
                 : <div className="flex">
-                    <div className="px-[10px]">
-                        <a target="_blank" href={`https://ud.me/${userInfo.sub}`}>
-                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
-                                <div className="flex align-middle pr-[10px] pt-[2px]">
-                                    <div className="px-[10px] pt-[1px] align-middle" >
-                                        {userInfo?.picture === undefined ? <RandomAvatar name={
-                                            // "0x123"
-                                            userInfo.name
-                                        } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
-                                    </div>
-                                    {/* <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div> */}
-                                    <div className="align-middle ">{userInfo.wallet_address.substring(0, 4) + "...." + userInfo.wallet_address.substring(userInfo.wallet_address - 4, userInfo.wallet_address.length - 1)}</div>
+                    <div className="px-[10px]" onClick={() => {
+                        setProfileModalOpen(true)
+                    }}>
 
+                        <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                            <div className="flex align-middle pr-[10px] pt-[2px]">
+                                <div className="px-[10px] pt-[1px] align-middle" >
+                                    {userInfo?.picture === undefined ? <RandomAvatar name={
+                                        userInfo.wallet_address
+                                    } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
                                 </div>
+                                {/* <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div> */}
+                                <div className="align-middle ">{userInfo.wallet_address.substring(0, 4) + "...." + userInfo.wallet_address.substring(userInfo.wallet_address - 4, userInfo.wallet_address.length - 1)}</div>
+
                             </div>
-                        </a>
+                        </div>
+
                     </div>
                     <Button onClick={async () => {
                         await logoutUD();
                         dispatch(setUserInfo(undefined))
                     }}>   Logout</Button></div>
+
                 // {(userInfo as UserInfo).wallet_address}
+
             }
-            {/* <ConnectButton chainStatus="none" showBalance={false} /> */}
+            {isProfileModalOpen && <Modal isOpen={isProfileModalOpen} style={profileModalStyle} onRequestClose={() => isProfileModalOpen(false)}><ProfileModal onRequestClose={() => setProfileModalOpen(false)} /></Modal>}
+
         </Row >
     )
 }
@@ -88,7 +112,46 @@ function NavItem(props) {
     return <Link href={props.href}
         className={"flex-initial py-4 text-[14px] text-[#67666E] hover:text-[#fff] font-[600]" + props.className}>{props.children}</Link>
 }
+function ProfileModal(props) {
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
 
+    return <>
+        <Column className={"relative"}>
+            <h1 className="text-[20px] leading-[24px] font-[500]">Connected Account</h1>
+            <button onClick={() => props.onRequestClose()} className="absolute right-0 "><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6.5L18 18.5M18 6.5L6 18.5" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            </button>
+            <div className="flex flex-grow justify-center">
+                <div className="justify-center">
+                    <div className="flex p-[40px] justify-center" >
+                        {userInfo?.picture === undefined ? <RandomAvatar name={
+                            userInfo.wallet_address
+                        } size={60} /> : <NXTImage width={60} height={60} src={userInfo.picture} />}
+                    </div>
+                    <Column className="justify-center text-center gap-y-[8px] input mb-[10px]" >
+                        <label className="text-center text-[25px]" htmlFor="">{userInfo.sub}</label>
+                    </Column>
+                    <Column className="justify-center  text-center gap-y-[8px] text-[#67666E]" >
+                        <label className="text-center text-[16px]" htmlFor="">{userInfo.wallet_address}</label>
+                    </Column>
+
+                </div>
+            </div>
+            <div className={"flex justify-center"}>
+                <Button className="mx-[20px] mt-[30px]" onClick={async () => {
+                    navigator.clipboard.writeText(userInfo.wallet_address)
+                    toast("Address Copied")
+                }}>Copy Address</Button>
+                <Button className="mx-[20px] mt-[30px] " onClick={async () => {
+                    window.open(`https://ud.me/${userInfo.sub}`, "_blank")
+
+                }}>Open Profile</Button>
+            </div>
+        </Column>
+        <ToastContainer className={"mt-[100px]"} />
+    </>
+}
 
 function ExpansionPanel(props) {
     const { query } = useRouter();

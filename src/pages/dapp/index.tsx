@@ -46,6 +46,22 @@ const reviewModalStyle = {
     }
 }
 
+const profileModalStyle = {
+    overlay: {
+        background: 'rgba(0,0,0,0.7)'
+    },
+    content: {
+        padding: '24px',
+        top: 'calc(50% - (30vw / 2))',
+        border: 0,
+        width: '512px',
+        height: '512px',
+        margin: '0 auto',
+        background: '#141318',
+        borderRadius: '16px'
+    }
+}
+
 
 function Divider(props) {
     return <div className="h-[1px] bg-[#2D2C33]" />
