@@ -1,4 +1,4 @@
-import UAuth from "@uauth/js";
+import UAuth, { UserInfo } from "@uauth/js";
 import { UD_AUTH_KEY, UD_KEY_SCOPE, UD_REDIRECT_URL } from "../../api/constants";
 
 export const uauth = new UAuth({
@@ -11,8 +11,8 @@ export const connectWithUd = async () => {
         const authorization = await uauth.loginWithPopup();
         if (authorization) {
             const user = await uauth.user();
-            const address = user.wallet_address;
-            return address;
+            console.log("User", user)
+            return user;
         }
         return undefined;
     } catch (error) {

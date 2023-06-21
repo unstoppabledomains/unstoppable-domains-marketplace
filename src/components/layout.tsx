@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { App, } from "../app/constants";
 
-import { getAddress, setAddress } from "../features/app/address_slice";
+import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
 import { getApp } from "../features/app/app_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
 import { connectWithUd } from '../features/wallet_connect';
@@ -16,13 +16,14 @@ import { AppStrings } from "../pages/constants";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
 import { Row } from "./layout/flex";
+import { UserInfo } from "os";
 
 
 
 function NavBar(props) {
     const app = useSelector(getApp);
-    const address = useSelector(getAddress);
-    console.log("address", address);
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
+    console.log("userInfo", userInfo);
     const dispatch = useDispatch();
     const router = useRouter();
     // const onAppConfigClick = (app) => {
@@ -36,7 +37,6 @@ function NavBar(props) {
         return "";
     }
 
-
     return (
         <Row center
             className="py-4 px-10 border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
@@ -47,17 +47,18 @@ function NavBar(props) {
 
                 </NavItem >
             </div >
-            {<Button onClick={async () => {
-                const addr = await connectWithUd();
-                if (addr) {
-                    dispatch(setAddress(addr))
-                }
-            }}>Login {address} </Button>
-                // : <Button onClick={async () => {
-                //     await logoutUD();
-                //     // dispatch(setAccount(''))
-
-                // }}>Logout</Button>
+            {userInfo === undefined ?
+                <Button onClick={async () => {
+                    const user = await connectWithUd();
+                    if (user) {
+                        dispatch(setUserInfo(user))
+                    }
+                }}>Login</Button>
+                : <Button onClick={async () => {
+                    await logoutUD();
+                    dispatch(setUserInfo(undefined))
+                }}>   Logout</Button>
+                // {(userInfo as UserInfo).wallet_address}
             }
             {/* <ConnectButton chainStatus="none" showBalance={false} /> */}
         </Row >
