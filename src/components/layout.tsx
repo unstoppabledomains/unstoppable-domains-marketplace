@@ -62,10 +62,13 @@ function NavBar(props) {
                                 <div className="flex align-middle pr-[10px] pt-[2px]">
                                     <div className="px-[10px] pt-[1px] align-middle" >
                                         {userInfo?.picture === undefined ? <RandomAvatar name={
-                                            "0x123"
+                                            // "0x123"
+                                            userInfo.name
                                         } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
                                     </div>
-                                    <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div>
+                                    {/* <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div> */}
+                                    <div className="align-middle ">{userInfo.wallet_address.substring(0, 4) + "...." + userInfo.wallet_address.substring(userInfo.wallet_address - 4, userInfo.wallet_address.length - 1)}</div>
+
                                 </div>
                             </div>
                         </a>
