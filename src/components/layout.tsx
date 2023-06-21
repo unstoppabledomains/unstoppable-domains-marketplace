@@ -17,6 +17,7 @@ import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
 import { Row } from "./layout/flex";
 import { UserInfo } from "os";
+import { RandomAvatar } from "react-random-avatars";
 
 
 
@@ -54,12 +55,21 @@ function NavBar(props) {
                         dispatch(setUserInfo(user))
                     }
                 }}>Login</Button>
-                : <div
-                // className="w-[200px] flex flex grow"
-                >
-                    {/* <div className="top-[16px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
-                        {AppStrings.builtOnPolygon}
-                    </div> */}
+                : <div className="flex">
+                    <div className="px-[10px]">
+                        <a target="_blank" href={userInfo.profile}>
+                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                                <div className="flex align-middle pr-[10px] pt-[2px]">
+                                    <div className="px-[10px] pt-[1px] align-middle" >
+                                        {userInfo?.picture === undefined ? <RandomAvatar name={
+                                            "0x123"
+                                        } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
+                                    </div>
+                                    <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <Button onClick={async () => {
                         await logoutUD();
                         dispatch(setUserInfo(undefined))
