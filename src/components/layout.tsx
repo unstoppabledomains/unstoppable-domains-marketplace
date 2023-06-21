@@ -57,7 +57,7 @@ function NavBar(props) {
                 }}>Login</Button>
                 : <div className="flex">
                     <div className="px-[10px]">
-                        <a target="_blank" href={`https://ud.me/${userInfo.sub}}`}>
+                        <a target="_blank" href={`https://ud.me/${userInfo.sub}`}>
                             <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
                                 <div className="flex align-middle pr-[10px] pt-[2px]">
                                     <div className="px-[10px] pt-[1px] align-middle" >
