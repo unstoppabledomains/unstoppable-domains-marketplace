@@ -492,7 +492,7 @@ export function PageLayout(props) {
             {/* <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-transparent w-[70vw] rounded-full fixed -bottom-[30vw] -right-[30vw] h-[70vw] -z-10"></div>
              <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-[#0a090d] w-[70vw] rounded-full fixed -bottom-[10vw] right-[10vw] h-[40vw] -z-20"></div> */}
             <div className=" ">
-                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src="/bg.png"
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
                     alt={`${App.name} Logo`} />
             </div>
 
