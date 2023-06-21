@@ -3,24 +3,24 @@ import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
+import Modal from 'react-modal';
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { App, } from "../app/constants";
-import Modal from 'react-modal';
 
-import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
+import { UserInfo } from "os";
+import { RandomAvatar } from "react-random-avatars";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Column, Row } from "../components/layout/flex";
 import { getApp } from "../features/app/app_slice";
+import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
 import { connectWithUd, logoutUD } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
-import { Column, Row } from "../components/layout/flex";
-import { UserInfo } from "os";
-import { RandomAvatar } from "react-random-avatars";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const profileModalStyle = {
@@ -31,7 +31,7 @@ const profileModalStyle = {
         padding: '24px',
         top: 'calc(50% - (30vw / 2))',
         border: 0,
-        width: '350px',
+        width: '400px',
         height: '350px',
         margin: '0 auto',
         background: '#141318',
@@ -68,7 +68,7 @@ function NavBar(props) {
 
                 </NavItem >
             </div >
-            {userInfo !== undefined ?
+            {userInfo == undefined ?
                 <Button onClick={async () => {
                     const user = await connectWithUd();
                     if (user) {
@@ -76,7 +76,7 @@ function NavBar(props) {
                     }
                 }}>Login</Button>
                 : <div className="flex">
-                    <div className="px-[10px]" onClick={() => {
+                    <button className="px-[10px]" onClick={() => {
                         setProfileModalOpen(true)
                     }}>
 
@@ -84,16 +84,16 @@ function NavBar(props) {
                             <div className="flex align-middle pr-[10px] pt-[2px]">
                                 <div className="px-[10px] pt-[1px] align-middle" >
                                     {userInfo?.picture === undefined ? <RandomAvatar name={
-                                        userInfo.wallet_address
+                                        userInfo?.wallet_address
                                     } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
                                 </div>
                                 {/* <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div> */}
-                                <div className="align-middle ">{userInfo.wallet_address.substring(0, 4) + "...." + userInfo.wallet_address.substring(userInfo.wallet_address - 4, userInfo.wallet_address.length - 1)}</div>
+                                <div className="align-middle ">{userInfo?.wallet_address?.substring(0, 4) + "...." + userInfo?.wallet_address?.substring(userInfo.wallet_address.length - 4, userInfo.wallet_address.length - 1)}</div>
 
                             </div>
                         </div>
 
-                    </div>
+                    </button>
                     <Button onClick={async () => {
                         await logoutUD();
                         dispatch(setUserInfo(undefined))
@@ -102,7 +102,10 @@ function NavBar(props) {
                 // {(userInfo as UserInfo).wallet_address}
 
             }
-            {isProfileModalOpen && <Modal isOpen={isProfileModalOpen} style={profileModalStyle} onRequestClose={() => isProfileModalOpen(false)}><ProfileModal onRequestClose={() => setProfileModalOpen(false)} /></Modal>}
+            {isProfileModalOpen &&
+                <Modal isOpen={isProfileModalOpen} style={profileModalStyle} onRequestClose={() => isProfileModalOpen(false)}>
+                    <ProfileModal onRequestClose={() => setProfileModalOpen(false)} />
+                </Modal>}
 
         </Row >
     )
@@ -116,13 +119,13 @@ function ProfileModal(props) {
     const userInfo: UserInfo | undefined = useSelector(getUserInfo);
 
     return <>
-        <Column className={"relative"}>
+        <Column className={"relative "}>
             <h1 className="text-[20px] leading-[24px] font-[500]">Connected Account</h1>
             <button onClick={() => props.onRequestClose()} className="absolute right-0 "><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 6.5L18 18.5M18 6.5L6 18.5" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             </button>
-            <div className="flex flex-grow justify-center">
+            <div className="flex flex-grow justify-center px-[40px]">
                 <div className="justify-center">
                     <div className="flex p-[40px] justify-center" >
                         {userInfo?.picture === undefined ? <RandomAvatar name={
@@ -132,8 +135,8 @@ function ProfileModal(props) {
                     <Column className="justify-center text-center gap-y-[8px] input mb-[10px]" >
                         <label className="text-center text-[25px]" htmlFor="">{userInfo.sub}</label>
                     </Column>
-                    <Column className="justify-center  text-center gap-y-[8px] text-[#67666E]" >
-                        <label className="text-center text-[16px]" htmlFor="">{userInfo.wallet_address}</label>
+                    <Column className="justify-center px-[20px] text-center gap-y-[8px] text-[#67666E] " >
+                        <label className="text-center px-[20px] text-[16px]" htmlFor="">{userInfo.wallet_address}</label>
                     </Column>
 
                 </div>
@@ -486,6 +489,12 @@ export function PageLayout(props) {
                 </section>
 
             </Row>
+            {/* <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-transparent w-[70vw] rounded-full fixed -bottom-[30vw] -right-[30vw] h-[70vw] -z-10"></div>
+             <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-[#0a090d] w-[70vw] rounded-full fixed -bottom-[10vw] right-[10vw] h-[40vw] -z-20"></div> */}
+            <div className=" ">
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src="/bg.svg"
+                    alt={`${App.name} Logo`} />
+            </div>
 
         </article>
     );

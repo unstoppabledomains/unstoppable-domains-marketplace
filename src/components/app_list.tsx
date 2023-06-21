@@ -23,7 +23,7 @@ export function AppList(props) {
     const router = useRouter();
 
     return (
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 3xl:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 z-20">
             {(props.data?.length ?? false) ? props.data.map((app: Dapp) => <Link href={`/dapp?id=${app.dappId}`}> <Card key={app.dappId}>
                 {/* <Link href={}> */}
                 <Row className="justify-between">
