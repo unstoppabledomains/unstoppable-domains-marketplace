@@ -11,7 +11,7 @@ import { App, } from "../app/constants";
 import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
 import { getApp } from "../features/app/app_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
-import { connectWithUd } from '../features/wallet_connect';
+import { connectWithUd, logoutUD } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
@@ -54,10 +54,16 @@ function NavBar(props) {
                         dispatch(setUserInfo(user))
                     }
                 }}>Login</Button>
-                : <Button onClick={async () => {
-                    await logoutUD();
-                    dispatch(setUserInfo(undefined))
-                }}>   Logout</Button>
+                : <div
+                // className="w-[200px] flex flex grow"
+                >
+                    {/* <div className="top-[16px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                        {AppStrings.builtOnPolygon}
+                    </div> */}
+                    <Button onClick={async () => {
+                        await logoutUD();
+                        dispatch(setUserInfo(undefined))
+                    }}>   Logout</Button></div>
                 // {(userInfo as UserInfo).wallet_address}
             }
             {/* <ConnectButton chainStatus="none" showBalance={false} /> */}
