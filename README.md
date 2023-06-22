@@ -82,3 +82,4 @@ While adding new API endpoints it is important to call `api.injectEndpoints` and
 Redux Toolkit an example of this can be seen in `src/features/dapp/dapp_api.ts`
 
 To know more about this [visit](https://redux-toolkit.js.org/rtk-query/usage/code-splitting)
+
