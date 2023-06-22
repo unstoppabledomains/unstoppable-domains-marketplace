@@ -14,21 +14,13 @@ import { Dapp } from "../../features/dapp/models/dapp";
 import { Review } from "../../features/dapp/models/review";
 import { useSearchByIdQuery } from "../../features/search";
 import { AppStrings } from "../constants";
+import { UserInfo } from "@uauth/js";
+import { getUserInfo } from "../../features/app/user_info_slice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 Modal.setAppElement('#__next');
 
-// dapp page, shows complete dapp info
-const modalStyles = {
-    overlay: {
-        background: 'rgba(0,0,0,0.80)'
-    },
-    content: {
-        padding: 0,
-        top: '80px',
-        border: 0,
-        background: 'transparent'
-    }
-}
 
 const reviewModalStyle = {
     overlay: {
@@ -168,9 +160,8 @@ export function StarRating(props) {
 function ReviewDialog(props) {
     const [postReview, result, isLoading, isFetching] = usePostReviewMutation();
     const [errors, setErrors] = useState();
-    //todo update address here
-    const address = ''
-    // const { address } = useAccount();
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
+    const address: string | undefined = userInfo?.wallet_address;
     const [review, setReview] = useState<Review>({
         dappId: props.dappId,
         userAddress: address,
@@ -223,26 +214,23 @@ function ReviewDialog(props) {
 
 function AppRatingList(props) {
     const { data, isLoading, isFetching } = useGetAppRatingQuery(props.id)
-    // TODO: Update connect here
-    // const { openConnectModal } = useConnectModal();
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
+    const address: string | undefined = userInfo?.wallet_address;
+
     const dApp = props.dapp;
-    //TODO: update address here
-    const address = ''
-    // const { address } = useAccount();
     if (isLoading || isFetching) return null;
     return <>
         <Row className="justify-between items-center py-[24px]">
             <h1 className="text-[24px] leading-[32px] font-[500]">{AppStrings.reviewsTitle}</h1>
             <button className="flex items-center gap-x-[8px] text-transparent bg-clip-text bg-gradient-to-b from-[#0D67FE] to-[#0D67FE] font-bold text-[14px] leading-[18px]" onClick={() => {
-                // TODO: replace connect button here
 
-                // if (address) {
-                //     props.onCreateReivew()
-                //     return;
+                if (address) {
+                    props.onCreateReivew()
+                    return;
 
-                // } else if (openConnectModal) {
-                //     openConnectModal();
-                // }
+                } else {
+                    toast("Please Login First.")
+                }
             }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="url(#paint0_linear_1089_2333)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -256,6 +244,7 @@ function AppRatingList(props) {
                 Add review
             </button>
         </Row>
+        <ToastContainer className={"mt-[100px]"} />
 
         <Row className="gap-x-[18px] ">
             <p className="text-[24px] leading-[28px] font-[600]">{Math.round((dApp?.metrics?.rating ?? 0) * 10) / 10}</p>
@@ -298,8 +287,9 @@ function DappList(props) {
     }, {
         refetchOnMountOrArgChange: false
     });
-    //TODO: add address here
-    const address = ""
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
+    console.log("userInfo", userInfo);
+    const address: string | undefined = userInfo?.wallet_address;
     // const { address } = useAccount();
 
 
