@@ -261,7 +261,7 @@ var dappstoreMaping = `{
   "NFT.Social Graph": "social-networking.social-graph",
   "NFT.Tooling / Infra": "nft.tooling",
 
-  "Social": "social",
+  "Social": "social-networking",
 
   "Tooling": "developer-tools",
   "Tooling.Block Explorers": "developer-tools.block-explorer",
