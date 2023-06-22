@@ -68,7 +68,7 @@ function NavBar(props) {
 
                 </NavItem >
             </div >
-            {userInfo == undefined ?
+            {userInfo === undefined ?
                 <Button onClick={async () => {
                     const user = await connectWithUd();
                     if (user) {
@@ -80,15 +80,15 @@ function NavBar(props) {
                         setProfileModalOpen(true)
                     }}>
 
-                        <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                        <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
                             <div className="flex align-middle pr-[10px] pt-[2px]">
                                 <div className="px-[10px] pt-[1px] align-middle" >
                                     {userInfo?.picture === undefined ? <RandomAvatar name={
                                         userInfo?.wallet_address
                                     } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
                                 </div>
-                                {/* <div className="align-middle ">{"0x12323123188123adad1".substring(0, 4) + "...." + "3adad1".substring(4, -1)}</div> */}
-                                <div className="align-middle ">{userInfo?.wallet_address?.substring(0, 4) + "...." + userInfo?.wallet_address?.substring(userInfo.wallet_address.length - 4, userInfo.wallet_address.length - 1)}</div>
+                                {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
+                                <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
 
                             </div>
                         </div>
