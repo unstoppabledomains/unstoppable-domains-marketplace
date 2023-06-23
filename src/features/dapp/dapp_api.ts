@@ -164,7 +164,7 @@ export class DappDataSource implements IDappDataSource {
 				const filteredList = list.find(
 					(dapp) => dapp.key === "unstoppable-domains-apps-store"
 				);
-				const appIds = filteredList.dappIds;
+				const appIds = filteredList.dappIds.slice(0, 10);
 				const result = <any>[];
 				for (const idx in appIds) {
 					const appReq = await fetchWithBQ(
