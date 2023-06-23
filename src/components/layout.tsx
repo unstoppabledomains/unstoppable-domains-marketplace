@@ -3,7 +3,6 @@ import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-import Modal from 'react-modal';
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
@@ -22,22 +21,6 @@ import { AppStrings } from "../pages/constants";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
 
-
-const profileModalStyle = {
-    overlay: {
-        background: 'rgba(0,0,0,0.7)'
-    },
-    content: {
-        padding: '24px',
-        top: 'calc(50% - (30vw / 2))',
-        border: 0,
-        width: '400px',
-        height: '350px',
-        margin: '0 auto',
-        background: '#141318',
-        borderRadius: '16px'
-    }
-}
 
 
 function NavBar(props) {
@@ -103,9 +86,12 @@ function NavBar(props) {
 
             }
             {isProfileModalOpen &&
-                <Modal isOpen={isProfileModalOpen} style={profileModalStyle} onRequestClose={() => isProfileModalOpen(false)}>
-                    <ProfileModal onRequestClose={() => setProfileModalOpen(false)} />
-                </Modal>}
+                <div className="fixed top-0 left-0 bg-[#00000080]" >
+                    <div className="h-screen flex items-center justify-center w-screen">
+                        <div className=" z-50 px-4 pt-4 pb-8 overflow-x-hidden overflow-y-hidden max-h-full bg-[#141318] rounded-2xl border-slate-700 border-[1px]">
+                            <ProfileModal onRequestClose={() => setProfileModalOpen(false)} />
+                        </div>
+                    </div></div>}
 
         </Row >
     )
