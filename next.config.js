@@ -6,9 +6,7 @@ const nextConfig = {
   },
   distDir: 'build',
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    // ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false
   },
   i18n: {
     locales: ['en'],
@@ -26,7 +24,7 @@ const nextConfig = {
       }
     ]
   },
-  reactStrictMode: false,
+  reactStrictMode: true,
 
   webpack: config => {
     config.resolve.fallback = { fs: false, net: false, tls: false };

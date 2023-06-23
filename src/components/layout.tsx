@@ -1,14 +1,12 @@
-// @ts-nocheck
 import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useRef, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { App, } from "../app/constants";
 
-import { UserInfo } from "os";
 import { RandomAvatar } from "react-random-avatars";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,14 +16,15 @@ import { getUserInfo, setUserInfo } from "../features/app/user_info_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
 import { connectWithUd, logoutUD } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
-import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
+import { UserInfo } from "@uauth/js";
 
+import { FeaturedCard, SliderButton } from "./card";
 
 
 function NavBar(props) {
     const app = useSelector(getApp);
-    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
+    const userInfo: UserInfo| undefined = useSelector(getUserInfo);
     console.log("userInfo", userInfo);
     const dispatch = useDispatch();
     const router = useRouter();
@@ -68,7 +67,7 @@ function NavBar(props) {
                                 <div className="px-[10px] pt-[1px] align-middle" >
                                     {userInfo?.picture === undefined ? <RandomAvatar name={
                                         userInfo?.wallet_address
-                                    } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} />}
+                                    } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} alt={""} />}
                                 </div>
                                 {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
                                 <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
@@ -115,25 +114,25 @@ function ProfileModal(props) {
                 <div className="justify-center">
                     <div className="flex p-[40px] justify-center" >
                         {userInfo?.picture === undefined ? <RandomAvatar name={
-                            userInfo.wallet_address
-                        } size={60} /> : <NXTImage width={60} height={60} src={userInfo.picture} />}
+                            userInfo?.wallet_address
+                        } size={60} /> : <NXTImage width={60} height={60} src={userInfo.picture} alt={""} />}
                     </div>
                     <Column className="justify-center text-center gap-y-[8px] input mb-[10px]" >
-                        <label className="text-center text-[25px]" htmlFor="">{userInfo.sub}</label>
+                        <label className="text-center text-[25px]" htmlFor="">{userInfo?.sub}</label>
                     </Column>
                     <Column className="justify-center px-[20px] text-center gap-y-[8px] text-[#67666E] " >
-                        <label className="text-center px-[20px] text-[16px]" htmlFor="">{userInfo.wallet_address}</label>
+                        <label className="text-center px-[20px] text-[16px]" htmlFor="">{userInfo?.wallet_address}</label>
                     </Column>
 
                 </div>
             </div>
             <div className={"flex justify-center"}>
                 <Button className="mx-[20px] mt-[30px]" onClick={async () => {
-                    navigator.clipboard.writeText(userInfo.wallet_address)
+                    navigator.clipboard.writeText(userInfo?.wallet_address??"")
                     toast("Address Copied")
                 }}>Copy Address</Button>
                 <Button className="mx-[20px] mt-[30px] " onClick={async () => {
-                    window.open(`https://ud.me/${userInfo.sub}`, "_blank")
+                    window.open(`https://ud.me/${userInfo?.sub}`, "_blank")
 
                 }}>Open Profile</Button>
             </div>
@@ -290,7 +289,7 @@ function CategoryListSmall(props) {
     const RenderElement = ({ e }) => {
         const [referenceElement, setReferenceElement] = useState<any>(null);
         const [popperElement, setPopperElement] = useState<any>(null);
-        const [isOpen, setIsOpen] = useState<bool>(false);
+        const [isOpen, setIsOpen] = useState<boolean>(false);
         const { styles, attributes } = usePopper(referenceElement, popperElement, {
             placement: 'bottom',
             modifiers: [
@@ -303,7 +302,6 @@ function CategoryListSmall(props) {
                 {
                     name: 'offset',
                     options: {
-                        enabled: true,
                         offset: [10, 16]
                     }
                 }
@@ -490,7 +488,7 @@ export default function Layout(props) {
     const app = useSelector(getApp);
     const router = useRouter();
     const { data, isLoading } = useGetFeaturedDappsQuery();
-    const slider = useRef();
+    const slider = createRef<Slider>();
     let dragging = false;
     const settings = {
         dots: false,

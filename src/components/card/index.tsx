@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Row } from "../layout/flex";
 import { StarRating } from "../../pages/dapp";
 
-export const Card = (props) => {
+export const Card = (props:any) => {
     return (
         <div className="card p-4 w-full h-full bg-card-bg border border-[#ffffff1a] rounded-card-radius">
             {props.children}
@@ -11,9 +11,9 @@ export const Card = (props) => {
     )
 }
 
-export function SliderButton(props) {
+export function SliderButton(props:any) {
     return (
-        <button className="w-[52px] h-[52px]" {...props}>{props.children}</button>
+        <button className="w-[52px] h-[52px]" onClick={props.onClick}>{props.children}</button>
     )
 }
 
