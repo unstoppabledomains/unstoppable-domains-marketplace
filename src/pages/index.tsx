@@ -25,7 +25,8 @@ const Index = (props) => {
         page: (app.chainId === 137) ? page + 1 : page2 + 1,
         limit: limit,
         chainId: app.chainId,
-        orderBy: ["name:asc"]
+        orderBy: ["name:asc"],
+        storeKey: "unstoppable-domains-apps-store"
     }, {
         refetchOnMountOrArgChange: true,
     });
