@@ -14,7 +14,7 @@ function RatingAndReviewPage(props) {
     if (!data.data.length) {
         reviewList = <p>No reviews found</p>;
     } else {
-        reviewList = data.data.map(review => <ReviewCard review={review} />)
+        reviewList = data.data.map((review, index) => <ReviewCard key={index} review={review} />)
     }
     return (
         <PageLayout>

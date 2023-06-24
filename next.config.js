@@ -5,9 +5,7 @@ const nextConfig = {
 
   },
   distDir: 'build',
-  eslint: {
-    ignoreDuringBuilds: false
-  },
+
   i18n: {
     locales: ['en'],
     defaultLocale: 'en'

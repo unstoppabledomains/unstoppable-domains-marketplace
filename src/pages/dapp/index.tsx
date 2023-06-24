@@ -115,7 +115,7 @@ function UpdateDappSection(props) {
         <Row className="items-start justify-between">
             <div className="w-8/12 flex flex-col gap-[16px]">
                 <h2 className="text-[24px] text-[500] leading-[32px]">Update App</h2>
-                <p className="text-[#87868C]">Click here to update the App metadata on the Meroku platform. You are seeing this because you have claimed this App's .app namespace</p>
+                <p className="text-[#87868C]">Click here to update the App metadata on the Meroku platform. You are seeing this because you have claimed this App&apos;s .app namespace</p>
             </div>
             <ClaimButton onClick={onClick}>Update</ClaimButton>
         </Row>
@@ -139,7 +139,7 @@ export function StarRating(props) {
         <Row className="gap-x-[4px]" onMouseLeave={editable ? () => setRating(rating) : undefined}>
             {[...Array(5)].map((_, idx) => {
                 idx += 1;
-                return <svg onClick={editable ? () => setRating(idx) : undefined}
+                return <svg key={idx} onClick={editable ? () => setRating(idx) : undefined}
                     onMouseEnter={editable ? () => setHover(idx) : undefined}
                     onMouseLeave={editable ? () => setRating(rating) : undefined}
                     className={`icon ${idx <= (rating || hover) ? "icon-filled" : null}`}
@@ -252,7 +252,7 @@ function AppRatingList(props) {
         </Row>
         <small className="text-[14px] leading-[34px] font-[500] text-[#87868C]">{dApp?.metrics?.ratingsCount ?? 0} Ratings</small>
         <Row className="gap-x-[16px] items-stretch ">
-            {data.data.slice(0, 2).map(review => <ReviewCard review={review} />)}
+            {data.data.slice(0, 2).map((review, index) => <ReviewCard key={index} review={review} />)}
         </Row>
         {!!data.data.length && <Row className="justify-end my-[16px]">
             <Link className="text-transparent bg-clip-text bg-gradient-to-b from-[#0D67FE] to-[#0D67FE] font-bold text-[14px] leading-[18px]" href={`dapp/reviews/?id=${props.id}`}>View More</Link>

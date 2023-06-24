@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Row } from "../layout/flex";
 import { StarRating } from "../../pages/dapp";
 
-export const Card = (props:any) => {
+export const Card = (props: any) => {
     return (
         <div className="card p-4 w-full h-full bg-card-bg border border-[#ffffff1a] rounded-card-radius">
             {props.children}
@@ -11,7 +11,7 @@ export const Card = (props:any) => {
     )
 }
 
-export function SliderButton(props:any) {
+export function SliderButton(props: any) {
     return (
         <button className="w-[52px] h-[52px]" onClick={props.onClick}>{props.children}</button>
     )
@@ -28,7 +28,7 @@ export function FeaturedCard(props) {
             </div>
             <div className="absolute bottom-[24px] left-[24px]">
                 <p className="text-[16px] leading-[18px] lg:text-[24px] lg:leading-[28px] font-[500] line-clamp-1 mb-[8px]">{app.name}</p>
-                <Row className="gap-x-[4px]">{app.tags?.length ? app.tags?.slice(0, 3).map((e) => <Tag>{e}</Tag>) : <br />}</Row>
+                <Row className="gap-x-[4px]">{app.tags?.length ? app.tags?.slice(0, 3).map((e: string, index: number) => <Tag key={index}>{e}</Tag>) : <br />}</Row>
             </div>
         </div>
     )

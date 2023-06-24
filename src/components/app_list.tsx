@@ -24,12 +24,12 @@ export function AppList(props) {
 
     return (
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 z-20">
-            {(props.data?.length ?? false) ? props.data.map((app: Dapp) => <Link href={`/dapp?id=${app.dappId}`}> <Card key={app.dappId}>
+            {(props.data?.length ?? false) ? props.data.map((app: Dapp) => <Link key={app.dappId} href={`/dapp?id=${app.dappId}`}> <Card key={app.dappId}>
                 {/* <Link href={}> */}
                 <Row className="justify-between">
                     <Image src={app.images.logo} width={64} height={64} className="rounded-lg" alt="" />
                     <Row className="items-start gap-[6px]">
-                        {app.tags?.slice(0, 3).map((e) => <Tag>{e}</Tag>)}
+                        {app.tags?.slice(0, 3).map((e, index) => <Tag key={index}>{e}</Tag>)}
                     </Row>
                 </Row>
                 <p className="text-[24px] leading-[32px] font-[500] my-4">{app.name}</p>

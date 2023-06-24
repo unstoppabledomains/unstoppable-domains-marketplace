@@ -169,7 +169,7 @@ function ExpansionPanel(props) {
             </div>
 
             {open && hasSubCategories && category.subCategory.map((e) =>
-            (<div className={`pl-5 ${query?.subCategory === e ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px] ' : ''}`}>
+            (<div key={e} className={`pl-5 ${query?.subCategory === e ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px] ' : ''}`}>
 
                 <Link href={`/categories/?categories=${category.category}&subCategory=${e}`}>
                     <p className={`text-[16px] font-[500] py-[10px] hover:text-[#fff] capitalize ${query?.subCategory === e ? ' text-white ' : 'text-[#87868C]'}`}>{e}</p>
@@ -388,13 +388,13 @@ function CategoryListSmall(props) {
         <Row className="lg:hidden overflow-scroll gap-[16px] py-[32px]">
             {
                 [
-                    <div className={`cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px]  ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#212026] ' : 'bg-transparent'}`}>
+                    <div key={"allDapps"} className={`cursor-pointer bg-[#212026] rounded-[32px] flex justify-between items-center py-[8px] px-[12px]  ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#212026] ' : 'bg-transparent'}`}>
                         <Link href="/#allDappsScroll"  >
                             <div
                                 className="capitalize whitespace-nowrap text-[14px] leading-[21px]">{AppStrings.allDapps}</div></Link>
 
                     </div>,
-                    ...[data.data.map((e, index) => <RenderElement e={e} />)]]
+                    ...[data.data.map((e, index) => <RenderElement key={index} e={e} />)]]
             }
         </Row >
     );
