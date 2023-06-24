@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { store } from '../store';
+import { persistor, store } from '../store';
 import type { AppProps } from 'next/app';
 import "./globals.css";
 
@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { generalSans } from '../theme';
 import Head from 'next/head';
+import { PersistGate } from 'redux-persist/integration/react'
 
 
 export default function App({ Component, pageProps }: AppProps<{
@@ -18,11 +19,12 @@ export default function App({ Component, pageProps }: AppProps<{
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Provider store={store}>
-                <Layout className={generalSans.className}>
-                    <Component {...pageProps} />
+                <PersistGate loading={null} persistor={persistor}>
 
-                </Layout>
-
+                    <Layout className={generalSans.className}>
+                        <Component {...pageProps} />
+                    </Layout>
+                </PersistGate>
             </Provider>
         </>
     )
