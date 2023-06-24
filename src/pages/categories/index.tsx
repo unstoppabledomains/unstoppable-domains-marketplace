@@ -43,7 +43,9 @@ function CategoriesList(props) {
         page: page + 1,
         limit,
         chainId: app.chainId,
-        orderBy: router.query.search === undefined ? ["name:asc"] : []
+        orderBy: router.query.search === undefined ? ["name:asc"] : [],
+        storeKey: "unstoppable-domains-apps-store"
+
     }, {
         refetchOnMountOrArgChange: false,
     });

@@ -1,12 +1,13 @@
 import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import { App, } from "../app/constants";
 
+import { UserInfo } from "@uauth/js";
 import { RandomAvatar } from "react-random-avatars";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,14 +18,13 @@ import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQue
 import { connectWithUd, logoutUD } from '../features/wallet_connect';
 import { AppStrings } from "../pages/constants";
 import { Button, Card } from "./index";
-import { UserInfo } from "@uauth/js";
 
 import { FeaturedCard, SliderButton } from "./card";
 
 
 function NavBar(props) {
     const app = useSelector(getApp);
-    const userInfo: UserInfo| undefined = useSelector(getUserInfo);
+    const userInfo: UserInfo | undefined = useSelector(getUserInfo);
     console.log("userInfo", userInfo);
     const dispatch = useDispatch();
     const router = useRouter();
@@ -128,7 +128,7 @@ function ProfileModal(props) {
             </div>
             <div className={"flex justify-center"}>
                 <Button className="mx-[20px] mt-[30px]" onClick={async () => {
-                    navigator.clipboard.writeText(userInfo?.wallet_address??"")
+                    navigator.clipboard.writeText(userInfo?.wallet_address ?? "")
                     toast("Address Copied")
                 }}>Copy Address</Button>
                 <Button className="mx-[20px] mt-[30px] " onClick={async () => {

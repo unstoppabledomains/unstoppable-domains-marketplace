@@ -1,23 +1,23 @@
+import { UserInfo } from "@uauth/js";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Modal from 'react-modal';
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { BASE_URL, HOST_URL } from "../../api/constants";
 import { Button, ClaimButton, ExpandAbleText, RImage as Image, PageLayout } from "../../components";
 import { ReviewCard } from "../../components/card";
 import { Column, Row } from "../../components/layout/flex";
 import { getApp } from "../../features/app/app_slice";
+import { getUserInfo } from "../../features/app/user_info_slice";
 import { useGetAppRatingQuery, useGetBuildDownloadUrlQuery, useGetDappByOwnerAddressQuery, usePostReviewMutation } from "../../features/dapp/dapp_api";
 import { Dapp } from "../../features/dapp/models/dapp";
 import { Review } from "../../features/dapp/models/review";
 import { useSearchByIdQuery } from "../../features/search";
 import { AppStrings } from "../constants";
-import { UserInfo } from "@uauth/js";
-import { getUserInfo } from "../../features/app/user_info_slice";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 Modal.setAppElement('#__next');
 
@@ -114,8 +114,8 @@ function UpdateDappSection(props) {
     return (
         <Row className="items-start justify-between">
             <div className="w-8/12 flex flex-col gap-[16px]">
-                <h2 className="text-[24px] text-[500] leading-[32px]">Update dApp</h2>
-                <p className="text-[#87868C]">Click here to update the dApp metadata on the Meroku platform. You are seeing this because you have claimed this dApp's .app namespace</p>
+                <h2 className="text-[24px] text-[500] leading-[32px]">Update App</h2>
+                <p className="text-[#87868C]">Click here to update the App metadata on the Meroku platform. You are seeing this because you have claimed this App's .app namespace</p>
             </div>
             <ClaimButton onClick={onClick}>Update</ClaimButton>
         </Row>
@@ -186,7 +186,7 @@ function ReviewDialog(props) {
             </svg>
             </button>
             <Column>
-                Have you opened or downloaded dapp before posting review?
+                Have you opened or downloaded this app before posting review?
             </Column>
 
         </Column >
