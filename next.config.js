@@ -5,7 +5,9 @@ const nextConfig = {
 
   },
   distDir: 'build',
-
+  eslint: {
+    ignoreDuringBuilds: false
+  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en'
@@ -22,7 +24,7 @@ const nextConfig = {
       }
     ]
   },
-  reactStrictMode: false,
+  reactStrictMode: true,
 
   webpack: config => {
     config.resolve.fallback = { fs: false, net: false, tls: false };
