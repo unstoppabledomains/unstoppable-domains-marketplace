@@ -283,7 +283,7 @@ function DappList(props) {
     } = useSearchByIdQuery(query.id, {
         page: 1,
         limit: 1,
-        chainId: app.chainId,
+        // chainId: app.chainId,
     }, {
         refetchOnMountOrArgChange: false
     });

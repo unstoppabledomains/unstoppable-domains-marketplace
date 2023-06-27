@@ -24,7 +24,7 @@ const Index = (props) => {
     } = useGetInfiniteDappListQuery({
         page: (app.chainId === 137) ? page + 1 : page2 + 1,
         limit: limit,
-        chainId: app.chainId,
+        // chainId: app.chainId,
         orderBy: ["name:asc"],
         storeKey: "unstoppable-domains-apps-store"
     }, {
@@ -95,7 +95,7 @@ const Index = (props) => {
                         activeClassName="bg-[#212026]"
                         breakLabel=".."
                         nextLabel={<div className="mt-2" >
-                            <svg className={data.pageCount === selectedPage + 1 ? 'stroke-[#212026]' : 'stroke-[#E2E1E6]'} width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className={data?.pageCount === selectedPage + 1 ? 'stroke-[#212026]' : 'stroke-[#E2E1E6]'} width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 

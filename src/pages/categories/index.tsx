@@ -42,7 +42,7 @@ function CategoriesList(props) {
         subCategory: categoryMapped.subCategory,
         page: page + 1,
         limit,
-        chainId: app.chainId,
+        // chainId: app.chainId,
         orderBy: router.query.search === undefined ? ["name:asc"] : [],
         storeKey: "unstoppable-domains-apps-store"
 

@@ -264,8 +264,8 @@ export function Hero(props) {
                         className="min-h-[65vh] h-[65vh] pt-[20vh] pb-[10vh] justify-center flex-col-reverse md:flex-row md:justify-start items-center text-center md:text-left container z-10">
                         <div className="flex-initial w-full md:w-1/2">
                             <h1 className="text-[24px]  leading-[28px] md:text-[64px] md:leading-[72px] font-[500] mb-[24px]">{title}</h1>
-                            <p className="w-full md:w-[70%] text-[16px] text-[#67666E] leading-[24px] font-[500] mb-[24px]">{subtitle}</p>
-                            <Button><a target={"_blank"} href={"https://app.meroku.org"}>{button.text}</a></Button>
+                            <p className="w-full md:w-[70%] text-[16px] text-[#95949C] leading-[24px] font-[500] mb-[24px]">{subtitle}</p>
+                            <Button><a target={"_blank"} href={button.href}>{button.text}</a></Button>
                         </div>
                     </Row>
                 </div>
@@ -408,7 +408,7 @@ export function PageLayout(props) {
         isFetching,
         isLoading,
     } = useGetCategoryListQuery({
-        chainId: app.chainId,
+        // chainId: app.chainId,
     }, {
         refetchOnMountOrArgChange: false
     });
@@ -534,7 +534,7 @@ export default function Layout(props) {
                     {router.pathname === '/' && <div><div className="">
                         <Hero
                             title={app.hero.title}
-                            subtitle={app.hero.title}
+                            subtitle={app.hero.subtitle}
                             button={app.hero.button}
                             video={app.hero.video}
                         />

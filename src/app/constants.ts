@@ -49,12 +49,12 @@ const posConfig: AppConfig = {
 	title: "Apps",
 	chainId: 137,
 	hero: {
-		title: "There are more Apps built #OnPolygon than ever before",
+		title: "Discover, Connect, Explore.",
 		subtitle:
-			"The Apps in our ecosystem set the standard for privacy,security and content quality.",
+			"Your gateway to endless opportunities for utilizing your Web3 domain, all in one destination.",
 		button: {
 			text: "Submit your App",
-			href: "",
+			href: "https://app.meroku.org",
 		},
 		video: "https://player.vimeo.com/video/791153898?h=da72488da5",
 	},
