@@ -265,7 +265,13 @@ export function Hero(props) {
                         <div className="flex-initial w-full md:w-1/2">
                             <h1 className="text-[24px]  leading-[28px] md:text-[64px] md:leading-[72px] font-[500] mb-[24px]">{title}</h1>
                             <p className="w-full md:w-[70%] text-[16px] text-[#95949C] leading-[24px] font-[500] mb-[24px]">{subtitle}</p>
-                            <Button><a target={"_blank"} href={button.href}>{button.text}</a></Button>
+
+                            <Input />
+                            <div className="pt-[24px] max-md:visible invisible"><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
+
+                        </div>
+                        <div className="items-end flex grow h-auto  col-end-auto h-full max-md:hidden pt-[400px]">
+                            <div className="flex grow  justify-end "><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
                         </div>
                     </Row>
                 </div>
@@ -434,7 +440,7 @@ export function PageLayout(props) {
                         className="text-[20px] leading-[27px] lg:text-[42px] lg:leading-[48px] font-[500]">{app.title}</span>
                 </div>
                 <div className="flex-initial w-full md:w-3/12">
-                    <Input />
+                    {router.pathname != '/' && <Input />}
                 </div>
             </Row>
 
