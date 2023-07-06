@@ -42,9 +42,9 @@ function NavBar(props) {
 
     return (
         <Row center
-            className="py-4 px-10 border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
+            className="py-4 pr-[10px] pl-[5px] border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
             <div className="flex-initial">
-                <NavItem href="/" className="pr-[20px]">
+                <NavItem href="/">
                     <NXTImage width={App.logo.width} height={App.logo.height} src={App.logo.src} style={{ objectFit: "contain", height: App.logo.height }}
                         alt={`${App.name} Logo`} />
 
