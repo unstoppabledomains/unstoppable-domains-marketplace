@@ -2,7 +2,7 @@ export const App = {
 	name: "Web Store",
 	logo: {
 		height: 42,
-		width: 115,
+		width: 165,
 		src: "/logo_transparent.png",
 	},
 	menu: [
@@ -61,5 +61,5 @@ const posConfig: AppConfig = {
 };
 
 export type { AppConfig };
-export {};
+export { };
 export { posConfig };
