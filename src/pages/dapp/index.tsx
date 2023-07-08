@@ -388,7 +388,7 @@ function DappList(props) {
                         </div>
                     </header>
                     <DappDetailSection title={AppStrings.about}>
-                        <ExpandAbleText maxCharacters={320} maxLines={3}>{dApp.description}</ExpandAbleText>
+                        <ExpandAbleText maxCharacters={220} ellipsizeMode='tail' numberOfLines={3} maxLines={3}>{dApp.description}</ExpandAbleText>
                     </DappDetailSection>
                     <Divider />
                     <AppRatingList id={dApp.dappId} dapp={dApp} onCreateReivew={() => setIsReviewModalOpen(true)} />
