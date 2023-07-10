@@ -267,12 +267,9 @@ export function Hero(props) {
                             <p className="w-full md:w-[70%] text-[16px] text-[#ffffff] leading-[24px] font-[500] mb-[24px]">{subtitle}</p>
 
                             <Input />
-                            <div className="pt-[24px] max-md:visible invisible"><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
+                            <div className="pt-[24px] "><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
+                        </div>
 
-                        </div>
-                        <div className="items-end flex grow h-auto  col-end-auto h-full max-md:hidden pt-[400px]">
-                            <div className="flex grow  justify-end "><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
-                        </div>
                     </Row>
                 </div>
                 <div

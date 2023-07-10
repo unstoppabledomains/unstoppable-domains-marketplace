@@ -53,7 +53,7 @@ const posConfig: AppConfig = {
 		subtitle:
 			"Your gateway to endless opportunities for utilizing your Web3 domain, all in one destination.",
 		button: {
-			text: "Submit your App",
+			text: "Partner? Submit App",
 			href: "https://app.meroku.org",
 		},
 		video: "https://player.vimeo.com/video/791153898?h=da72488da5",
@@ -61,5 +61,5 @@ const posConfig: AppConfig = {
 };
 
 export type { AppConfig };
-export { };
+export {};
 export { posConfig };
