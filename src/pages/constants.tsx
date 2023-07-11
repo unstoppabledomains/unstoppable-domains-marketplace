@@ -11,7 +11,7 @@ const AppStrings = {
     social: 'Social',
     readMore: 'Read More',
     readLess: 'Read Less',
-    featuredDapps: 'Featured Apps',
+    featuredDapps: 'Featured Web3 Apps Using AI',
     reviewsTitle: 'Ratings & Reviews',
     ratings: 'Ratings',
     anonymousAnalyticsTag: 'anonymous_udde',
@@ -19,6 +19,6 @@ const AppStrings = {
 
 export {
     AppStrings
-}
+};
 const defaultExport = () => { }
 export default defaultExport;
