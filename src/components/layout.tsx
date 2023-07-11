@@ -252,6 +252,23 @@ function Input(props) {
         </div>
     )
 }
+// export function Banner(props) {
+//     const [isOpen, setOpen] = useState(true);
+
+//     return (
+//         isOpen ? <div className="relative bg-[#0546b7] min-h-[5vh] h-[5vh] pt-[4vh] pb-[6vh] ">
+//             <div className="bg-[#0546b7] min-h-[10vh] h-[10vh] pt-[2vh] pb-[2vh] ">
+
+//                 <button onClick={() => { setOpen(false) }} className="absolute right-0">
+//                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                         <path d="M6 6.5L18 18.5M18 6.5L6 18.5" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+//                     </svg>
+//                 </button>
+//                 <p></p>
+//             </div>
+//         </div> : <></>
+//     )
+// }
 
 export function Hero(props) {
     const { title, subtitle, video, button } = props;
@@ -534,14 +551,19 @@ export default function Layout(props) {
                     <NavBar />
                 </div>
                 <main className="relative top-[30px]">
-                    {router.pathname === '/' && <div><div className="">
-                        <Hero
-                            title={app.hero.title}
-                            subtitle={app.hero.subtitle}
-                            button={app.hero.button}
-                            video={app.hero.video}
-                        />
-                    </div>
+
+                    {router.pathname === '/' && <div>
+                        <div>
+                            {/* <Banner></Banner> */}
+                        </div>
+                        <div className="">
+                            <Hero
+                                title={app.hero.title}
+                                subtitle={app.hero.subtitle}
+                                button={app.hero.button}
+                                video={app.hero.video}
+                            />
+                        </div>
                         <div className="container relative">
                             <Row className="justify-between items-center my-[32px]">
                                 <h2 className="text-[24px] leading-[32px] lg:text-[60px] lg:leading-[72px] font-[500]">

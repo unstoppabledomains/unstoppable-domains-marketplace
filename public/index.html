@@ -7,15 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F6J2HCKK1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-5F6J2HCKK1');
-  </script>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <style>
+    /* Add custom styles here */
+    #floating-banner {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      background-color: #0546b7;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 9999;
+      border: none;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #floating-banner a {
+      color: white;
+    }
+  </style>
   <!--
       manifest.json provides metadata used when your web index is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -31,11 +44,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>React Redux App</title>
+
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
