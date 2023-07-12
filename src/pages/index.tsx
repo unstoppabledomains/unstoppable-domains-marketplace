@@ -26,7 +26,6 @@ const Index = (props) => {
         limit: limit,
         // chainId: app.chainId,
         orderBy: ["name:asc"],
-        storeKey: "unstoppable-domains-apps-store"
     }, {
         refetchOnMountOrArgChange: true,
     });

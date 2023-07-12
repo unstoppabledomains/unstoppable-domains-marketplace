@@ -1,7 +1,7 @@
 import { EndpointBuilder } from "@reduxjs/toolkit/dist/query/endpointDefinitions";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { api } from "../../api/api";
-import { ApiEndpoints } from "../../api/constants";
+import { ApiEndpoints, STORE_KEY } from "../../api/constants";
 import {
 	BuildDownloadResponse,
 	CategoryListResponse,
@@ -53,7 +53,7 @@ export class DappDataSource implements IDappDataSource {
 	getAppList(builder: EndpointBuilder<any, any, any>) {
 		return builder.query<PagedResponse<Dapp>, PagedRequest>({
 			query: (args) => ({
-				url: `${ApiEndpoints.APP_LIST}`,
+				url: `${ApiEndpoints.APP_LIST}?storeKey=${STORE_KEY}`,
 				params: args,
 			}),
 		});
@@ -63,7 +63,7 @@ export class DappDataSource implements IDappDataSource {
 	getInfiniteAppList(builder: EndpointBuilder<any, any, any>) {
 		return builder.query<any, any>({
 			query: (args) => ({
-				url: `${ApiEndpoints.APP_LIST}`,
+				url: `${ApiEndpoints.APP_LIST}?storeKey=${STORE_KEY}`,
 				params: args,
 			}),
 			serializeQueryArgs: ({
@@ -162,7 +162,7 @@ export class DappDataSource implements IDappDataSource {
 					return { error: appIdsReq.error as FetchBaseQueryError };
 				const list = appIdsReq.data;
 				const filteredList = list.find(
-					(dapp) => dapp.key === "unstoppable-domains-apps-store"
+					(dapp) => dapp.key === STORE_KEY
 				);
 				const appIds = filteredList.dappIds.slice(0, 10);
 				let result = <any>[];
@@ -171,7 +171,7 @@ export class DappDataSource implements IDappDataSource {
 					dappIdsCombined = dappIdsCombined + "," + appIds[idx];
 				}
 				const appReq = await fetchWithBQ(
-					`/dapp/search/${dappIdsCombined}?storeKey=unstoppable-domains-apps-store`
+					`/dapp/search/${dappIdsCombined}?storeKey=${STORE_KEY}`
 				);
 				result = appReq.data.data;
 				return result.length
