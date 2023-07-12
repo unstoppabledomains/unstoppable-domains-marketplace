@@ -18,7 +18,12 @@ export default function App({ Component, pageProps }: AppProps<{
     return (
         <>
             <Head>
+                <title>The Unstoppable Marketplace | Unstoppable Domains</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="Explore 860+ applications integrated with Unstoppable and new ways to use your Web3 domain." />
+                <meta property="og:title" content="The Unstoppable Marketplace | Unstoppable Domains" />
+                <meta property="og:description" content="Explore 860+ applications integrated with Unstoppable and new ways to use your Web3 domain." />
+                <meta property="og:image" content="https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/The%20Unstoppable%20Marketplace_LandingPage_Thumbnail.png" />
             </Head>
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
