@@ -1,34 +1,34 @@
 export const App = {
-	name: "Web Store",
-	logo: {
-		height: 42,
-		width: 165,
-		src: "/logo_transparent.png",
-	},
-	menu: [
-		// {
-		//     'href': '/',
-		//     title: 'dApps',
-		// },
-		// {
-		//     'href': '/categories',
-		//     title: 'Categories',
-		// },
-	],
+    name: "Web Store",
+    logo: {
+        height: 42,
+        width: 165,
+        src: "/logo_transparent.png",
+    },
+    menu: [
+        // {
+        //     'href': '/',
+        //     title: 'dApps',
+        // },
+        // {
+        //     'href': '/categories',
+        //     title: 'Categories',
+        // },
+    ],
 };
 
 interface AppConfig {
-	title: string;
-	chainId: number;
-	hero: {
-		title: string;
-		subtitle: string;
-		button: {
-			text: string;
-			href: string;
-		};
-		video: string;
-	};
+    title: string;
+    chainId: number;
+    hero: {
+        title: string;
+        subtitle: string;
+        button: {
+            text: string;
+            href: string;
+        };
+        video: string;
+    };
 }
 
 // const zkevmConfig:AppConfig = {
@@ -46,21 +46,26 @@ interface AppConfig {
 // }
 
 const posConfig: AppConfig = {
-	title: "Apps",
-	chainId: 137,
-	hero: {
-		title: "Discover, Connect, Explore.",
-		subtitle:
-			"Your gateway to endless opportunities for utilizing your Web3 domain, all in one destination.",
-		button: {
-			text: "Partner? Submit App",
-			href: "https://app.meroku.org",
-		},
-		video: "https://player.vimeo.com/video/791153898?h=da72488da5",
-	},
+    title: "Apps",
+    chainId: 137,
+    hero: {
+        title: "Discover, Connect, Explore.",
+        subtitle:
+            "Your gateway to endless opportunities for utilizing your Web3 domain, all in one destination.",
+        button: {
+            text: "Partner? Submit App",
+            href: "https://app.meroku.org",
+        },
+        video: "https://player.vimeo.com/video/791153898?h=da72488da5",
+    },
 };
 
 const bannerScript: string = ` // Create the banner element
+                    var banner = document.createElement("div");
+                    banner.id = "floating-banner";
+
+
+
                     var banner = document.createElement("div");
                     banner.id = "floating-banner";
 
@@ -73,11 +78,20 @@ const bannerScript: string = ` // Create the banner element
                     closeButton.addEventListener("click", function() {
                     banner.style.display = "none";
                     });
+                        // Create the close button
+                    var closeButton = document.createElement("span");
+                    closeButton.innerHTML = "X";
+                    closeButton.style.float = "right";
+                    closeButton.style.cursor = "pointer";
+                    closeButton.style.fontWeight = "bold";
+                    closeButton.addEventListener("click", function() {
+                    banner.style.display = "none";
+                    });
                     banner.style.position = "fixed";
-                    // banner.style.bottom = "20px";
+                    banner.style.bottom = "10px";
                     banner.style.right = "20px";
                     banner.style.left = "20px";
-                    banner.style.top = "78px";
+                    //banner.style.top = "78px";
                     banner.style.backgroundColor = "#0546b7";
                     banner.style.color = "white";
                     banner.style.padding = "10px";
@@ -89,7 +103,7 @@ const bannerScript: string = ` // Create the banner element
 
                     // Create the main text
                     var mainText = document.createElement("div");
-                    mainText.innerHTML = 'Get 30%* off <span class="domain-text">.polygon domains</span> through August 13th. Go <a href="#" target="_blank" id="promo-link">here</a>.';
+                    mainText.innerHTML = 'Get 30%* off <span class="domain-text">.polygon domains</span> through August 13th. <a href="#" id="promo-link">Go here</a>.';
                     mainText.style.marginBottom = "10px";
 
                     // Create the small text
@@ -111,8 +125,8 @@ const bannerScript: string = ` // Create the banner element
                     var urlParameters = {
                     utm_source: urlParams.get("utm_source") || "",
                     utm_medium: urlParams.get("utm_medium") || "",
-                    utm_campaign: urlParams.get("utm_campaign") || "",
-                    code: urlParams.get("code") || "",
+                    utm_campaign: "marketplace",
+                    code: "UDMARKETPLACELAUNCH",
                     ref: urlParams.get("ref") || ""
                     };
                     var queryString = Object.keys(urlParameters)
@@ -120,7 +134,23 @@ const bannerScript: string = ` // Create the banner element
                         return encodeURIComponent(key) + "=" + encodeURIComponent(urlParameters[key]);
                     })
                     .join("&");
-                    promoLink.href = "https://unstoppabledomains.com/?" + queryString;`;
+                    promoLink.href = "https://unstoppabledomains.com/?" + queryString;
+
+                    // Adjust banner position on scroll
+                    // function adjustBannerPosition() {
+                    // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    // var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                    // var documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+
+                    // if (scrollTop + windowHeight >= documentHeight) {
+                    //     banner.style.bottom = "20px";
+                    // } else {
+                    //     banner.style.bottom = windowHeight - scrollTop + 20 + "px";
+                    // }
+                    // }
+
+                    // window.addEventListener("scroll", adjustBannerPosition);
+                    // adjustBannerPosition();`;
 const analyticsScript = ` window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());

@@ -643,6 +643,7 @@ export default function Layout(props) {
                     <div className={` ${router.pathname === '/' ? `pt-[70px]` : `pt-[45px]`}`} id="allDappsScroll" />
 
                     {props.children}
+                    <div className="pb-[80px]" />
                 </main >
             </div >
         </>
