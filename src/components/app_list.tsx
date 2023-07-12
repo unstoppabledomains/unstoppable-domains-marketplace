@@ -27,7 +27,7 @@ export function AppList(props) {
             {(props.data?.length ?? false) ? props.data.map((app: Dapp) => <Link key={app.dappId} href={`/dapp?id=${app.dappId}`}> <Card key={app.dappId}>
                 {/* <Link href={}> */}
                 <Row className="justify-between">
-                    <Image src={app.images.logo} width={64} height={64} className="rounded-lg" alt="" />
+                    <Image src={app.images?.logo} width={64} height={64} className="rounded-lg" alt="" />
                     <Row className="items-start gap-[6px]">
                         {app.tags?.slice(0, 3).map((e, index) => <Tag key={index}>{e}</Tag>)}
                     </Row>

@@ -165,13 +165,15 @@ export class DappDataSource implements IDappDataSource {
 					(dapp) => dapp.key === "unstoppable-domains-apps-store"
 				);
 				const appIds = filteredList.dappIds.slice(0, 10);
-				const result = <any>[];
+				let result = <any>[];
+				let dappIdsCombined = "";
 				for (const idx in appIds) {
-					const appReq = await fetchWithBQ(
-						`/dapp/search/${appIds[idx]}`
-					);
-					result.push(appReq.data.data[0]);
+					dappIdsCombined = dappIdsCombined + "," + appIds[idx];
 				}
+				const appReq = await fetchWithBQ(
+					`/dapp/search/${dappIdsCombined}?storeKey=unstoppable-domains-apps-store`
+				);
+				result = appReq.data.data;
 				return result.length
 					? { data: result }
 					: { error: result.error as FetchBaseQueryError };
