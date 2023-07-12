@@ -620,19 +620,25 @@ export default function Layout(props) {
                             </Row>
                             <Slider ref={slider} {...settings}>
                                 {data
-                                    ? data.map((dapp) => (
-                                        <Link
-                                            key={app.dappId}
-                                            href={`/dapp?id=${dapp.dappId}`}
-                                            draggable={false}
-                                            onClick={(e) =>
-                                                dragging &&
-                                                e.preventDefault()
-                                            }
-                                        >
-                                            <FeaturedCard app={dapp} />
-                                        </Link>
-                                    ))
+                                    ? data.map((dapp) => {
+                                        console.log("dapp", dapp)
+                                        if (dapp) {
+                                            return (
+                                                <Link
+                                                    key={dapp.dappId ?? ""}
+                                                    href={`/dapp?id=${dapp.dappId ?? ""}`}
+                                                    draggable={false}
+                                                    onClick={(e) =>
+                                                        dragging &&
+                                                        e.preventDefault()
+                                                    }
+                                                >
+                                                    <FeaturedCard app={dapp} />
+                                                </Link>
+                                            )
+                                        }
+
+                                    })
                                     : buildLoadingCard(5)}
                             </Slider>
                         </div>
