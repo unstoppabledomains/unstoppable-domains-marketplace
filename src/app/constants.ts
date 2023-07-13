@@ -64,11 +64,6 @@ const bannerScript: string = ` // Create the banner element
                     var banner = document.createElement("div");
                     banner.id = "floating-banner";
 
-
-
-                    var banner = document.createElement("div");
-                    banner.id = "floating-banner";
-
                     // Create the close button
                     var closeButton = document.createElement("span");
                     closeButton.innerHTML = "X";
@@ -78,15 +73,8 @@ const bannerScript: string = ` // Create the banner element
                     closeButton.addEventListener("click", function() {
                     banner.style.display = "none";
                     });
-                        // Create the close button
-                    var closeButton = document.createElement("span");
-                    closeButton.innerHTML = "X";
-                    closeButton.style.float = "right";
-                    closeButton.style.cursor = "pointer";
-                    closeButton.style.fontWeight = "bold";
-                    closeButton.addEventListener("click", function() {
-                    banner.style.display = "none";
-                    });
+                    // Create the close button
+
                     banner.style.position = "fixed";
                     banner.style.bottom = "10px";
                     banner.style.right = "20px";
@@ -103,7 +91,7 @@ const bannerScript: string = ` // Create the banner element
 
                     // Create the main text
                     var mainText = document.createElement("div");
-                    mainText.innerHTML = 'Get 30%* off <span class="domain-text">.polygon domains</span> through August 13th. <a href="#" id="promo-link">Go here</a>.';
+                    mainText.innerHTML = 'Get 30%* off <span class="domain-text">.polygon domains</span> through August 13th. <a target="_blank" href="#" id="promo-link"><b><u>Go here</b></u></a>.';
                     mainText.style.marginBottom = "10px";
 
                     // Create the small text
@@ -125,7 +113,7 @@ const bannerScript: string = ` // Create the banner element
                     var urlParameters = {
                     utm_source: urlParams.get("utm_source") || "",
                     utm_medium: urlParams.get("utm_medium") || "",
-                    utm_campaign: "marketplace",
+                    utm_campaign: "Unstoppable%20Marketplace",
                     code: "UDMARKETPLACELAUNCH",
                     ref: urlParams.get("ref") || ""
                     };
@@ -135,6 +123,7 @@ const bannerScript: string = ` // Create the banner element
                     })
                     .join("&");
                     promoLink.href = "https://unstoppabledomains.com/?" + queryString;
+
 
                     // Adjust banner position on scroll
                     // function adjustBannerPosition() {
