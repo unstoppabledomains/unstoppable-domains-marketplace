@@ -360,7 +360,7 @@ function DappList(props) {
                                           33vw"
                                     style={{ aspectRatio: 1 }}
                                     fill={true}
-                                    src={dApp.images.logo}
+                                    src={dApp.images?.logo}
                                     className="rounded-lg w-[64px] lg:w-[64px] "
                                     alt="" />
                             </div>

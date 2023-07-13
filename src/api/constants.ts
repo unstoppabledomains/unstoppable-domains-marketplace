@@ -13,6 +13,8 @@ export const UD_REDIRECT_URL = process.env.NEXT_PUBLIC_UD_REDIRECT_URL;
 export const UD_KEY_SCOPE = process.env.NEXT_PUBLIC_UD_KEY_SCOPE;
 
 export const MEROKU_API_KEY = process.env.NEXT_PUBLIC_MEROKU_API_KEY;
+export const STORE_KEY = process.env.NEXT_PUBLIC_UD_STORE_KEY;
+
 // export const BASE_URL = `${API_HOST}/${API_PATH}/${API_VERSION}`;
 
 export const ApiEndpoints = {
