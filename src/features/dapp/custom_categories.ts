@@ -6,23 +6,13 @@ export const categories = {
   message: "success",
   data: [
     {
-      category: "B2B",
-      subCategory: [],
-    },
-    {
       category: "Utility",
       subCategory: [],
     },
     {
       category: "Tooling",
       subCategory: [
-        "Security",
-        "Monitoring",
-        "Storage",
-        "Front Ends",
         "Messaging",
-        "Block Explorers",
-        "Indexer",
         "Wallet",
       ],
     },
@@ -34,11 +24,7 @@ export const categories = {
       category: "Infrastructure",
       subCategory: [
         "Oracles",
-        "Node Infra",
-        "Bridges",
         "Identity",
-        "Payments",
-        "Analytics",
         "On-Ramp/Off-Ramp",
       ],
     },
@@ -49,43 +35,24 @@ export const categories = {
     {
       category: "Gaming",
       subCategory: [
-        "Puzzle and strategy games",
-        "Action and adventure games",
-        "First-person action games",
-        "Role-playing games (RPG)",
-        "Sports and racing games",
-        "Simulation games",
-        "Studios",
       ],
     },
     {
       category: "NFT",
       subCategory: [
         "Marketplace",
-        "Music",
-        "Domain Names",
         "PFPs",
-        "Social Graph",
-        "Art",
         "NFT Tooling / Infra",
       ],
     },
     {
       category: "DAO",
-      subCategory: ["Investing", "Tooling", "DAO - Misc"],
+      subCategory: [],
     },
     {
       category: "DeFi",
       subCategory: [
-        "Stablecoins",
         "Decentralized Exchanges",
-        "Lending and Borrowing",
-        "Liquid Staking",
-        "Yield Aggregation / Farming",
-        "Derivatives, Perps, Trading",
-        "Real World Assets / Tokenization",
-        "Insurance",
-        "Prediction Markets",
         "DeFi - Other",
       ],
     },

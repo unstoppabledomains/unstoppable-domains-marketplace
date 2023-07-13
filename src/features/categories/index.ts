@@ -209,67 +209,34 @@
 //   }`;
 
 var dappstoreMaping = `{
-  "B2B": "business",
 
   "DAO": "productivity.decentralized-collaboration-tools",
-  "DAO.DAO - Misc": "productivity.decentralized-collaboration-tools-misc",
-  "DAO.Investing": "productivity.decentralized-collaboration-tools-investing",
-  "DAO.Tooling": "productivity.decentralized-collaboration-tools-tools",
 
   "DeFi": "finance.defi",
   "DeFi.Decentralized Exchanges": "finance.exchanges",
-  "DeFi.Derivatives, Perps, Trading": "finance.trading",
-  "DeFi.Insurance": "finance.insurance",
-  "DeFi.Lending and Borrowing": "finance.lending-and-borrowing",
-  "DeFi.Liquid Staking": "finance.liquid-staking",
-  "DeFi.Prediction Markets": "finance.prediction-markets",
-  "DeFi.Real World Assets / Tokenization": "finance.tokenization",
-  "DeFi.Stablecoins": "finance.stablecoins",
-  "DeFi.Yield Aggregation / Farming": "finance.farming",
   "DeFi.DeFi - Other": "finance.others",
 
   "Education": "education",
 
   "Gaming": "games",
-  "Gaming.Action and adventure games": "games.adventure",
-  "Gaming.First-person action games": "games.action",
-  "Gaming.Puzzle and strategy games": "games.puzzle",
-  "Gaming.Role-playing games (RPG)": "games.role-playing",
-  "Gaming.Simulation games": "games.simulation",
-  "Gaming.Sports and racing games": "games.racing",
-  "Gaming.Studios": "games.studios",
 
   "Infrastructure": "developer-tools.developer-infra",
-  "Infrastructure.Analytics": "developer-tools.analytics",
-  "Infrastructure.Bridges": "developer-tools.bridges",
   "Infrastructure.Identity": "developer-tools.identity",
   "Infrastructure.Indexer": "developer-tools.indexer",
-  "Infrastructure.Node Infra": "developer-tools.node-infra",
   "Infrastructure.Oracles": "developer-tools.oracles",
-  "Infrastructure.Payments": "finance.payments",
   "Infrastructure.Block Explorers": "developer-tools.block-explorer",
   "Infrastructure.Storage": "developer-tools.storage",
 
   "Metaverse": "games.metaverse",
 
   "NFT": "nft",
-  "NFT.Art": "nft.art",
-  "NFT.Domain Names": "nft.domain-names",
   "NFT.Marketplace": "nft.nft-marketplaces",
-  "NFT.Music": "entertainment.music",
   "NFT.PFPs": "nft.peps",
-  "NFT.Social Graph": "social-networking.social-graph",
   "NFT.Tooling / Infra": "nft.tooling",
 
   "Social": "social-networking",
 
   "Tooling": "developer-tools",
-  "Tooling.Block Explorers": "developer-tools.block-explorer",
-  "Tooling.Front Ends": "developer-tools.front-ends",
-  "Tooling.Indexer": "developer-tools.indexer",
-  "Tooling.Monitoring": "developer-tools.monitoring",
-  "Tooling.Security": "developer-tools.security",
-  "Tooling.Storage": "developer-tools.storage",
   "Tooling.Messaging": "social-networking.messaging",
   "Tooling.Wallet": "utilities.wallets",
 
@@ -355,4 +322,5 @@ const customToMerokuCategory = (
 //   return othersList;
 // };
 
-export { polygonMappedList, customToMerokuCategory };
+export { customToMerokuCategory, polygonMappedList };
+
