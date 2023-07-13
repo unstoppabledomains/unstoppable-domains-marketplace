@@ -1,10 +1,10 @@
-import UAuth, { UserInfo } from "@uauth/js";
-import { UD_AUTH_KEY, UD_KEY_SCOPE, UD_REDIRECT_URL } from "../../api/constants";
+import UAuth from "@uauth/js";
+import { UD_AUTH_KEY, UD_REDIRECT_URL } from "../../api/constants";
 
 export const uauth = new UAuth({
     clientID: UD_AUTH_KEY ?? "cc720d3c-4eb6-4f04-9b18-9018f5537fff",
     redirectUri: UD_REDIRECT_URL ?? "http://localhost:3000",
-    scope: UD_KEY_SCOPE ?? "openid wallet"
+    scope: "openid wallet profile"
 });
 export const connectWithUd = async () => {
     try {
