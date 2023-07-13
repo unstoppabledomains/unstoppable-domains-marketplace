@@ -67,7 +67,7 @@ function NavBar(props) {
                                 <div className="px-[10px] pt-[1px] align-middle" >
                                     {userInfo?.picture === undefined ? <RandomAvatar name={
                                         userInfo?.wallet_address
-                                    } size={20} /> : <NXTImage width={20} height={20} src={userInfo.picture} alt={""} />}
+                                    } size={20} /> : <NXTImage width={20} unoptimized={true} height={20} src={userInfo.picture} alt={""} />}
                                 </div>
                                 {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
                                 <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
@@ -115,7 +115,7 @@ function ProfileModal(props) {
                     <div className="flex p-[40px] justify-center" >
                         {userInfo?.picture === undefined ? <RandomAvatar name={
                             userInfo?.wallet_address
-                        } size={60} /> : <NXTImage width={60} height={60} src={userInfo.picture} alt={""} />}
+                        } size={60} /> : <NXTImage width={60} height={60} unoptimized={true} src={userInfo.picture} alt={""} />}
                     </div>
                     <Column className="justify-center text-center gap-y-[8px] input mb-[10px]" >
                         <label className="text-center text-[25px]" htmlFor="">{userInfo?.sub}</label>
