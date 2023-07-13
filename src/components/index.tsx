@@ -68,7 +68,7 @@ function ClaimButton(props) {
 
 function RImage(props) {
     const imgRef = useRef(null);
-    const [src, setSrc] = useState(props.placeholder || '/assets/images/icon_placeholder.png');
+    const [src, setSrc] = useState(props.placeholder || '/assets/images/icon_placeholder.jpg');
     useEffect(() => {
         const img: any = imgRef.current;
         // console.log(img.src, src)
