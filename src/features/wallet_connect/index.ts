@@ -11,7 +11,7 @@ export const connectWithUd = async () => {
         const authorization = await uauth.loginWithPopup();
         if (authorization) {
             const user = await uauth.user();
-            console.log("User", user)
+            console.log("User ", user)
             return user;
         }
         return undefined;
