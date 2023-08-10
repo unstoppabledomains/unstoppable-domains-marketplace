@@ -164,7 +164,7 @@ export class DappDataSource implements IDappDataSource {
 				const filteredList = list.find(
 					(dapp) => dapp.key === STORE_KEY
 				);
-				const appIds = filteredList.dappIds.slice(0, 11);
+				const appIds = filteredList.dappIds;
 				let result = <any>[];
 				const appReq = await fetchWithBQ(
 					`/dapp/search/${appIds.join(",")}?storeKey=${STORE_KEY}`
