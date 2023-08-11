@@ -60,7 +60,7 @@ const posConfig: AppConfig = {
     },
 };
 
-const bannerScript: string = ` // Create the banner element
+const bannerScript: string = ''; /*` // Create the banner element
                     var banner = document.createElement("div");
                     banner.id = "floating-banner";
 
@@ -140,6 +140,7 @@ const bannerScript: string = ` // Create the banner element
 
                     // window.addEventListener("scroll", adjustBannerPosition);
                     // adjustBannerPosition();`;
+                    */
 const analyticsScript = ` window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
