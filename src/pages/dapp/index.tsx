@@ -349,7 +349,7 @@ function DappList(props) {
                     <span className="text-2xl">{AppStrings.allDapps}</span>
                 </div>
                 {dApp.images.banner && <div className="z-0 relative top-[16px] lg:top-[48px] w-full h-[200px] lg:h-[400px]">
-                    <Image src={dApp.images.banner === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png' ?
+                    <Image src={(dApp?.images?.banner === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png' || dApp?.images?.banner === 'https://dgshe1iny46ip.cloudfront.net/Banner.png') ?
                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-banner.png' :
                         dApp.images.banner}
                         placeholder={"/assets/images/banner_placeholder.png"} fill={true} alt="DApp Banner" className="aspect-video	rounded-lg object-cover	" />
@@ -363,7 +363,7 @@ function DappList(props) {
                                           33vw"
                                     style={{ aspectRatio: 1 }}
                                     fill={true}
-                                    src={dApp.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' ?
+                                    src={(dApp?.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' || dApp?.images?.logo === 'https://dgshe1iny46ip.cloudfront.net/icon.png') ?
                                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-logo.jpg' :
                                         dApp.images?.logo
                                     }
@@ -401,7 +401,7 @@ function DappList(props) {
                     {dApp.images.screenshots?.length && (<>
                         <DappDetailSection title={AppStrings.gallery}>
                             <div className="grid grid-cols-3 gap-4">
-                                {dApp.images.screenshots?.map((e, idx) => <img key={idx} src={(e || '') === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png' ? 'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-screenshot.jpg' : e} alt="DApp Screenshot" />)}
+                                {dApp.images.screenshots?.map((e, idx) => <img key={idx} src={((e || '') === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png' || (e || '') === 'https://dgshe1iny46ip.cloudfront.net/screenshots.png') ? 'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-screenshot.jpg' : e} alt="DApp Screenshot" />)}
                             </div>
                         </DappDetailSection>
                         <Divider />

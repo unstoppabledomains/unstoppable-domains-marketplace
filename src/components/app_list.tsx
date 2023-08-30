@@ -27,7 +27,7 @@ export function AppList(props) {
             {(props.data?.length ?? false) ? props.data.map((app: Dapp) => <Link key={app.dappId} href={`/dapp?id=${app.dappId}`}> <Card key={app.dappId}>
                 {/* <Link href={}> */}
                 <Row className="justify-between">
-                    <Image src={app.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' ?
+                    <Image src={(app?.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' || app?.images?.logo === 'https://dgshe1iny46ip.cloudfront.net/icon.png') ?
                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-logo.jpg' :
                         app.images?.logo} width={64} height={64} className="rounded-lg" alt="" />
                     <Row className="items-start gap-[6px]">
