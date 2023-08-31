@@ -87,9 +87,9 @@ function DownloadButton(props) {
     const { href, dApp } = props;
     const { data, isLoading, isFetching } = useGetBuildDownloadUrlQuery(dApp.dappId)
     if (isLoading || isFetching) return null;
-    console.log(dApp.dappId)
-    console.log(href)
-    console.log(data, isLoading, isFetching);
+    // console.log(dApp.dappId)
+    // console.log(href)
+    // console.log(data, isLoading, isFetching);
     const downloadAvailable = dApp.availableOnPlatform.includes('android') || dApp.availableOnPlatform.includes('ios');
     const classnames = classNames({
         'text-[#ddd]': !downloadAvailable,
@@ -167,7 +167,7 @@ function ReviewDialog(props) {
         userAddress: address,
     } as Review);
     const onSubmit = (evt) => {
-        console.log(result.isUpdating)
+        // console.log(result.isUpdating)
 
         postReview({ ...review, rating: review.rating ?? 0 }).unwrap().then(_ => {
             props.onRequestClose();
@@ -175,7 +175,7 @@ function ReviewDialog(props) {
             console.log(err);
             setErrors(err)
         });
-        console.log(result.isUpdating);
+        // console.log(result.isUpdating);
     }
 
     if (errors) {
@@ -288,7 +288,7 @@ function DappList(props) {
         refetchOnMountOrArgChange: false
     });
     const userInfo: UserInfo | undefined = useSelector(getUserInfo);
-    console.log("userInfo", userInfo);
+    // console.log("userInfo", userInfo);
     const address: string | undefined = userInfo?.wallet_address;
     // const { address } = useAccount();
 

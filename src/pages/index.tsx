@@ -48,7 +48,7 @@ const Index = (props) => {
     }
 
     const handlePageChange = (pageData) => {
-        console.log("On Page change", pageData)
+        // console.log("On Page change", pageData)
         let selected = pageData.selected;
         app.chainId === 137 ? setPage(selected) : setPage2(selected);
         router.push('/#allDappsScroll')

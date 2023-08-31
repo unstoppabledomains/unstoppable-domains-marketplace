@@ -52,7 +52,7 @@ function CategoriesList(props) {
     // since now data is being merge in RTK itself
     useEffect(() => {
         if (data) {
-            console.log("data", data);
+            // console.log("data", data);
             setItems([...data?.response])
             setDataPage(data.page)
         }
@@ -63,7 +63,7 @@ function CategoriesList(props) {
     }
 
     const handlePageChange = (pageData) => {
-        console.log("On Page change", pageData)
+        // console.log("On Page change", pageData)
         let selected = pageData.selected;
         setPage(selected);
         router.push('#allDappsScroll')
@@ -100,8 +100,8 @@ function CategoriesList(props) {
                 </div>
             </PageLayout>
     }
-    console.log("data", data)
-    console.log("page", page)
+    // console.log("data", data)
+    // console.log("page", page)
 
     child = (<AppList data={items}>
     </AppList>);

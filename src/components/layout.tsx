@@ -25,7 +25,7 @@ import { FeaturedCard, SliderButton } from "./card";
 function NavBar(props) {
     const app = useSelector(getApp);
     const userInfo: UserInfo | undefined = useSelector(getUserInfo);
-    console.log("userInfo", userInfo);
+    // console.log("userInfo", userInfo);
     const dispatch = useDispatch();
     const router = useRouter();
     // const onAppConfigClick = (app) => {
@@ -147,7 +147,7 @@ function ExpansionPanel(props) {
     // const [isExpanded, setExpanded] = useState<boolean>(open);
     const isExpanded = open;
     const hasSubCategories = props.category.subCategory.length > 0;
-    console.log(category.category, open)
+    // console.log(category.category, open)
     return (
         <div className={`pr-4  `}>
 
@@ -621,7 +621,7 @@ export default function Layout(props) {
                             <Slider ref={slider} {...settings}>
                                 {data
                                     ? data.map((dapp) => {
-                                        console.log("dapp", dapp)
+                                        // console.log("dapp", dapp)
                                         if (dapp) {
                                             return (
                                                 <Link
