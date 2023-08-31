@@ -384,8 +384,8 @@ function CategoryListSmall(props) {
                         {...attributes.popper} className="cursor-pointer z-10">
                         <Card>
                             {
-                                e.subCategory.map((f) => {
-                                    return <p key={JSON.stringify(e)} onClick={(evt) => {
+                                e.subCategory.map((f: string, index: number) => {
+                                    return <p key={index} onClick={(evt) => {
                                         evt.stopPropagation()
                                         router.push(`/categories/?categories=${e.category}&subCategory=${f.toString()}`, undefined, { shallow: true });
                                         setSelected(f);
@@ -539,7 +539,7 @@ export default function Layout(props) {
     function buildLoadingCard(number: number) {
         let output = Array<React.JSX.Element>();
         for (let i = 0; i < number; i++) {
-            output.push(<div className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />)
+            output.push(<div key={i} className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />)
         }
         return output
     }
