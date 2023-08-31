@@ -251,8 +251,19 @@ var polygonMappedList: string[] = [];
 
 // merokuAPIData.map((e) => merokuCategoryList.push(e.category));
 
-(Object.values(dappstoreMapingData) as string[]).map((e) => {
-  polygonMappedList.push(e.split(".")[0]);
+// Get de-deuplicated list of mapped categories
+(Object.values(dappstoreMapingData) as string[]).map((c) => {
+  if (Array.isArray(c)) {
+    for (var i = 0; i < c?.length; i++) { 
+      if (!polygonMappedList.some(e => e === c[i].split(".")[0])) {
+        polygonMappedList.push(c[i].split(".")[0]);
+      }
+    }
+  } else {
+    if (!polygonMappedList.some(e => e === c.split(".")[0])) {
+      polygonMappedList.push(c.split(".")[0]);
+    }
+  }
 });
 
 // var othersList: string[] = merokuCategoryList.filter(
@@ -261,7 +272,7 @@ var polygonMappedList: string[] = [];
 
 interface CatSubCat {
   category: string | string[];
-  subCategory?: string;
+  subCategory?: string | string[];
 }
 
 // Create a Map object to be passed
@@ -283,7 +294,9 @@ const customToMerokuCategory = (
   var merokuCategoryList: string[] = [];
 
   if (merokuData !== undefined) {
+    // Get de-duplicated list of categories for dapps on store
     merokuData.data.map((e) => merokuCategoryList.push(e.category));
+    // Get de-duplicated list of categories for dapps on store without a mapping
     var othersList: string[] = merokuCategoryList.filter(
       (value) => !polygonMappedList.includes(value.toLowerCase())
     );
@@ -297,15 +310,32 @@ const customToMerokuCategory = (
   const key = subCategory
     ? [category, subCategory].join(".")
     : (category as string);
+  // Get Polygon mapping for custom category name
   const value = mapping.get(key);
   if (value) {
-    const [c, sc] = value.split(".");
-    output["category"] = c;
-    if (sc) {
-      output["subCategory"] = sc;
+    // If mapping is a list, iterate list, seperate categories / subcategories, and de-duplicate
+    if (Array.isArray(value)) {
+      output["category"] = [];
+      output["subCategory"] = [];
+      for (var i = 0; i < value?.length; i++) {
+        const [c, sc] = value[i].split(".");
+        if (!output["category"].some(e => e === c)) {
+          output["category"].push(c);
+        }
+        if (sc) {
+          if (!output["subCategory"].some(e => e === sc)) {
+            output["subCategory"].push(sc);
+          }
+        }
+      }
+    } else {
+      const [c, sc] = value.split(".");
+      output["category"] = c;
+      if (sc) {
+        output["subCategory"] = sc;
+      }
     }
   }
-
   return output;
 };
 // const getOthersCategoryList = (
