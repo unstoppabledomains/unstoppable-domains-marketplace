@@ -29,7 +29,7 @@ export function AppList(props) {
                 <Row className="justify-between">
                     <Image src={(app?.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' || app?.images?.logo === 'https://dgshe1iny46ip.cloudfront.net/icon.png') ?
                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-logo.jpg' :
-                        app.images?.logo} width={64} height={64} className="rounded-lg" alt="" />
+                        app.images?.logo} width={64} height={64} className="rounded-lg" alt="" unoptimized={true}/>
                     <Row className="items-start gap-[6px]">
                         {app.tags?.slice(0, 3).map((e, index) => <Tag key={index}>{e}</Tag>)}
                     </Row>

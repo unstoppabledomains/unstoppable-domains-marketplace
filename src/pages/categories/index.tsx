@@ -132,7 +132,7 @@ function CategoriesList(props) {
                     breakLabel=".."
                     nextLabel={<div className="mt-2" >
                         <svg className={data.pageCount === page + 1 ? 'stroke-[#212026]' : 'stroke-[#E2E1E6]'} width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 13L7 7L1 1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
 
                     </div>}
@@ -143,7 +143,7 @@ function CategoriesList(props) {
                     pageCount={data.pageCount}
                     previousLabel={<div className="mt-2" >
                         <svg className={page == 0 ? 'stroke-[#212026]' : 'stroke-[#E2E1E6]'} width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 13L1 7L7 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M7 13L1 7L7 1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
 
                     </div>}

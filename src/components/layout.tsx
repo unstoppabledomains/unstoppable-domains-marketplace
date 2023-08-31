@@ -365,11 +365,11 @@ function CategoryListSmall(props) {
                                     setSelected('');
                                     setOpenKey('');
                                 }}>
-                                    <path d="M1 1L11 11M11 1L1 11" stroke="#E2E1E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1 1L11 11M11 1L1 11" stroke="#E2E1E6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 :
                                 <svg className={`self-center ml-[16px] ${((openKey === e.category) && isOpen) ? "rotate-180" : " "}`} width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 9.5L12 15.5L18 9.5" stroke="#E2E1E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 9.5L12 15.5L18 9.5" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
                             : <></>
@@ -470,8 +470,8 @@ export function PageLayout(props) {
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5M22 12.5C22 6.97715 17.5228 2.5 12 2.5M22 12.5H2M12 22.5C6.47715 22.5 2 18.0228 2 12.5M12 22.5C14.5013 19.7616 15.9228 16.208 16 12.5C15.9228 8.79203 14.5013 5.23835 12 2.5M12 22.5C9.49872 19.7616 8.07725 16.208 8 12.5C8.07725 8.79203 9.49872 5.23835 12 2.5M2 12.5C2 6.97715 6.47715 2.5 12 2.5"
-                                            stroke="#E2E1E6" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                            stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round"
+                                            strokeLinejoin="round" />
                                     </svg>
                                     <span className="text-xl">{AppStrings.browsingHistory}</span>
                                 </Link>
