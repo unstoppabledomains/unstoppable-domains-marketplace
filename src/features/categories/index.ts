@@ -207,42 +207,33 @@
 //       }
 //     ]
 //   }`;
-
+ //,"developer-tools.identity"
 var dappstoreMaping = `{
+  
+  "Utilities": ["utilities.file-management","utilities.browsers","utilities.security-and-privacy"], 
 
-  "DAO": "productivity.decentralized-collaboration-tools",
+  "Messaging": "social-networking.messaging",
 
-  "DeFi": "finance.defi",
-  "DeFi.Decentralized Exchanges": "finance.exchanges",
-  "DeFi.DeFi - Other": "finance.others",
+  "Wallets": "utilities.wallets",
 
-  "Education": "education",
-
-  "Gaming": "games",
-
-  "Infrastructure": "developer-tools.developer-infra",
-  "Infrastructure.Identity": "developer-tools.identity",
-  "Infrastructure.Indexer": "developer-tools.indexer",
-  "Infrastructure.Oracles": "developer-tools.oracles",
-  "Infrastructure.Block Explorers": "developer-tools.block-explorer",
-  "Infrastructure.Storage": "developer-tools.storage",
+  "Infrastructure": ["developer-tools","finance.ramp"],
 
   "Metaverse": "games.metaverse",
 
-  "NFT": "nft",
-  "NFT.Marketplace": "nft.nft-marketplaces",
-  "NFT.PFPs": "nft.peps",
-  "NFT.Tooling / Infra": "nft.tooling",
+  "Gaming": ["games.strategy","games.simulation","games.role-playing","games.studios","games.action","games.racing","games.adventure","games.puzzle","games.board","games.word"],
 
-  "Social": "social-networking",
+  "NFT Marketplaces": "nft.nft-marketplaces",
 
-  "Tooling": "developer-tools",
-  "Tooling.Messaging": "social-networking.messaging",
-  "Tooling.Wallet": "utilities.wallets",
+  "NFT Projects": ["nft.art","nft.tooling","nft.pfps"],
 
-  "Utility": "utilities",
+  "Domains": ["nft.domain-names"],
+
+  "DAO": ["productivity.decentralized-collaboration-tools","productivity.decentralized-collaboration-tools-investing"],
+
+  "DeFi": ["finance.exchanges","finance.defi","finance.others"],
+
+  "Education": "education"
   
-  "Infrastructure.On-Ramp/Off-Ramp": "finance.ramp"
 }`;
 // var merokuAPIData = JSON.parse(merokuJsonString).data;
 var dappstoreMapingData = JSON.parse(dappstoreMaping);
