@@ -45,45 +45,55 @@ function NavBar(props) {
             className="py-4 pr-[10px] pl-[5px] border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
             <div className="flex-initial">
                 <NavItem href="/">
-                    <NXTImage width={App.logo.width} height={App.logo.height} src={App.logo.src} style={{ objectFit: "contain", height: App.logo.height }}
-                        alt={`${App.name} Logo`} />
+                    <NXTImage width={App.marketLogo.width} height={App.marketLogo.height} src={App.marketLogo.src} style={{ objectFit: "contain", height: App.marketLogo.height }}
+                        alt={`${App.marketName} Logo`} />
 
                 </NavItem >
-            </div >
-            {userInfo === undefined ?
-                <Button onClick={async () => {
-                    const user = await connectWithUd();
-                    if (user) {
-                        dispatch(setUserInfo(user))
-                    }
-                }}>Login</Button>
-                : <div className="flex">
-                    <button className="px-[10px]" onClick={() => {
-                        setProfileModalOpen(true)
-                    }}>
-
-                        <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
-                            <div className="flex align-middle pr-[10px] pt-[2px]">
-                                <div className="px-[10px] pt-[1px] align-middle" >
-                                    {userInfo?.picture === undefined ? <RandomAvatar name={
-                                        userInfo?.wallet_address
-                                    } size={20} /> : <NXTImage width={20} unoptimized={true} height={20} src={userInfo.picture} alt={""} />}
-                                </div>
-                                {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
-                                <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
-
-                            </div>
-                        </div>
-
-                    </button>
+            </div>
+            <div className="flex flex-row">
+                {userInfo === undefined ?
                     <Button onClick={async () => {
-                        await logoutUD();
-                        dispatch(setUserInfo(undefined))
-                    }}>   Logout</Button></div>
+                        const user = await connectWithUd();
+                        if (user) {
+                            dispatch(setUserInfo(user))
+                        }
+                    }}>Login</Button>
+                    : <div className="flex">
+                        <button className="px-[10px]" onClick={() => {
+                            setProfileModalOpen(true)
+                        }}>
 
-                // {(userInfo as UserInfo).wallet_address}
+                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                                <div className="flex align-middle pr-[10px] pt-[2px]">
+                                    <div className="px-[10px] pt-[1px] align-middle" >
+                                        {userInfo?.picture === undefined ? <RandomAvatar name={
+                                            userInfo?.wallet_address
+                                        } size={20} /> : <NXTImage width={20} unoptimized={true} height={20} src={userInfo.picture} alt={""} />}
+                                    </div>
+                                    {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
+                                    <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
 
-            }
+                                </div>
+                            </div>
+
+                        </button>
+                        <Button onClick={async () => {
+                            await logoutUD();
+                            dispatch(setUserInfo(undefined))
+                        }}>   Logout</Button></div>
+
+                    // {(userInfo as UserInfo).wallet_address}
+
+                }
+                <div>
+                    <NavItem href="https://unstoppabledomains.com/">
+                        <NXTImage width={App.homePageLogo.width} height={App.homePageLogo.height} src={App.homePageLogo.src} style={{ objectFit: "contain", height: App.homePageLogo.height }}
+                            alt={`${App.homePage} Logo`} />
+
+                    </NavItem >
+                </div >
+            </div>
+            
             {isProfileModalOpen &&
                 <div className="fixed top-0 left-0 bg-[#00000080]" >
                     <div className="h-screen flex items-center justify-center w-screen">
@@ -496,8 +506,10 @@ export function PageLayout(props) {
             {/* <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-transparent w-[70vw] rounded-full fixed -bottom-[30vw] -right-[30vw] h-[70vw] -z-10"></div>
              <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-[#0a090d] w-[70vw] rounded-full fixed -bottom-[10vw] right-[10vw] h-[40vw] -z-20"></div> */}
             <div className=" ">
-                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
-                    alt={`${App.name} Logo`} />
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.homePageLogo.width} height={App.homePageLogo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
+                    alt={`${App.homePage} Logo`} />
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.marketLogo.width} height={App.marketLogo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
+                    alt={`${App.marketName} Logo`} />
             </div>
 
         </article>
@@ -535,6 +547,25 @@ export default function Layout(props) {
             }
         ]
     };
+
+    const metrics = [
+        {
+          title: 3700000,
+          description: "Domains Registered",
+        },
+        {
+          title: 310,
+          description: "Coins + Tokens Supported",
+        },
+        {
+          title: 865,
+          description: "Integrations",
+        },
+        {
+          title: 1000,
+          description: "Partners",
+        },
+      ];
 
     function buildLoadingCard(number: number) {
         let output = Array<React.JSX.Element>();
@@ -643,8 +674,20 @@ export default function Layout(props) {
                             </Slider>
                         </div>
 
-                    </div>}
+                        <div id="stats" className="bg-white mt-10 w-full">
+                            <div className="mx-auto w-[75%] max-w-[1344px] justify-center flex flex-col md:flex-row pt-10 pb-10 md:pt-24 md:pb-24">
+                                {metrics.map((metric) => (
+                                <div className="text-center flex flex-col mx-auto md:pr-4 md:pl-4" key={metric.description}>
+                                    <div className="font-[900] md:text-[3rem] lg:text-[4.5rem] text-[2rem] mb-1 text-slate-900">
+                                        {parseInt(`${metric.title}`, 10).toLocaleString()}
+                                    </div>
+                                    <div className="text-[1.25rem] text-slate-900">{metric.description}</div>
+                                </div>
+                                ))}
+                            </div>
+                        </div>
 
+                    </div>}
 
                     <div className={` ${router.pathname === '/' ? `pt-[70px]` : `pt-[45px]`}`} id="allDappsScroll" />
 
