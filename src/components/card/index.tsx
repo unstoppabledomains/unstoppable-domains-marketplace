@@ -39,7 +39,7 @@ export function ReviewCard(props) {
     const date = new Date(Date.parse(review.updatedAt))
     return <Card className="h-auto" >
         <Row className="justify-between">
-            <p>{review.userId}<span className="text-[#87868C]">&#x2022; {`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}</span></p>
+            <p>{review.userId}<span className="text-[#87868C]">&#x2022; {`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`}</span></p>
             <StarRating rating={review.rating} />
         </Row>
         <p className="text-[14px] leading-[21px] font-[500] text-[#87868C]">{review.comment}</p>
