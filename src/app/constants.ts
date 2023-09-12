@@ -1,10 +1,17 @@
 export const App = {
-    name: "Web Store",
-    logo: {
+    homePage: "Unstoppable Domains",
+    homePageLogo: {
         height: 42,
         width: 165,
-        src: "/logo_transparent.png",
+        src: "/udlogo_transparent.png",
     },
+    marketName: "Web Store",
+    marketLogo: {
+        height: 42,
+        width: 165,
+        src: "/marketlogo_transparent.png",
+    },
+    
     menu: [
         // {
         //     'href': '/',
@@ -53,8 +60,8 @@ const posConfig: AppConfig = {
         subtitle:
             "Your gateway to endless opportunities for utilizing your Web3 domain, all in one destination.",
         button: {
-            text: "Partner? Submit App",
-            href: "https://app.meroku.org",
+            text: "Become a Partner",
+            href: "https://unstoppableweb.co/3L8fteG",
         },
         video: "https://player.vimeo.com/video/791153898?h=da72488da5",
     },

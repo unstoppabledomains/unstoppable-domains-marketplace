@@ -207,42 +207,33 @@
 //       }
 //     ]
 //   }`;
-
+ //,"developer-tools.identity"
 var dappstoreMaping = `{
+  
+  "Utilities": ["utilities.file-management","utilities.browsers","utilities.security-and-privacy"], 
 
-  "DAO": "productivity.decentralized-collaboration-tools",
+  "Messaging": "social-networking.messaging",
 
-  "DeFi": "finance.defi",
-  "DeFi.Decentralized Exchanges": "finance.exchanges",
-  "DeFi.DeFi - Other": "finance.others",
+  "Wallets": "utilities.wallets",
 
-  "Education": "education",
-
-  "Gaming": "games",
-
-  "Infrastructure": "developer-tools.developer-infra",
-  "Infrastructure.Identity": "developer-tools.identity",
-  "Infrastructure.Indexer": "developer-tools.indexer",
-  "Infrastructure.Oracles": "developer-tools.oracles",
-  "Infrastructure.Block Explorers": "developer-tools.block-explorer",
-  "Infrastructure.Storage": "developer-tools.storage",
+  "Infrastructure": ["developer-tools","finance.ramp"],
 
   "Metaverse": "games.metaverse",
 
-  "NFT": "nft",
-  "NFT.Marketplace": "nft.nft-marketplaces",
-  "NFT.PFPs": "nft.peps",
-  "NFT.Tooling / Infra": "nft.tooling",
+  "Gaming": ["games.strategy","games.simulation","games.role-playing","games.studios","games.action","games.racing","games.adventure","games.puzzle","games.board","games.word"],
 
-  "Social": "social-networking",
+  "NFT Marketplaces": "nft.nft-marketplaces",
 
-  "Tooling": "developer-tools",
-  "Tooling.Messaging": "social-networking.messaging",
-  "Tooling.Wallet": "utilities.wallets",
+  "NFT Projects": ["nft.art","nft.tooling","nft.pfps"],
 
-  "Utility": "utilities",
+  "Domains": ["nft.domain-names"],
+
+  "DAO": ["productivity.decentralized-collaboration-tools","productivity.decentralized-collaboration-tools-investing"],
+
+  "DeFi": ["finance.exchanges","finance.defi","finance.others"],
+
+  "Education": "education"
   
-  "Infrastructure.On-Ramp/Off-Ramp": "finance.ramp"
 }`;
 // var merokuAPIData = JSON.parse(merokuJsonString).data;
 var dappstoreMapingData = JSON.parse(dappstoreMaping);
@@ -251,8 +242,19 @@ var polygonMappedList: string[] = [];
 
 // merokuAPIData.map((e) => merokuCategoryList.push(e.category));
 
-(Object.values(dappstoreMapingData) as string[]).map((e) => {
-  polygonMappedList.push(e.split(".")[0]);
+// Get de-deuplicated list of mapped categories
+(Object.values(dappstoreMapingData) as string[]).map((c) => {
+  if (Array.isArray(c)) {
+    for (var i = 0; i < c?.length; i++) { 
+      if (!polygonMappedList.some(e => e === c[i].split(".")[0])) {
+        polygonMappedList.push(c[i].split(".")[0]);
+      }
+    }
+  } else {
+    if (!polygonMappedList.some(e => e === c.split(".")[0])) {
+      polygonMappedList.push(c.split(".")[0]);
+    }
+  }
 });
 
 // var othersList: string[] = merokuCategoryList.filter(
@@ -261,7 +263,7 @@ var polygonMappedList: string[] = [];
 
 interface CatSubCat {
   category: string | string[];
-  subCategory?: string;
+  subCategory?: string | string[];
 }
 
 // Create a Map object to be passed
@@ -283,7 +285,9 @@ const customToMerokuCategory = (
   var merokuCategoryList: string[] = [];
 
   if (merokuData !== undefined) {
+    // Get de-duplicated list of categories for dapps on store
     merokuData.data.map((e) => merokuCategoryList.push(e.category));
+    // Get de-duplicated list of categories for dapps on store without a mapping
     var othersList: string[] = merokuCategoryList.filter(
       (value) => !polygonMappedList.includes(value.toLowerCase())
     );
@@ -297,15 +301,32 @@ const customToMerokuCategory = (
   const key = subCategory
     ? [category, subCategory].join(".")
     : (category as string);
+  // Get Polygon mapping for custom category name
   const value = mapping.get(key);
   if (value) {
-    const [c, sc] = value.split(".");
-    output["category"] = c;
-    if (sc) {
-      output["subCategory"] = sc;
+    // If mapping is a list, iterate list, seperate categories / subcategories, and de-duplicate
+    if (Array.isArray(value)) {
+      output["category"] = [];
+      output["subCategory"] = [];
+      for (var i = 0; i < value?.length; i++) {
+        const [c, sc] = value[i].split(".");
+        if (!output["category"].some(e => e === c)) {
+          output["category"].push(c);
+        }
+        if (sc) {
+          if (!output["subCategory"].some(e => e === sc)) {
+            output["subCategory"].push(sc);
+          }
+        }
+      }
+    } else {
+      const [c, sc] = value.split(".");
+      output["category"] = c;
+      if (sc) {
+        output["subCategory"] = sc;
+      }
     }
   }
-
   return output;
 };
 // const getOthersCategoryList = (

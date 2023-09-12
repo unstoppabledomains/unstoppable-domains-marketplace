@@ -25,7 +25,7 @@ import { FeaturedCard, SliderButton } from "./card";
 function NavBar(props) {
     const app = useSelector(getApp);
     const userInfo: UserInfo | undefined = useSelector(getUserInfo);
-    console.log("userInfo", userInfo);
+    // console.log("userInfo", userInfo);
     const dispatch = useDispatch();
     const router = useRouter();
     // const onAppConfigClick = (app) => {
@@ -45,45 +45,55 @@ function NavBar(props) {
             className="py-4 pr-[10px] pl-[5px] border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
             <div className="flex-initial">
                 <NavItem href="/">
-                    <NXTImage width={App.logo.width} height={App.logo.height} src={App.logo.src} style={{ objectFit: "contain", height: App.logo.height }}
-                        alt={`${App.name} Logo`} />
+                    <NXTImage width={App.marketLogo.width} height={App.marketLogo.height} src={App.marketLogo.src} style={{ objectFit: "contain", height: App.marketLogo.height }}
+                        alt={`${App.marketName} Logo`} />
 
                 </NavItem >
-            </div >
-            {userInfo === undefined ?
-                <Button onClick={async () => {
-                    const user = await connectWithUd();
-                    if (user) {
-                        dispatch(setUserInfo(user))
-                    }
-                }}>Login</Button>
-                : <div className="flex">
-                    <button className="px-[10px]" onClick={() => {
-                        setProfileModalOpen(true)
-                    }}>
-
-                        <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
-                            <div className="flex align-middle pr-[10px] pt-[2px]">
-                                <div className="px-[10px] pt-[1px] align-middle" >
-                                    {userInfo?.picture === undefined ? <RandomAvatar name={
-                                        userInfo?.wallet_address
-                                    } size={20} /> : <NXTImage width={20} unoptimized={true} height={20} src={userInfo.picture} alt={""} />}
-                                </div>
-                                {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
-                                <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
-
-                            </div>
-                        </div>
-
-                    </button>
+            </div>
+            <div className="flex flex-row">
+                {userInfo === undefined ?
                     <Button onClick={async () => {
-                        await logoutUD();
-                        dispatch(setUserInfo(undefined))
-                    }}>   Logout</Button></div>
+                        const user = await connectWithUd();
+                        if (user) {
+                            dispatch(setUserInfo(user))
+                        }
+                    }}>Login</Button>
+                    : <div className="flex">
+                        <button className="px-[10px]" onClick={() => {
+                            setProfileModalOpen(true)
+                        }}>
 
-                // {(userInfo as UserInfo).wallet_address}
+                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                                <div className="flex align-middle pr-[10px] pt-[2px]">
+                                    <div className="px-[10px] pt-[1px] align-middle" >
+                                        {userInfo?.picture === undefined ? <RandomAvatar name={
+                                            userInfo?.wallet_address
+                                        } size={20} /> : <NXTImage width={20} unoptimized={true} height={20} src={userInfo.picture} alt={""} />}
+                                    </div>
+                                    {/* <div className="align-middle ">AbhimanyuShekhawat.Polygon</div> */}
+                                    <div className="align-middle ">{userInfo?.sub ?? userInfo?.wallet_address}</div>
 
-            }
+                                </div>
+                            </div>
+
+                        </button>
+                        <Button onClick={async () => {
+                            await logoutUD();
+                            dispatch(setUserInfo(undefined))
+                        }}>   Logout</Button></div>
+
+                    // {(userInfo as UserInfo).wallet_address}
+
+                }
+                <div>
+                    <NavItem href="https://unstoppableweb.co/45ZSk6s">
+                        <NXTImage width={App.homePageLogo.width} height={App.homePageLogo.height} src={App.homePageLogo.src} style={{ objectFit: "contain", height: App.homePageLogo.height }}
+                            alt={`${App.homePage} Logo`} />
+
+                    </NavItem >
+                </div >
+            </div>
+            
             {isProfileModalOpen &&
                 <div className="fixed top-0 left-0 bg-[#00000080]" >
                     <div className="h-screen flex items-center justify-center w-screen">
@@ -147,7 +157,7 @@ function ExpansionPanel(props) {
     // const [isExpanded, setExpanded] = useState<boolean>(open);
     const isExpanded = open;
     const hasSubCategories = props.category.subCategory.length > 0;
-    console.log(category.category, open)
+    // console.log(category.category, open)
     return (
         <div className={`pr-4  `}>
 
@@ -365,11 +375,11 @@ function CategoryListSmall(props) {
                                     setSelected('');
                                     setOpenKey('');
                                 }}>
-                                    <path d="M1 1L11 11M11 1L1 11" stroke="#E2E1E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1 1L11 11M11 1L1 11" stroke="#E2E1E6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 :
                                 <svg className={`self-center ml-[16px] ${((openKey === e.category) && isOpen) ? "rotate-180" : " "}`} width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 9.5L12 15.5L18 9.5" stroke="#E2E1E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6 9.5L12 15.5L18 9.5" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
 
                             : <></>
@@ -384,8 +394,8 @@ function CategoryListSmall(props) {
                         {...attributes.popper} className="cursor-pointer z-10">
                         <Card>
                             {
-                                e.subCategory.map((f) => {
-                                    return <p key={JSON.stringify(e)} onClick={(evt) => {
+                                e.subCategory.map((f: string, index: number) => {
+                                    return <p key={index} onClick={(evt) => {
                                         evt.stopPropagation()
                                         router.push(`/categories/?categories=${e.category}&subCategory=${f.toString()}`, undefined, { shallow: true });
                                         setSelected(f);
@@ -470,8 +480,8 @@ export function PageLayout(props) {
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5M22 12.5C22 6.97715 17.5228 2.5 12 2.5M22 12.5H2M12 22.5C6.47715 22.5 2 18.0228 2 12.5M12 22.5C14.5013 19.7616 15.9228 16.208 16 12.5C15.9228 8.79203 14.5013 5.23835 12 2.5M12 22.5C9.49872 19.7616 8.07725 16.208 8 12.5C8.07725 8.79203 9.49872 5.23835 12 2.5M2 12.5C2 6.97715 6.47715 2.5 12 2.5"
-                                            stroke="#E2E1E6" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                            stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round"
+                                            strokeLinejoin="round" />
                                     </svg>
                                     <span className="text-xl">{AppStrings.browsingHistory}</span>
                                 </Link>
@@ -496,8 +506,10 @@ export function PageLayout(props) {
             {/* <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-transparent w-[70vw] rounded-full fixed -bottom-[30vw] -right-[30vw] h-[70vw] -z-10"></div>
              <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-[#0a090d] w-[70vw] rounded-full fixed -bottom-[10vw] right-[10vw] h-[40vw] -z-20"></div> */}
             <div className=" ">
-                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
-                    alt={`${App.name} Logo`} />
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.homePageLogo.width} height={App.homePageLogo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
+                    alt={`${App.homePage} Logo`} />
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.marketLogo.width} height={App.marketLogo.height} src={router.pathname !== '/dapp' ? '/bg.png' : "/bg-2.png"}
+                    alt={`${App.marketName} Logo`} />
             </div>
 
         </article>
@@ -536,10 +548,29 @@ export default function Layout(props) {
         ]
     };
 
+    const metrics = [
+        {
+          title: 3700000,
+          description: "Domains Registered",
+        },
+        {
+          title: 310,
+          description: "Coins + Tokens Supported",
+        },
+        {
+          title: 865,
+          description: "Integrations",
+        },
+        {
+          title: 1000,
+          description: "Partners",
+        },
+      ];
+
     function buildLoadingCard(number: number) {
         let output = Array<React.JSX.Element>();
         for (let i = 0; i < number; i++) {
-            output.push(<div className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />)
+            output.push(<div key={i} className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />)
         }
         return output
     }
@@ -621,7 +652,7 @@ export default function Layout(props) {
                             <Slider ref={slider} {...settings}>
                                 {data
                                     ? data.map((dapp) => {
-                                        console.log("dapp", dapp)
+                                        // console.log("dapp", dapp)
                                         if (dapp) {
                                             return (
                                                 <Link
@@ -643,8 +674,20 @@ export default function Layout(props) {
                             </Slider>
                         </div>
 
-                    </div>}
+                        <div id="stats" className="bg-white mt-10 w-full">
+                            <div className="mx-auto w-[75%] max-w-[1344px] justify-center flex flex-col md:flex-row pt-10 pb-10 md:pt-24 md:pb-24">
+                                {metrics.map((metric) => (
+                                <div className="text-center flex flex-col mx-auto md:pr-4 md:pl-4" key={metric.description}>
+                                    <div className="font-[900] md:text-[3rem] lg:text-[4.5rem] text-[2rem] mb-1 text-slate-900">
+                                        {parseInt(`${metric.title}`, 10).toLocaleString()}
+                                    </div>
+                                    <div className="text-[1.25rem] text-slate-900">{metric.description}</div>
+                                </div>
+                                ))}
+                            </div>
+                        </div>
 
+                    </div>}
 
                     <div className={` ${router.pathname === '/' ? `pt-[70px]` : `pt-[45px]`}`} id="allDappsScroll" />
 

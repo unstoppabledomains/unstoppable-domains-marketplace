@@ -87,8 +87,8 @@ export class DappDataSource implements IDappDataSource {
 				return key;
 			},
 			forceRefetch({ currentArg, previousArg }) {
-				console.log("PreviousPage: ", previousArg?.page);
-				console.log("CurrentPage: ", currentArg?.page);
+				// console.log("PreviousPage: ", previousArg?.page);
+				// console.log("CurrentPage: ", currentArg?.page);
 				return currentArg?.page === previousArg?.page
 					? currentArg?.chainId !== previousArg?.chainId
 					: true;

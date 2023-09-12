@@ -15,7 +15,7 @@ function Text(props) {
             className: `${props.className} ${className}`,
         },
         // {dApp.description.split('\\n').map(e => <p>{e}</p>)}
-        props.children.split('\\n').map((e: string, index: number) => <p key={index}>{e}</p>)
+        props.children.split('\\n').map((e: string, index: number) => <span key={index}>{e}</span>)
     );
 }
 

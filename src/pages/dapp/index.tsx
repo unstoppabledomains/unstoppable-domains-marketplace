@@ -87,9 +87,9 @@ function DownloadButton(props) {
     const { href, dApp } = props;
     const { data, isLoading, isFetching } = useGetBuildDownloadUrlQuery(dApp.dappId)
     if (isLoading || isFetching) return null;
-    console.log(dApp.dappId)
-    console.log(href)
-    console.log(data, isLoading, isFetching);
+    // console.log(dApp.dappId)
+    // console.log(href)
+    // console.log(data, isLoading, isFetching);
     const downloadAvailable = dApp.availableOnPlatform.includes('android') || dApp.availableOnPlatform.includes('ios');
     const classnames = classNames({
         'text-[#ddd]': !downloadAvailable,
@@ -167,7 +167,7 @@ function ReviewDialog(props) {
         userAddress: address,
     } as Review);
     const onSubmit = (evt) => {
-        console.log(result.isUpdating)
+        // console.log(result.isUpdating)
 
         postReview({ ...review, rating: review.rating ?? 0 }).unwrap().then(_ => {
             props.onRequestClose();
@@ -175,7 +175,7 @@ function ReviewDialog(props) {
             console.log(err);
             setErrors(err)
         });
-        console.log(result.isUpdating);
+        // console.log(result.isUpdating);
     }
 
     if (errors) {
@@ -233,7 +233,7 @@ function AppRatingList(props) {
                 }
             }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="url(#paint0_linear_1089_2333)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke="url(#paint0_linear_1089_2333)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <defs>
                         <linearGradient id="paint0_linear_1089_2333" x1="12.0607" y1="1.87869" x2="12.0607" y2="22" gradientUnits="userSpaceOnUse">
                             <stop stopColor="#0D67FE" />
@@ -288,7 +288,7 @@ function DappList(props) {
         refetchOnMountOrArgChange: false
     });
     const userInfo: UserInfo | undefined = useSelector(getUserInfo);
-    console.log("userInfo", userInfo);
+    // console.log("userInfo", userInfo);
     const address: string | undefined = userInfo?.wallet_address;
     // const { address } = useAccount();
 
@@ -349,10 +349,10 @@ function DappList(props) {
                     <span className="text-2xl">{AppStrings.allDapps}</span>
                 </div>
                 {dApp.images.banner && <div className="z-0 relative top-[16px] lg:top-[48px] w-full h-[200px] lg:h-[400px]">
-                    <Image src={dApp.images.banner === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png' ?
+                    <Image src={(dApp?.images?.banner === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png' || dApp?.images?.banner === 'https://dgshe1iny46ip.cloudfront.net/Banner.png') ?
                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-banner.png' :
                         dApp.images.banner}
-                        placeholder={"/assets/images/banner_placeholder.png"} fill={true} alt="DApp Banner" className="aspect-video	rounded-lg object-cover	" />
+                        placeholder={"/assets/images/banner_placeholder.png"} fill={true} alt="DApp Banner" className="aspect-video	rounded-lg object-cover	" unoptimized={true}/>
                 </div>}
                 <section>
                     <header className="z-10 flex flex-col md:flex-row md:justify-between md:items-end gap-4 px-[8px] lg:px-[16px]">
@@ -363,12 +363,13 @@ function DappList(props) {
                                           33vw"
                                     style={{ aspectRatio: 1 }}
                                     fill={true}
-                                    src={dApp.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' ?
+                                    src={(dApp?.images?.logo === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png' || dApp?.images?.logo === 'https://dgshe1iny46ip.cloudfront.net/icon.png') ?
                                         'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-logo.jpg' :
                                         dApp.images?.logo
                                     }
                                     className="rounded-lg w-[64px] lg:w-[64px] "
-                                    alt="" />
+                                    alt="" 
+                                    unoptimized={true}/>
                             </div>
                             <div className="flex-auto  pt-4">
                                 <p className="text-[12px] leading-[16px] md:text-[16px] md:leading-[20px] uppercase my-2">{dApp.category}</p>
@@ -387,7 +388,7 @@ function DappList(props) {
                             </Button>
                             <a target="_blank" href={`https://twitter.com/intent/tweet?text=Hey%2C%20I%20found%20this%20amazing%20dapp%2C%20check%20it%20out%20${HOST_URL}${router.asPath}`} className="p-3 font-[600] text-[14px]">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.59003 13.51L15.42 17.49M15.41 6.51001L8.59003 10.49M21 5C21 6.65685 19.6569 8 18 8C16.3431 8 15 6.65685 15 5C15 3.34315 16.3431 2 18 2C19.6569 2 21 3.34315 21 5ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 19C21 20.6569 19.6569 22 18 22C16.3431 22 15 20.6569 15 19C15 17.3431 16.3431 16 18 16C19.6569 16 21 17.3431 21 19Z" stroke="#E2E1E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.59003 13.51L15.42 17.49M15.41 6.51001L8.59003 10.49M21 5C21 6.65685 19.6569 8 18 8C16.3431 8 15 6.65685 15 5C15 3.34315 16.3431 2 18 2C19.6569 2 21 3.34315 21 5ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 19C21 20.6569 19.6569 22 18 22C16.3431 22 15 20.6569 15 19C15 17.3431 16.3431 16 18 16C19.6569 16 21 17.3431 21 19Z" stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </a>
                             <DownloadButton href={downloadLink} dApp={dApp} />
@@ -401,7 +402,7 @@ function DappList(props) {
                     {dApp.images.screenshots?.length && (<>
                         <DappDetailSection title={AppStrings.gallery}>
                             <div className="grid grid-cols-3 gap-4">
-                                {dApp.images.screenshots?.map((e, idx) => <img key={idx} src={(e || '') === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png' ? 'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-screenshot.jpg' : e} alt="DApp Screenshot" />)}
+                                {dApp.images.screenshots?.map((e, idx) => <img key={idx} src={((e || '') === 'https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png' || (e || '') === 'https://dgshe1iny46ip.cloudfront.net/screenshots.png') ? 'https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-default-screenshot.jpg' : e} alt="DApp Screenshot" />)}
                             </div>
                         </DappDetailSection>
                         <Divider />

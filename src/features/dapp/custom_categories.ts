@@ -6,27 +6,20 @@ export const categories = {
   message: "success",
   data: [
     {
-      category: "Utility",
+      category: "Utilities",
       subCategory: [],
     },
     {
-      category: "Tooling",
-      subCategory: [
-        "Messaging",
-        "Wallet",
-      ],
+      category: "Messaging",
+      subCategory: [],
     },
     {
-      category: "Social",
+      category: "Wallets",
       subCategory: [],
     },
     {
       category: "Infrastructure",
-      subCategory: [
-        "Oracles",
-        "Identity",
-        "On-Ramp/Off-Ramp",
-      ],
+      subCategory: [],
     },
     {
       category: "Metaverse",
@@ -34,16 +27,19 @@ export const categories = {
     },
     {
       category: "Gaming",
-      subCategory: [
-      ],
+      subCategory: [],
     },
     {
-      category: "NFT",
-      subCategory: [
-        "Marketplace",
-        "PFPs",
-        "NFT Tooling / Infra",
-      ],
+      category: "NFT Marketplaces",
+      subCategory: [],
+    },
+    {
+      category: "NFT Projects",
+      subCategory: [],
+    },
+    {
+      category: "Domains",
+      subCategory: [],
     },
     {
       category: "DAO",
@@ -51,10 +47,7 @@ export const categories = {
     },
     {
       category: "DeFi",
-      subCategory: [
-        "Decentralized Exchanges",
-        "DeFi - Other",
-      ],
+      subCategory: [],
     },
     {
       category: "Education",
