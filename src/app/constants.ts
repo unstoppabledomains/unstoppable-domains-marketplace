@@ -67,7 +67,7 @@ const posConfig: AppConfig = {
     },
 };
 
-const bannerScript: string = ''; /*` // Create the banner element
+const bannerScript: string = ` // Create the banner element
                     var banner = document.createElement("div");
                     banner.id = "floating-banner";
 
@@ -80,13 +80,12 @@ const bannerScript: string = ''; /*` // Create the banner element
                     closeButton.addEventListener("click", function() {
                     banner.style.display = "none";
                     });
-                    // Create the close button
 
+                    // Styling
                     banner.style.position = "fixed";
                     banner.style.bottom = "10px";
                     banner.style.right = "20px";
                     banner.style.left = "20px";
-                    //banner.style.top = "78px";
                     banner.style.backgroundColor = "#0546b7";
                     banner.style.color = "white";
                     banner.style.padding = "10px";
@@ -98,56 +97,29 @@ const bannerScript: string = ''; /*` // Create the banner element
 
                     // Create the main text
                     var mainText = document.createElement("div");
-                    mainText.innerHTML = 'Get 30%* off <span class="domain-text">.polygon domains</span> through August 13th. <a target="_blank" href="#" id="promo-link"><b><u>Go here</b></u></a>.';
+                    mainText.innerHTML = '.polygon $2 domain sale! 8 character+ domains are now $2 for a limited time. <a target="_blank" href="#" id="promo-link"><b><u>Get yours now</b></u></a>.';
                     mainText.style.marginBottom = "10px";
+                    mainText.style.marginTop = "10px";
+                    mainText.style.wordSpacing = "1px";
 
                     // Create the small text
-                    var smallText = document.createElement("div");
-                    smallText.innerHTML = '*Maximum value of $2,000. Valid through 11:59pm PST August 13th. Cannot be combined with other coupons/promotions.';
-                    smallText.style.fontSize = "12px";
+                    //var smallText = document.createElement("div");
+                    //smallText.innerHTML = '*Maximum value of $2,000. Valid through 11:59pm PST August 13th. Cannot be combined with other coupons/promotions.';
+                    //smallText.style.fontSize = "12px";
 
                     // Append the elements to the banner
                     banner.appendChild(closeButton);
                     banner.appendChild(mainText);
-                    banner.appendChild(smallText);
+                    //banner.appendChild(smallText);
 
                     // Append the banner to the document body
                     document.body.appendChild(banner);
 
                     // Set the hyperlink URL with URL parameters
                     var promoLink = document.getElementById("promo-link");
-                    var urlParams = new URLSearchParams(window.location.search);
-                    var urlParameters = {
-                    utm_source: urlParams.get("utm_source") || "",
-                    utm_medium: urlParams.get("utm_medium") || "",
-                    utm_campaign: "Unstoppable%20Marketplace",
-                    code: "UDMARKETPLACELAUNCH",
-                    ref: urlParams.get("ref") || ""
-                    };
-                    var queryString = Object.keys(urlParameters)
-                    .map(function(key) {
-                        return encodeURIComponent(key) + "=" + encodeURIComponent(urlParameters[key]);
-                    })
-                    .join("&");
-                    promoLink.href = "https://unstoppabledomains.com/?" + queryString;
-
-
-                    // Adjust banner position on scroll
-                    // function adjustBannerPosition() {
-                    // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    // var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                    // var documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
-
-                    // if (scrollTop + windowHeight >= documentHeight) {
-                    //     banner.style.bottom = "20px";
-                    // } else {
-                    //     banner.style.bottom = windowHeight - scrollTop + 20 + "px";
-                    // }
-                    // }
-
-                    // window.addEventListener("scroll", adjustBannerPosition);
-                    // adjustBannerPosition();`;
-                    */
+                    promoLink.style.fontWeight = "bold";
+                    promoLink.href = "https://unstoppableweb.co/3LnduDI";`;
+                    
 const analyticsScript = ` window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
