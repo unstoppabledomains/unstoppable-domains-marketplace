@@ -67,6 +67,7 @@ const posConfig: AppConfig = {
     },
 };
 
+/*
 const bannerScript: string = ` // Create the banner element
                     var banner = document.createElement("div");
                     banner.id = "floating-banner";
@@ -119,6 +120,8 @@ const bannerScript: string = ` // Create the banner element
                     var promoLink = document.getElementById("promo-link");
                     promoLink.style.fontWeight = "bold";
                     promoLink.href = "https://unstoppableweb.co/3LnduDI";`;
+*/
+const bannerScript: string = ``;
                     
 const analyticsScript = ` window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
