@@ -21,6 +21,9 @@ import { Button, Card } from "./index";
 
 import { FeaturedCard, SliderButton } from "./card";
 
+import Carousel from "./carousel/Carousel";
+import { EmblaOptionsType } from "embla-carousel-react";
+
 
 function NavBar(props) {
     const app = useSelector(getApp);
@@ -282,21 +285,24 @@ function Input(props) {
 
 export function Hero(props) {
     const { title, subtitle, video, button } = props;
+    const OPTIONS: EmblaOptionsType = { loop: true }
 
     return (
         <>
             <div className="relative">
                 <div className="bg-black bg-no-repeat bg-cover" style={{ backgroundImage: `url("/hero_bg.png")` }}>
                     <Row
-                        className="min-h-[65vh] h-[65vh] pt-[20vh] pb-[10vh] justify-center flex-col-reverse md:flex-row md:justify-start items-center text-center md:text-left container z-10">
+                        className="min-h-[350px] pt-[10vh] pb-[5vh] pl-2 pr-2 justify-center flex-col md:flex-row md:justify-start items-center text-center md:text-left container z-10">
                         <div className="flex-initial w-full md:w-1/2">
                             <h1 className="text-[24px]  leading-[28px] md:text-[64px] md:leading-[72px] font-[500] mb-[24px]">{title}</h1>
-                            <p className="w-full md:w-[70%] text-[16px] text-[#ffffff] leading-[24px] font-[500] mb-[24px]">{subtitle}</p>
 
                             <Input />
                             <div className="pt-[24px] "><Button><a target={"_blank"} href={button.href}>{button.text}</a></Button></div>
                         </div>
-
+                        <div className="flex-initial w-full md:w-[12%]"/>
+                        <div className="flex-initial w-full md:w-[38%] pt-[5vh] pb-[2vh]">
+                            <Carousel options={OPTIONS} />
+                        </div>
                     </Row>
                 </div>
                 <div
