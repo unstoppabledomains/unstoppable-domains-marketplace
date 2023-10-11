@@ -116,7 +116,7 @@ export class DappDataSource implements IDappDataSource {
 
 	getFeaturedList(builder: EndpointBuilder<any, any, any>) {
 		return builder.query<PagedResponse<Dapp>, void>({
-			query: () => ApiEndpoints.FEATURED,
+			query: () => `${ApiEndpoints.FEATURED}?storeKey=${STORE_KEY}`,
 		});
 	}
 
@@ -157,14 +157,11 @@ export class DappDataSource implements IDappDataSource {
 	getFeaturedDapps(builder: EndpointBuilder<any, any, any>) {
 		return builder.query<Dapp, void>({
 			async queryFn(_arg, _queryApi, _extraOptions, fetchWithBQ) {
-				const appIdsReq = await fetchWithBQ(ApiEndpoints.FEATURED);
+				const appIdsReq = await fetchWithBQ(`${ApiEndpoints.FEATURED}?storeKey=${STORE_KEY}`);
 				if (appIdsReq.error)
 					return { error: appIdsReq.error as FetchBaseQueryError };
 				const list = appIdsReq.data;
-				const filteredList = list.find(
-					(dapp) => dapp.key === STORE_KEY
-				);
-				const appIds = filteredList.dappIds;
+				const appIds = list[0].dappIds;
 				let result = <any>[];
 				const appReq = await fetchWithBQ(
 					`/dapp/search/${appIds.join(",")}?storeKey=${STORE_KEY}`
