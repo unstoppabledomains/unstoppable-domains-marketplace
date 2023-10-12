@@ -38,11 +38,11 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-anime-manga.png",
-      "utm": 'https://unstoppableweb.co/3F1LXUz',
-      "title": "1-letter and 1-digit .anime & .manga domains",
-      "subtitle": "Secure a premium .manga and .manga domains in this exclusive sale! Act fast, ends on October 10th at 9am ET.",
-      "button": 'Shop the domains'
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-webacy.png",
+      "utm": 'https://unstoppabledomains.com/blog/categories/announcements/article/unstoppable-integrates-webacy',
+      "title": "Webacy's Wallet Safety Score comes to your UD.me/ profile!",
+      "subtitle": "Understand your wallet's vulnerability in real-time with insights from wallet age, smart contract integrity, and transaction activity.",
+      "button": 'Learn More'
     }, 
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-polygon-domains.png",
