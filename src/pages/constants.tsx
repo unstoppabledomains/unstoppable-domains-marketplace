@@ -11,7 +11,7 @@ const AppStrings = {
     social: 'Social',
     readMore: 'Read More',
     readLess: 'Read Less',
-    featuredDapps: 'Featured Web3 Apps Using AI',
+    featuredDapps: 'Featured Web3 Apps',
     reviewsTitle: 'Ratings & Reviews',
     ratings: 'Ratings',
     anonymousAnalyticsTag: 'anonymous_udde',
