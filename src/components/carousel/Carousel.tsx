@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop.png",
+      "utm": 'https://unstoppableweb.co/3tNgbbD',
+      "title": "Your One-Stop Shop for both Web3 and Web2 domains",
+      "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
+      "button": 'Learn more'
+    }, 
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-webacy.png",
       "utm": 'https://unstoppabledomains.com/blog/categories/announcements/article/unstoppable-integrates-webacy',
       "title": "Webacy's Wallet Safety Score comes to your UD.me/ profile!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Our latest toolset and expert guidance are designed to streamline the integration of Web3 domains, empowering registrars to seize growth opportunities within the evolving web3 domain landscape.",
       "button": 'Learn more'
     },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable.png",
-      "utm": 'https://unstoppableweb.co/48AUMlQ',
-      "title": "It's your name. Own it.",
-      "subtitle": "Own your identity in the digital world. Get started with a Web3 domain. Select from over 10 extensions like .x, .nft, .eth, .crypto and more!",
-      "button": 'Get my name'
-    }, 
   ]
 
   const urlRedirect = (url) => {
