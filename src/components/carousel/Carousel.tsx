@@ -38,7 +38,7 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop.png",
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
       "utm": 'https://unstoppableweb.co/3tNgbbD',
       "title": "Your One-Stop Shop for both Web3 and Web2 domains",
       "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
