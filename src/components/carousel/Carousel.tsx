@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
+      "utm": 'https://web3compass.net/',
+      "title": "Unstoppable welcomes registrars to join our community!",
+      "subtitle": "The Web3 search engine, Web3 Compass, is now resolving and selling Unstoppable Domains!",
+      "button": 'Visit Web3 Compass'
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
       "utm": 'https://unstoppableweb.co/3tNgbbD',
       "title": "Your One-Stop Shop for both Web3 and Web2 domains",
@@ -64,13 +71,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "UD x The Sandbox Game x Smobler Studios",
       "subtitle": "We're joining forces to unveil the “Unstoppable Experience” in-game. A bustling in-game marketplace awaits with unique wearables for UD holders. Coming soon, stay tuned for updates.",
       "button": 'Read More'
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-registrar.png",
-      "utm": 'https://unstoppableweb.co/3LIvR60',
-      "title": "Unstoppable welcomes registrars to join our community!",
-      "subtitle": "Our latest toolset and expert guidance are designed to streamline the integration of Web3 domains, empowering registrars to seize growth opportunities within the evolving web3 domain landscape.",
-      "button": 'Learn more'
     },
   ]
 
