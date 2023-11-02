@@ -40,7 +40,7 @@ const Carousel: React.FC<PropType> = (props) => {
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
       "utm": 'https://web3compass.net/',
-      "title": "Unstoppable welcomes registrars to join our community!",
+      "title": "Web3 Compass launches the first Web3 search engine.",
       "subtitle": "The Web3 search engine, Web3 Compass, is now resolving and selling Unstoppable Domains!",
       "button": 'Visit Web3 Compass'
     },
