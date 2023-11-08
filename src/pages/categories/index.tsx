@@ -12,21 +12,12 @@ import Dapp from "../dapp";
 
 function CategoriesList(props) {
     const router = useRouter();
-    const limit = 10; // If this limit is used to cap the number of items, you'll need to implement it
+    const limit = 10;
     const app = useSelector(getApp);
-    const [page, setPage] = useState(0);
-    const [items, setItems] = useState([]);
+    const [page, setPage] = useState<number>(0);
+    const [items, setItems] = useState<Array<typeof Dapp>>();
     const merokuData = useGetCategoryListQuery({});
-  
-    useEffect(() => {
-      if (merokuData.data) {
-        // Assuming merokuData.data is an array of items you want to sort
-        const sortedItems = [...merokuData.data].sort((a, b) =>
-          a.name.localeCompare(b.name)
-        );
-        setItems(sortedItems);
-      }
-    }, [merokuData.data]);
+    const [dataPage, setDataPage] = useState<number>(1);
 
 
     let categoryMapped = customToMerokuCategory(router.query.categories, merokuData.data, router.query.subCategory);
