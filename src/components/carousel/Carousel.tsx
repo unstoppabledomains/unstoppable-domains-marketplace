@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Cyber_Monday_announcement.png",
+      "utm": 'https://unstoppableweb.co/46dFHnL',
+      "title": "Cyber Monday 2-for-1 Flash Sale",
+      "subtitle": "For 24 hours only, you will be able to buy a domain* and get one of equal or lesser value for FREE through Unstoppable.",
+      "button": 'Learn More'
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
       "utm": 'https://web3compass.net/',
       "title": "Web3 Compass launches the first Web3 search engine.",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Grab a .polygon domain for as little as $5 and stay up-to-date with everything happening in the Polygon Ecosystem via messaging.",
       "button": 'Get a domain'
     }, 
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-sandbox-smobler-blue.png",
-      "utm": 'https://finance.yahoo.com/news/unstoppable-domains-sandbox-smobler-forge-010000752.html',
-      "title": "UD x The Sandbox Game x Smobler Studios",
-      "subtitle": "We're joining forces to unveil the “Unstoppable Experience” in-game. A bustling in-game marketplace awaits with unique wearables for UD holders. Coming soon, stay tuned for updates.",
-      "button": 'Read More'
-    },
   ]
 
   const urlRedirect = (url) => {
