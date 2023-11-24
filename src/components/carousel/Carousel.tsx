@@ -38,11 +38,11 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Cyber_Monday_announcement.png",
-      "utm": 'https://unstoppableweb.co/46dFHnL',
-      "title": "Cyber Monday 2-for-1 Flash Sale",
-      "subtitle": "For 24 hours only, you will be able to buy a domain* and get one of equal or lesser value for FREE through Unstoppable.",
-      "button": 'Learn More'
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD_Cyber%20Monday_%20Sale%20is%20Live_Rectangle%20Announcement%20(2).png",
+      "utm": 'https://unstoppableweb.co/3R14Q0x',
+      "title": "Cyber Monday 2-for-1 Flash Sale is Live!",
+      "subtitle": "Today only, buy a domain and get the second one of equal or lesser value for FREE!",
+      "button": 'Shop Now'
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
