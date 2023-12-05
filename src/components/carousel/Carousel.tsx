@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable-tld.png",
+      "utm": 'https://unstoppableweb.co/3RsPPoP',
+      "title": "It's time! Be .unstoppable today",
+      "subtitle": ".Unstoppable, a digital identity that echoes your relentless spirit.",
+      "button": 'Get Yours Now'
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
       "utm": 'https://web3compass.net/',
       "title": "Web3 Compass launches the first Web3 search engine.",
@@ -49,7 +56,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm": 'https://unstoppableweb.co/3tNgbbD',
       "title": "Your One-Stop Shop for both Web3 and Web2 domains",
       "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
-      "button": 'Learn more'
+      "button": 'Learn More'
     }, 
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-webacy.png",
@@ -63,7 +70,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm": 'https://unstoppableweb.co/3PZafVs',
       "title": "Join the .polygon community for as little as $5.",
       "subtitle": "Grab a .polygon domain for as little as $5 and stay up-to-date with everything happening in the Polygon Ecosystem via messaging.",
-      "button": 'Get a domain'
+      "button": 'Get a Domain'
     }, 
   ]
 
