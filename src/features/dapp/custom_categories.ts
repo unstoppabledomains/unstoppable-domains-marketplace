@@ -6,15 +6,23 @@ export const categories = {
   message: "success",
   data: [
     {
-      category: "Utilities",
+      category: "DAO",
       subCategory: [],
     },
     {
-      category: "Messaging",
+      category: "DeFi",
       subCategory: [],
     },
     {
-      category: "Wallets",
+      category: "Domains",
+      subCategory: [],
+    },
+    {
+      category: "Education",
+      subCategory: [],
+    },
+    {
+      category: "Gaming",
       subCategory: [],
     },
     {
@@ -22,11 +30,11 @@ export const categories = {
       subCategory: [],
     },
     {
-      category: "Metaverse",
+      category: "Messaging",
       subCategory: [],
     },
     {
-      category: "Gaming",
+      category: "Metaverse",
       subCategory: [],
     },
     {
@@ -38,23 +46,15 @@ export const categories = {
       subCategory: [],
     },
     {
-      category: "Domains",
-      subCategory: [],
-    },
-    {
-      category: "DAO",
-      subCategory: [],
-    },
-    {
-      category: "DeFi",
-      subCategory: [],
-    },
-    {
-      category: "Education",
-      subCategory: [],
-    },
-    {
       category: "Others",
+      subCategory: [],
+    },
+    {
+      category: "Utilities",
+      subCategory: [],
+    },
+    {
+      category: "Wallets",
       subCategory: [],
     },
   ],

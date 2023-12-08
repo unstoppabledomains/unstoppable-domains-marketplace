@@ -167,6 +167,9 @@ export class DappDataSource implements IDappDataSource {
 					`/dapp/search/${appIds.join(",")}?storeKey=${STORE_KEY}`
 				);
 				result = appReq.data.data;
+				result.sort(function (a, b) {
+					return appIds.indexOf(a.dappId) - appIds.indexOf(b.dappId);
+				});
 				return result.length
 					? { data: result }
 					: { error: result.error as FetchBaseQueryError };
