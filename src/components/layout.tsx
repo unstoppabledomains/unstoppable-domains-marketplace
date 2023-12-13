@@ -682,10 +682,12 @@ export default function Layout(props) {
 
                         <div id="stats" className="bg-white mt-10 w-full">
                             <div className="mx-auto w-[75%] max-w-[1344px] justify-center flex flex-col md:flex-row pt-10 pb-10 md:pt-24 md:pb-24">
-                                {metrics.map((metric) => (
+                                {metrics.map((metric, i) => (
                                 <div className="text-center flex flex-col mx-auto md:pr-4 md:pl-4" key={metric.description}>
                                     <div className="font-[900] md:text-[3rem] lg:text-[4.5rem] text-[2rem] mb-1 text-slate-900">
-                                        {parseInt(`${metric.title}`, 10).toLocaleString()}
+                                        {i === 0 ? 
+                                        (parseInt(`${metric.title}`, 10).toLocaleString() + '+') 
+                                        : parseInt(`${metric.title}`, 10).toLocaleString()}
                                     </div>
                                     <div className="text-[1.25rem] text-slate-900">{metric.description}</div>
                                 </div>
