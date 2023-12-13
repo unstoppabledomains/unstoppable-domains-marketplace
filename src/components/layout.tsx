@@ -556,11 +556,11 @@ export default function Layout(props) {
 
     const metrics = [
         {
-          title: 3700000,
+          title: 3800000,
           description: "Domains Registered",
         },
         {
-          title: 310,
+          title: 307,
           description: "Coins + Tokens Supported",
         },
         {
