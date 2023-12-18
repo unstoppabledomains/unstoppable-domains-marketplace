@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable-premium.png",
+      "utm": 'https://unstoppableweb.co/3TuV8oX',
+      "title": "First Ever .Unstoppable Premium Drop",
+      "subtitle": "Single-digit, single-letter and two-letter .Unstoppable domains are available for the very first time. 72 hours only!",
+      "button": 'Shop the Drop'
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy.png",
       "utm": 'https://unstoppableweb.co/3T5IkoZ',
       "title": "$200 in UD Credit for Pudgy Penguin Holders",
@@ -52,13 +59,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": 'Get Yours Now'
     },
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/UD%20x%20Web3%20Compass.png",
-      "utm": 'https://web3compass.net/',
-      "title": "Web3 Compass launches the first Web3 search engine.",
-      "subtitle": "The Web3 search engine, Web3 Compass, is now resolving and selling Unstoppable Domains!",
-      "button": 'Visit Web3 Compass'
-    },
-    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
       "utm": 'https://unstoppableweb.co/3tNgbbD',
       "title": "Your One-Stop Shop for both Web3 and Web2 domains",
@@ -71,14 +71,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Webacy's Wallet Safety Score comes to your UD.me/ profile!",
       "subtitle": "Understand your wallet's vulnerability in real-time with insights from wallet age, smart contract integrity, and transaction activity.",
       "button": 'Learn More'
-    }, 
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-polygon-domains.png",
-      "utm": 'https://unstoppableweb.co/3PZafVs',
-      "title": "Join the .polygon community for as little as $5.",
-      "subtitle": "Grab a .polygon domain for as little as $5 and stay up-to-date with everything happening in the Polygon Ecosystem via messaging.",
-      "button": 'Get a Domain'
-    }, 
+    },
   ]
 
   const urlRedirect = (url) => {
