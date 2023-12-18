@@ -216,7 +216,7 @@ var dappstoreMaping = `{
 
   "Wallets": "utilities.wallets",
 
-  "Infrastructure": ["developer-tools","finance.ramp"],
+  "Infrastructure": ["developer-tools"],
 
   "Metaverse": "games.metaverse",
 
@@ -230,7 +230,7 @@ var dappstoreMaping = `{
 
   "DAO": ["productivity.decentralized-collaboration-tools","productivity.decentralized-collaboration-tools-investing"],
 
-  "DeFi": ["finance.exchanges","finance.defi","finance.others"],
+  "DeFi": ["finance.exchanges","finance.defi","finance.others","finance.ramp"],
 
   "Education": "education"
   
