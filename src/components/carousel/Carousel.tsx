@@ -41,7 +41,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy.png",
       "utm": 'https://unstoppableweb.co/3T5IkoZ',
       "title": "$200 in UD Credit for Pudgy Penguin Holders",
-      "subtitle": "Pudgy Penguin holders can unlock $200 in Unstoppable Credit per penguin owned. Hurry, offer ends December 18th.",
+      "subtitle": "Pudgy Penguin holders can unlock $200 in Unstoppable Credit per penguin owned. Hurry, offer ends soon.",
       "button": 'Get Credits'
     },
     {
