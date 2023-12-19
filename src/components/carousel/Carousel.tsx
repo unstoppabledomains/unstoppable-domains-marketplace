@@ -39,7 +39,7 @@ const Carousel: React.FC<PropType> = (props) => {
   const bannerData = [
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable-premium.png",
-      "utm": 'https://unstoppableweb.co/3TuV8oX',
+      "utm": 'https://unstoppableweb.co/3RseQPL',
       "title": "First Ever .Unstoppable Premium Drop",
       "subtitle": "Single-digit, single-letter and two-letter .Unstoppable domains are available for the very first time. 72 hours only!",
       "button": 'Shop the Drop'
