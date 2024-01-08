@@ -23,6 +23,7 @@ import { FeaturedCard, SliderButton } from "./card";
 
 import Carousel from "./carousel/Carousel";
 import { EmblaOptionsType } from "embla-carousel-react";
+import { getStats } from "../api/getStats";
 
 
 function NavBar(props) {
@@ -526,6 +527,12 @@ export default function Layout(props) {
     const app = useSelector(getApp);
     const router = useRouter();
     const { data, isLoading } = useGetFeaturedDappsQuery();
+    const [ tickers, setTickers ] = useState<string>('307');
+    const [ takenDomains, setTakenDomains ] = useState<string>('3.8M+');
+    const [ records, setRecords ] = useState<string>('778k');
+    const [ integrations, setIntegrations ] = useState<string>('865');
+    const [ partners, setPartners ] = useState<string>('1000');
+   
     const slider = createRef<Slider>();
     let dragging = false;
     const settings = {
@@ -556,22 +563,38 @@ export default function Layout(props) {
 
     const metrics = [
         {
-          title: 3800000,
+          title: takenDomains,
           description: "Domains Registered",
         },
         {
-          title: 307,
+          title: records,
+          description: "Domain Records Set",
+        },
+        {
+          title: tickers,
           description: "Coins + Tokens Supported",
         },
         {
-          title: 865,
+          title: integrations,
           description: "Integrations",
         },
         {
-          title: 1000,
+          title: partners,
           description: "Partners",
         },
       ];
+
+
+    useEffect(() => {
+        getStats()
+        .then(stats => {
+            setTickers(stats.tickers)
+            setTakenDomains(stats.domains)
+            setRecords(stats.records)
+            setIntegrations(stats.integrations)
+            setPartners(stats.partners)
+        })
+    }, [])
 
     function buildLoadingCard(number: number) {
         let output = Array<React.JSX.Element>();
@@ -682,12 +705,10 @@ export default function Layout(props) {
 
                         <div id="stats" className="bg-white mt-10 w-full">
                             <div className="mx-auto w-[75%] max-w-[1344px] justify-center flex flex-col md:flex-row pt-10 pb-10 md:pt-24 md:pb-24">
-                                {metrics.map((metric, i) => (
+                                {metrics.map((metric) => (
                                 <div className="text-center flex flex-col mx-auto md:pr-4 md:pl-4" key={metric.description}>
                                     <div className="font-[900] md:text-[3rem] lg:text-[4.5rem] text-[2rem] mb-1 text-slate-900">
-                                        {i === 0 ? 
-                                        (parseInt(`${metric.title}`, 10).toLocaleString() + '+') 
-                                        : parseInt(`${metric.title}`, 10).toLocaleString()}
+                                        {`${metric.title}`}
                                     </div>
                                     <div className="text-[1.25rem] text-slate-900">{metric.description}</div>
                                 </div>
