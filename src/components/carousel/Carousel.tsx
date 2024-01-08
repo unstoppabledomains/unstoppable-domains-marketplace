@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react'
-import useEmblaCarousel, {
+import useEmblaCarousel from 'embla-carousel-react'
+import {
   EmblaOptionsType,
   EmblaCarouselType
-} from 'embla-carousel-react'
+} from "embla-carousel";
 import { DotButton, useDotButton } from './CarouselDotButton'
 import Autoplay from 'embla-carousel-autoplay'
 import { NextButton, PrevButton, usePrevNextButtons } from './CarouselArrowButton'
