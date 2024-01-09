@@ -22,8 +22,8 @@ import { Button, Card } from "./index";
 import { FeaturedCard, SliderButton } from "./card";
 
 import Carousel from "./carousel/Carousel";
-import { EmblaOptionsType } from "embla-carousel-react";
 import { getStats } from "../api/getStats";
+import { EmblaOptionsType } from "embla-carousel";
 
 
 function NavBar(props) {
