@@ -226,7 +226,7 @@ var dappstoreMaping = `{
 
   "NFT Projects": ["nft.art","nft.tooling","nft.pfps"],
 
-  "Domains": ["nft.domain-names"],
+  "Registrars": ["nft.domain-names"],
 
   "DAO": ["productivity.decentralized-collaboration-tools","productivity.decentralized-collaboration-tools-investing"],
 

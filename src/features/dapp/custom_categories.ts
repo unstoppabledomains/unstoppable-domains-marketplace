@@ -14,10 +14,6 @@ export const categories = {
       subCategory: [],
     },
     {
-      category: "Domains",
-      subCategory: [],
-    },
-    {
       category: "Education",
       subCategory: [],
     },
@@ -47,6 +43,10 @@ export const categories = {
     },
     {
       category: "Others",
+      subCategory: [],
+    },
+    {
+      category: "Registrars",
       subCategory: [],
     },
     {
