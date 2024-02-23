@@ -46,7 +46,7 @@ function NavBar(props) {
 
     return (
         <Row center
-            className="py-4 pr-[10px] pl-[5px] border-b border-b-[#141217] bg-canvas-color px-4 py-2 md:py-4 md:px-10 gap-[16px]">
+            className="py-4 pr-[10px] pl-[5px] border-b border-b-[#141217] bg-canvas-color px-4 md:py-4 md:px-10 gap-[16px]">
             <div className="flex-initial">
                 <NavItem href="/">
                     <NXTImage width={App.marketLogo.width} height={App.marketLogo.height} src={App.marketLogo.src} style={{ objectFit: "contain", height: App.marketLogo.height }}
@@ -67,7 +67,7 @@ function NavBar(props) {
                             setProfileModalOpen(true)
                         }}>
 
-                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit w-[150px] justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
+                            <div className="top-[16px] py-[8px] lg:top-[48px] max-md:text-[12px] text-[16px] font-[500] flex  w-fit  justify-center border rounded-[24px] border-[#ffffff1f] bg-[#ffffff1f]">
                                 <div className="flex align-middle pr-[10px] pt-[2px]">
                                     <div className="px-[10px] pt-[1px] align-middle" >
                                         {userInfo?.picture === undefined ? <RandomAvatar name={
@@ -291,7 +291,7 @@ export function Hero(props) {
     return (
         <>
             <div className="relative">
-                <div className="bg-black bg-no-repeat bg-cover" style={{ backgroundImage: `url("/hero_bg.png")` }}>
+                <div className="bg-black bg-no-repeat bg-cover bg-hero-pudgy-mobile lg:bg-hero-pudgy">
                     <Row
                         className="min-h-[350px] pt-[10vh] pb-[5vh] pl-2 pr-2 justify-center flex-col md:flex-row md:justify-start items-center text-center md:text-left container z-10">
                         <div className="flex-initial w-full md:w-1/2">
@@ -478,22 +478,8 @@ export function PageLayout(props) {
             {data && <CategoryListSmall data={data} />}
 
             <Row className="items-start justify-start">
-                <aside className={`hidden 2xl:flex lg:flex md:flex-initial w-3/12 border-r border-r-border-color h-full`}>
+                <aside className={`hidden 2xl:flex lg:flex md:flex-initial w-3/12 h-full`}>
                     <div className="w-full">
-                        <div className='border-b border-b-border-color'>
-                            <div className={` align-middle items-center pt-2 pb-2 mr-4 my-2 ${((router?.asPath == "/history")) ? ' rounded-[12px] bg-[#212026] pl-[16px]' : ''}`}>
-                                <Link href="/history" >
-                                    <svg className="inline-block mr-2 pb-[5px]" width="24" height="25" viewBox="0 0 24 25"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5M22 12.5C22 6.97715 17.5228 2.5 12 2.5M22 12.5H2M12 22.5C6.47715 22.5 2 18.0228 2 12.5M12 22.5C14.5013 19.7616 15.9228 16.208 16 12.5C15.9228 8.79203 14.5013 5.23835 12 2.5M12 22.5C9.49872 19.7616 8.07725 16.208 8 12.5C8.07725 8.79203 9.49872 5.23835 12 2.5M2 12.5C2 6.97715 6.47715 2.5 12 2.5"
-                                            stroke="#E2E1E6" strokeWidth="2" strokeLinecap="round"
-                                            strokeLinejoin="round" />
-                                    </svg>
-                                    <span className="text-xl">{AppStrings.browsingHistory}</span>
-                                </Link>
-                            </div>
-                        </div>
                         <div className={`pt-2 pb-2 mr-4 my-2 ${((router?.pathname == "/")) ? ' rounded-[12px] bg-[#ffffff1a] pl-[16px]' : ''}`}>
                             <Link href="/#allDappsScroll"  >
                                 <span className="text-xl">{AppStrings.allDapps}</span>
