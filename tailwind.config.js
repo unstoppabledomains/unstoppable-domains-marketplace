@@ -20,6 +20,9 @@ module.exports = {
 			backgroundImage: {
 				"card-bg": "linear-gradient(180deg, #141217 0%, #0E0C12 100%);",
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				"hero-bg": "url('/hero_bg.png')",
+				"hero-pudgy": "url('/hero_pudgy_bg.png')",
+				"hero-pudgy-mobile": "url('/hero_pudgy_mobile_bg.png')",
 			},
 			borderRadius: {
 				"card-radius": "12px",
