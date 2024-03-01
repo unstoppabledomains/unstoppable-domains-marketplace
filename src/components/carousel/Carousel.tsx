@@ -46,25 +46,25 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": 'Get Yours Today!'
     },
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy-badges.png",
-      "utm": 'https://unstoppableweb.co/3OHW7yS',
-      "title": "Earn Badges for the .Pudgy Domains You Own.",
-      "subtitle": "Get a Penguin Participant badge for owning a .pudgy domain. Plus, get additional badges for the number of domains you own.",
-      "button": 'Get Your .PUDGY Name!'
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-sandbox-experience.png",
+      "utm": 'https://unstoppableweb.co/3SpQBmX',
+      "title": "The Unstoppable Meta Cube Experience in Sandbox",
+      "subtitle": "We teamed up with The Sandbox, Tuschay Studios and BoopGoop Games to launch a multi-team competition, a hangout lounge, a collectible shop, and a premium domain drop.",
+      "button": 'Check it out!'
     },
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy-ambassadors.png",
-      "utm": 'https://unstoppableweb.co/3wjDvz2',
-      "title": "Apply to Become a .Pudgy Arctic Ambassador!",
-      "subtitle": "As an ambassador, you'll share content and host community events centered around .PUDGY. Ambassadors receive an exclusive “Arctic Ambassador” badge, granting them access to a VIP Group Chat. Applications close March 23rd.",
-      "button": 'Apply Today!'
-    },
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
+      "utm": 'https://unstoppableweb.co/3tNgbbD',
+      "title": "Your One-Stop Shop for both Web3 and Web2 domains",
+      "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
+      "button": 'Learn More'
+    }, 
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy-stories.png",
-      "utm": 'https://unstoppableweb.co/3SY1XyA',
-      "title": "Share your #PudgyUDStories for a Chance to Win!",
-      "subtitle": "Upload your videos, images, and posts to social media like X, Instagram, Facebook and Discord using #PudgyUDStories for a chance to win a premium .pudgy domain.",
-      "button": 'Learn More!'
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-webacy.png",
+      "utm": 'https://unstoppabledomains.com/blog/categories/announcements/article/unstoppable-integrates-webacy',
+      "title": "Webacy's Wallet Safety Score comes to your UD.me/ profile!",
+      "subtitle": "Understand your wallet's vulnerability in real-time with insights from wallet age, smart contract integrity, and transaction activity.",
+      "button": 'Learn More'
     },
   ]
 

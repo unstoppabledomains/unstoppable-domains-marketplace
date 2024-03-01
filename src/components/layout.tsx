@@ -291,7 +291,7 @@ export function Hero(props) {
     return (
         <>
             <div className="relative">
-                <div className="bg-black bg-no-repeat bg-cover bg-hero-pudgy-mobile lg:bg-hero-pudgy">
+                <div className="bg-black bg-no-repeat bg-cover bg-hero-bg">
                     <Row
                         className="min-h-[350px] pt-[10vh] pb-[5vh] pl-2 pr-2 justify-center flex-col md:flex-row md:justify-start items-center text-center md:text-left container z-10">
                         <div className="flex-initial w-full md:w-1/2">
