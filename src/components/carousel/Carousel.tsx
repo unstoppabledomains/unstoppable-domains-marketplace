@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel_pog%20square.png",
+      "utm": 'https://unstoppableweb.co/3IYygYH',
+      "title": "Introducing the Launch of .POG",
+      "subtitle": "We’ve joined forces with POG Digital, the interoperable universal gaming ecosystem created by THE WORLD POG FEDERATION™, a beloved 90's game and collectibles brand. Together, we proudly introduce .POG, a brand new domain extension that gives POG users a unique username to identity as part of their community.",
+      "button": 'Get Yours Today!'
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-austin-tld.png",
       "utm": 'https://unstoppableweb.co/4cc8fCw',
       "title": ".Austin, the first city-centric web3 domain launches",
@@ -51,13 +58,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Pudgy Penguins and Unstoppable Launch .PUDGY",
       "subtitle": "Huddle up! .PUDGY is here! We're excited to announce a cool new partnership with Pudgy Penguins, the widely popular Web3 brand, to introduce the first-ever NFT Community-Focused Web3 Domain TLD.",
       "button": 'Get Yours Today!'
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-sandbox-experience.png",
-      "utm": 'https://unstoppableweb.co/3SpQBmX',
-      "title": "The Unstoppable Meta Cube Experience in Sandbox",
-      "subtitle": "We teamed up with The Sandbox, Tuschay Studios and BoopGoop Games to launch a multi-team competition, a hangout lounge, a collectible shop, and a premium domain drop.",
-      "button": 'Check it out!'
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
