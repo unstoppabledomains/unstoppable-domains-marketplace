@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-clay.png",
+      "utm": "https://unstoppableweb.co/3Q2xrC2",
+      "title": "Get ready to break the mold with .CLAY!",
+      "subtitle": "Introducing .CLAY domains in partnership with Clay Nation, the creative brand in web3 known for their captivating multi-dimensional clay animations and on-chain collectibles.",
+      "button": "Get Yours Now!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel_pog%20square.png",
       "utm": 'https://unstoppableweb.co/3IYygYH',
       "title": "Introducing the Launch of .POG",
@@ -66,13 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
       "button": 'Learn More'
     }, 
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-webacy.png",
-      "utm": 'https://unstoppabledomains.com/blog/categories/announcements/article/unstoppable-integrates-webacy',
-      "title": "Webacy's Wallet Safety Score comes to your UD.me/ profile!",
-      "subtitle": "Understand your wallet's vulnerability in real-time with insights from wallet age, smart contract integrity, and transaction activity.",
-      "button": 'Learn More'
-    },
   ]
 
   const urlRedirect = (url) => {
