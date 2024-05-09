@@ -222,6 +222,8 @@ var dappstoreMaping = `{
 
   "Gaming": ["games.strategy","games.simulation","games.role-playing","games.studios","games.action","games.racing","games.adventure","games.puzzle","games.board","games.word"],
 
+  "Naming Services": "naming-services",
+  
   "NFT Marketplaces": "nft.nft-marketplaces",
 
   "NFT Projects": ["nft.art","nft.tooling","nft.pfps"],
