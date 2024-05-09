@@ -34,6 +34,10 @@ export const categories = {
       subCategory: [],
     },
     {
+      category: "Naming Services",
+      subCategory: [],
+    },
+    {
       category: "NFT Marketplaces",
       subCategory: [],
     },
