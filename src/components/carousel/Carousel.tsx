@@ -41,7 +41,7 @@ const Carousel: React.FC<PropType> = (props) => {
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/witg-thumbnail",
       "utm": "https://get.unstoppabledomains.com/witg/",
-      "title": , "Empowering Women in Tech: Introducing .WITG Domains!",
+      "title": "Empowering Women in Tech: Introducing .WITG Domains!",
       "subtitle": "We've partnered with Women In Tech Global to launch .WITG domains! Women in Tech Global is on a mission to empower 5 million women and girls in tech by 2030, spanning 48 countries across 6 continents.",
       "button": "Get Yours Today!"
     },
