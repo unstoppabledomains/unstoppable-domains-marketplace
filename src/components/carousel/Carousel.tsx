@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/witg-thumbnail",
+      "utm": "https://get.unstoppabledomains.com/witg/"
+      "title": , "Empowering Women in Tech: Introducing .WITG Domains!",
+      "subtitle": "We've partnered with Women In Tech Global to launch .WITG domains! Women in Tech Global is on a mission to empower 5 million women and girls in tech by 2030, spanning 48 countries across 6 continents.",
+      "button": "Get Yours Today!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-clay.png",
       "utm": "https://unstoppableweb.co/3Q2xrC2",
       "title": "Get ready to break the mold with .CLAY!",
@@ -65,14 +72,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Pudgy Penguins and Unstoppable Launch .PUDGY",
       "subtitle": "Huddle up! .PUDGY is here! We're excited to announce a cool new partnership with Pudgy Penguins, the widely popular Web3 brand, to introduce the first-ever NFT Community-Focused Web3 Domain TLD.",
       "button": 'Get Yours Today!'
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/one-stop-shop-new.png",
-      "utm": 'https://unstoppableweb.co/3tNgbbD',
-      "title": "Your One-Stop Shop for both Web3 and Web2 domains",
-      "subtitle": "You can now purchase “.com” addresses, alongside their native Web3 addresses all in one place, on unstoppabledomains.com.",
-      "button": 'Learn More'
-    }, 
+    }
   ]
 
   const urlRedirect = (url) => {
