@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/metropolis-carousel.jpg",
+      "utm": "https://metropolisworld.io/partnerships/unstoppable-domains",
+      "title": "Become a Metropolis Citizen with the brand new .Metropolis",
+      "subtitle": "Now, we're thrilled to announce that we’re taking our collaboration with Metropolis to the next level. Introducing all-new .Metropolis digital identities, designed as unique usernames to serve the vibrant community of Metropolis enthusiasts!",
+      "button": "Get Yours Today!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/witg-thumbnail",
       "utm": "https://get.unstoppabledomains.com/witg/",
       "title": "Empowering Women in Tech: Introducing .WITG Domains!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": ".Austin, the first city-centric web3 domain launches",
       "subtitle": "Introducing .Austin, empowering 2.4m Central Texas residents and visitors to show their love of Austin and personalize their digital identity in the heart of Texas.",
       "button": 'Get your name!'
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgy-tld.png",
-      "utm": 'https://unstoppableweb.co/3OHW7yS',
-      "title": "Pudgy Penguins and Unstoppable Launch .PUDGY",
-      "subtitle": "Huddle up! .PUDGY is here! We're excited to announce a cool new partnership with Pudgy Penguins, the widely popular Web3 brand, to introduce the first-ever NFT Community-Focused Web3 Domain TLD.",
-      "button": 'Get Yours Today!'
     }
   ]
 
