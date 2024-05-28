@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/workx%20banner.png",
+      "utm": "https://domains.nftworkx.com/",
+      "title": "Get Ready to Tokenize Your Real World Assets with .WRKX!",
+      "subtitle": ".WRKX domains can act as your personal Web3 identity, can be used for simplified on-chain transactions and more…",
+      "button": "Get Yours Today!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/metropolis-carousel.jpg",
       "utm": "https://metropolisworld.io/partnerships/unstoppable-domains",
       "title": "Become a Metropolis Citizen with the brand new .Metropolis",
@@ -66,13 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "We’ve joined forces with POG Digital, the interoperable universal gaming ecosystem created by THE WORLD POG FEDERATION™, a beloved 90's game and collectibles brand. Together, we proudly introduce .POG, a brand new domain extension that gives POG users a unique username to identity as part of their community.",
       "button": 'Get Yours Today!'
     },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-austin-tld.png",
-      "utm": 'https://unstoppableweb.co/4cc8fCw',
-      "title": ".Austin, the first city-centric web3 domain launches",
-      "subtitle": "Introducing .Austin, empowering 2.4m Central Texas residents and visitors to show their love of Austin and personalize their digital identity in the heart of Texas.",
-      "button": 'Get your name!'
-    }
   ]
 
   const urlRedirect = (url) => {
