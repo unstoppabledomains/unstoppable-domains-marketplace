@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/secret%20mplace.png",
+      "utm": "https://www.secret-domains.com/",
+      "title": "We’re excited to announce that together with Secret Network, we’re launching .SECRET!",
+      "subtitle": ".SECRET domains are your all-in-one, interoperable digital identity in the web3 world.",
+      "button": "Get Yours Today!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/workx%20banner.png",
       "utm": "https://domains.nftworkx.com/",
       "title": "Get Ready to Tokenize Your Real World Assets with .WRKX!",
