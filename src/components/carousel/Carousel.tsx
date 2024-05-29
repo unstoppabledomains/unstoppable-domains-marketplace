@@ -73,13 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Introducing .CLAY domains in partnership with Clay Nation, the creative brand in web3 known for their captivating multi-dimensional clay animations and on-chain collectibles.",
       "button": "Get Yours Now!"
     },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel_pog%20square.png",
-      "utm": 'https://unstoppableweb.co/3IYygYH',
-      "title": "Introducing the Launch of .POG",
-      "subtitle": "We’ve joined forces with POG Digital, the interoperable universal gaming ecosystem created by THE WORLD POG FEDERATION™, a beloved 90's game and collectibles brand. Together, we proudly introduce .POG, a brand new domain extension that gives POG users a unique username to identity as part of their community.",
-      "button": 'Get Yours Today!'
-    },
   ]
 
   const urlRedirect = (url) => {
