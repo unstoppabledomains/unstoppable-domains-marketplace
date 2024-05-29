@@ -34,7 +34,7 @@ export const categories = {
       subCategory: [],
     },
     {
-      category: "Naming Services",
+      category: "TLDs & Naming Services",
       subCategory: [],
     },
     {
