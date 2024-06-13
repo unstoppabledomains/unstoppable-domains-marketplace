@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Yodl%20-%20Rectangle%20(2).png",
+      "utm": "https://t.co/KKjBiiku0U",
+      "title": "Yodl Adds Support for Unstoppable Domains!",
+      "subtitle": "On-Chain Payments just got easier! Use your Unstoppable Domain to send tokens & search for recipients.",
+      "button": "Try it Out!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/secret%20mplace.png",
       "utm": "https://www.secret-domains.com/",
       "title": "We’re excited to announce that together with Secret Network, we’re launching .SECRET!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Empowering Women in Tech: Introducing .WITG Domains!",
       "subtitle": "We've partnered with Women In Tech Global to launch .WITG domains! Women in Tech Global is on a mission to empower 5 million women and girls in tech by 2030, spanning 48 countries across 6 continents.",
       "button": "Get Yours Today!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-clay.png",
-      "utm": "https://unstoppableweb.co/3Q2xrC2",
-      "title": "Get ready to break the mold with .CLAY!",
-      "subtitle": "Introducing .CLAY domains in partnership with Clay Nation, the creative brand in web3 known for their captivating multi-dimensional clay animations and on-chain collectibles.",
-      "button": "Get Yours Now!"
     },
   ]
 
