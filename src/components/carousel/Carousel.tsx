@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-lite-wallet-banner.png",
+      "utm": "https://unstoppabledomains.com/products/wallet",
+      "title": "The Unstoppable Lite Wallet has Arrived",
+      "subtitle": "A wallet custom built for domainers. Manage your domains and cryptocurrency effortlessly without the hassle of complex seed phrases.",
+      "button": "Try it Out!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Yodl%20-%20Rectangle%20(2).png",
       "utm": "https://t.co/KKjBiiku0U",
       "title": "Yodl Adds Support for Unstoppable Domains!",
@@ -64,13 +71,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm": "https://metropolisworld.io/partnerships/unstoppable-domains",
       "title": "Become a Metropolis Citizen with the brand new .Metropolis",
       "subtitle": "Now, we're thrilled to announce that we’re taking our collaboration with Metropolis to the next level. Introducing all-new .Metropolis digital identities, designed as unique usernames to serve the vibrant community of Metropolis enthusiasts!",
-      "button": "Get Yours Today!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/witg-thumbnail",
-      "utm": "https://get.unstoppabledomains.com/witg/",
-      "title": "Empowering Women in Tech: Introducing .WITG Domains!",
-      "subtitle": "We've partnered with Women In Tech Global to launch .WITG domains! Women in Tech Global is on a mission to empower 5 million women and girls in tech by 2030, spanning 48 countries across 6 continents.",
       "button": "Get Yours Today!"
     },
   ]
