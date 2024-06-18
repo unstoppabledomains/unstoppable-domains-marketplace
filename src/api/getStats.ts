@@ -23,11 +23,11 @@ export const getStats = async () => {
       })
       const tickerCount = uniqueArray.length.toLocaleString()
 
-      var res = await fetch('https://unstoppabledomains.com/api/domains/taken-count')
+      var res = await fetch('https://api.unstoppabledomains.com/api/domains/taken-count')
       var json = await res.json()
       const takenDomainsCount = (json.takenDomainsCount/1000000).toLocaleString()+'M+'
 
-      var res = await fetch('https://unstoppabledomains.com/api/domain/records/count')
+      var res = await fetch('https://api.unstoppabledomains.com/api/domain/records/count')
       var json = await res.json()
       const recordsCount = Math.round(json.count/1000).toLocaleString()+(json.count/1000 % 1 >= 0.5 ? 'k+' : 'k')
 
