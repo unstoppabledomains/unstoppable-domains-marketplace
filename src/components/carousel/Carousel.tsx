@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onButtonClick)
 */
   const bannerData = [
+     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ANIME%20%26%20MANGA%20ICANN%20-%20RECTANGLE.png",
+      "utm": "https://www.animedomains.com/",
+      "title": "Planning & Strategizing to DNS Enable .Anime & Manga",
+      "subtitle": "Aiming to blend the best of Web2 functionalities with the innovative utility of Web3 domains via ICANN gTLD application process. If successful, this move would enable .Anime and .Manga to have full DNS capabilities!",
+      "button": "Get Your Domain!"
+    },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-lite-wallet-banner.png",
       "utm": "https://unstoppabledomains.com/products/wallet",
@@ -64,13 +71,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm": "https://domains.nftworkx.com/",
       "title": "Get Ready to Tokenize Your Real World Assets with .WRKX!",
       "subtitle": ".WRKX domains can act as your personal Web3 identity, can be used for simplified on-chain transactions and more…",
-      "button": "Get Yours Today!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/metropolis-carousel.jpg",
-      "utm": "https://metropolisworld.io/partnerships/unstoppable-domains",
-      "title": "Become a Metropolis Citizen with the brand new .Metropolis",
-      "subtitle": "Now, we're thrilled to announce that we’re taking our collaboration with Metropolis to the next level. Introducing all-new .Metropolis digital identities, designed as unique usernames to serve the vibrant community of Metropolis enthusiasts!",
       "button": "Get Yours Today!"
     },
   ]
