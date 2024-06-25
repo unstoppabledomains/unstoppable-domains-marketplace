@@ -9,7 +9,7 @@ export const App = {
     marketLogo: {
         height: 42,
         width: 165,
-        src: "/marketlogo_transparent.png",
+        src: "/ud-apps-logo.png",
     },
     
     menu: [
