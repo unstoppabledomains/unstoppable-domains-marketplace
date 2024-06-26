@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onButtonClick)
 */
   const bannerData = [
+    {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/marketplace-announcement.png",
+      "utm": "https://unstoppablemarketplace.com/",
+      "title": "A Brand New Unstoppable Marketplace Has Arrived!",
+      "subtitle": "Buy and Sell tokenized .com and web3 domains directly from our website. Featuring an easy-to-use interface, flexible payment options and automatic transfers!",
+      "button": "Check it Out!"
+    },
      {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ANIME%20%26%20MANGA%20ICANN%20-%20RECTANGLE.png",
       "utm": "https://www.animedomains.com/",
@@ -64,13 +71,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm": "https://www.secret-domains.com/",
       "title": "We’re excited to announce that together with Secret Network, we’re launching .SECRET!",
       "subtitle": ".SECRET domains are your all-in-one, interoperable digital identity in the web3 world.",
-      "button": "Get Yours Today!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/workx%20banner.png",
-      "utm": "https://domains.nftworkx.com/",
-      "title": "Get Ready to Tokenize Your Real World Assets with .WRKX!",
-      "subtitle": ".WRKX domains can act as your personal Web3 identity, can be used for simplified on-chain transactions and more…",
       "button": "Get Yours Today!"
     },
   ]
