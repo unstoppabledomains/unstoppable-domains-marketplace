@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps<{
     return (
         <>
             <Head>
-                <title>The Unstoppable Marketplace | Unstoppable Domains</title>
+                <title>Unstoppable Apps | Unstoppable Domains</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="Explore 860+ applications integrated with Unstoppable and new ways to use your Web3 domain." />
                 <meta property="og:title" content="The Unstoppable Marketplace | Unstoppable Domains" />
