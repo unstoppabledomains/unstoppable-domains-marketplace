@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/raiinbanner.png",
+      "utm": "https://unstoppableweb.co/4cJLF3z",
+      "title": "We’re thrilled to unveil our exciting collaboration with Raiinmaker Network, a pioneering force in Web3 and AI technology. Together, we're launching the all-new .RAIIN TLD!",
+      "subtitle": ".RAIIN domains are supported by our expansive ecosystem of over 865 applications, wallets, games, metaverses, and more, .RAIIN domains seamlessly integrate into your digital lifestyle.",
+      "button": "Get Yours Today!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/marketplace-announcement.png",
       "utm": "https://unstoppablemarketplace.com/",
       "title": "A Brand New Unstoppable Marketplace Has Arrived!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Yodl Adds Support for Unstoppable Domains!",
       "subtitle": "On-Chain Payments just got easier! Use your Unstoppable Domain to send tokens & search for recipients.",
       "button": "Try it Out!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/secret%20mplace.png",
-      "utm": "https://www.secret-domains.com/",
-      "title": "We’re excited to announce that together with Secret Network, we’re launching .SECRET!",
-      "subtitle": ".SECRET domains are your all-in-one, interoperable digital identity in the web3 world.",
-      "button": "Get Yours Today!"
     },
   ]
 
