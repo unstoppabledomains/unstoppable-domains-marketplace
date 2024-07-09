@@ -39,11 +39,18 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/raiinbanner.png",
-      "utm": "https://unstoppableweb.co/4cJLF3z",
-      "title": "We’re thrilled to unveil our exciting collaboration with Raiinmaker Network, a pioneering force in Web3 and AI technology. Together, we're launching the all-new .RAIIN TLD!",
-      "subtitle": ".RAIIN domains are supported by our expansive ecosystem of over 865 applications, wallets, games, metaverses, and more, .RAIIN domains seamlessly integrate into your digital lifestyle.",
-      "button": "Get Yours Today!"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-drop.png",
+      "utm": "https://crypto.com/nft/drops-event/c14edda7cb07d48fb9a36015d31057da?tab=shop",
+      "title": "Premium Onchain Domains at Special Prices",
+      "subtitle": "We've collaborated with Crypto.com to drop 200 never-before-released domains. For 30 days only, enjoy special prices on domains like .crypto, x.x, .bitcoin and more.",
+      "button": "Shop the Drop!"
+    },
+    {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgyworld.png",
+      "utm": "https://unstoppableweb.co/3OHW7yS",
+      "title": "Access Pudgy World With Your .Pudgy Domain",
+      "subtitle": "Starting Q4 2024, you'll be able to enter the whimsical Pudgy World using your very own .Pudgy domain (e.g., Luca.Pudgy).",
+      "button": "Get your .Pudgy domain!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/marketplace-announcement.png",
@@ -52,26 +59,19 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Buy and Sell tokenized .com and web3 domains directly from our website. Featuring an easy-to-use interface, flexible payment options and automatic transfers!",
       "button": "Check it Out!"
     },
-     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ANIME%20%26%20MANGA%20ICANN%20-%20RECTANGLE.png",
-      "utm": "https://www.animedomains.com/",
-      "title": "Planning & Strategizing to DNS Enable .Anime & Manga",
-      "subtitle": "Aiming to blend the best of Web2 functionalities with the innovative utility of Web3 domains via ICANN gTLD application process. If successful, this move would enable .Anime and .Manga to have full DNS capabilities!",
-      "button": "Get Your Domain!"
+    {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-hive3.png",
+      "utm": "https://hive3.tech/",
+      "title": "Login to Hive3 with your Domain",
+      "subtitle": "Level up your tech education! Login to Hive3’s blockchain-based learning platform with your Unstoppable domain.",
+      "button": "Give it a Try!"
     },
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ud-lite-wallet-banner.png",
-      "utm": "https://unstoppabledomains.com/products/wallet",
-      "title": "The Unstoppable Lite Wallet has Arrived",
-      "subtitle": "A wallet custom built for domainers. Manage your domains and cryptocurrency effortlessly without the hassle of complex seed phrases.",
-      "button": "Try it Out!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Yodl%20-%20Rectangle%20(2).png",
-      "utm": "https://t.co/KKjBiiku0U",
-      "title": "Yodl Adds Support for Unstoppable Domains!",
-      "subtitle": "On-Chain Payments just got easier! Use your Unstoppable Domain to send tokens & search for recipients.",
-      "button": "Try it Out!"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/raiinbanner.png",
+      "utm": "https://unstoppableweb.co/4cJLF3z",
+      "title": "We're thrilled to unveil our exciting collaboration with Raiinmaker Network, a pioneering force in Web3 and AI technology. Together, we're launching the all-new .RAIIN TLD!",
+      "subtitle": ".RAIIN domains are supported by our expansive ecosystem of over 865 applications, wallets, games, metaverses, and more, .RAIIN domains seamlessly integrate into your digital lifestyle.",
+      "button": "Get Yours Today!"
     },
   ]
 
