@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
+      "utm": "https://unstoppableweb.co/3VQbmZw",
+      "title": "A .Stepn the Right Direction",
+      "subtitle": "We're hitting the track with STEPN, the Web3 lifestyle app that rewards people for walking, jogging, and running, to launch .stepn domains!",
+      "button": "Get a .Stepn Domain!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-drop.png",
       "utm": "https://crypto.com/nft/drops-event/c14edda7cb07d48fb9a36015d31057da?tab=shop",
       "title": "Premium Onchain Domains at Special Prices",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Login to Hive3 with your Domain",
       "subtitle": "Level up your tech education! Login to Hive3’s blockchain-based learning platform with your Unstoppable domain.",
       "button": "Give it a Try!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/raiinbanner.png",
-      "utm": "https://unstoppableweb.co/4cJLF3z",
-      "title": "We're thrilled to unveil our exciting collaboration with Raiinmaker Network, a pioneering force in Web3 and AI technology. Together, we're launching the all-new .RAIIN TLD!",
-      "subtitle": ".RAIIN domains are supported by our expansive ecosystem of over 865 applications, wallets, games, metaverses, and more, .RAIIN domains seamlessly integrate into your digital lifestyle.",
-      "button": "Get Yours Today!"
     },
   ]
 
