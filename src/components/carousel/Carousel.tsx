@@ -39,6 +39,14 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-squarespace-hack.png",
+      "utm": null,
+      "title": "Unstoppabledomains.com has been subject to an attack.",
+      "subtitle": "Do NOT open emails from @unstoppabledomains.com or use the website until further notice.",
+      "button": null
+    },
+    /*
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
       "utm": "https://unstoppableweb.co/3VQbmZw",
       "title": "A .Stepn the Right Direction",
@@ -73,6 +81,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Level up your tech education! Login to Hive3’s blockchain-based learning platform with your Unstoppable domain.",
       "button": "Give it a Try!"
     },
+    */
   ]
 
   const urlRedirect = (url) => {
