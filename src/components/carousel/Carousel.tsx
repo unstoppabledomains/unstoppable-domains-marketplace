@@ -38,13 +38,6 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onButtonClick)
 */
   const bannerData = [
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-squarespace-hack.png",
-      "utm": null,
-      "title": "Unstoppabledomains.com has been subject to an attack.",
-      "subtitle": "Do NOT open emails from @unstoppabledomains.com or use the website until further notice.",
-      "button": null
-    },
     /*
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
