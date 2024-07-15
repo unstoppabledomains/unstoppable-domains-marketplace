@@ -38,6 +38,13 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onButtonClick)
 */
   const bannerData = [
+    {
+      "image": null,
+      "utm": null,
+      "title": null,
+      "subtitle": null,
+      "button": null
+    },
     /*
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
@@ -89,12 +96,13 @@ const Carousel: React.FC<PropType> = (props) => {
         <div className="flex touch-pan-y">
           {bannerData.map((banner, index) => (
             <div className="flex-[0_0_100%] min-w-0 min-h-0 relative pl-2 pr-2" key={index}>
-              <img
-                className="relative w-auto h-auto max-h-[150px] md:max-h-[200px] mx-auto rounded-3xl object-contain lg:cursor-pointer"
-                src={banner?.image}
-                alt={`Banner ${index + 1}`}
-                onClick={() => urlRedirect(banner?.utm)}
-              />
+              {banner?.image && <img
+                  className="relative w-auto h-auto max-h-[150px] md:max-h-[200px] mx-auto rounded-3xl object-contain lg:cursor-pointer"
+                  src={banner?.image}
+                  alt={`Banner ${index + 1}`}
+                  onClick={() => urlRedirect(banner?.utm)}
+                />
+              }
                 {banner?.title && <div className="mt-2 rounded-3xl max-w-[80%] md:max-w-[100%] mx-auto">
                   <div className="mx-auto justify-center flex flex-col md:flex-row pt-2 pb-2 md:pt-4 md:pb-4">
                     <div className="text-center flex flex-col mx-auto md:pr-4 md:pl-4 text-white break-normal" >
