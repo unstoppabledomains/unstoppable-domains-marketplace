@@ -57,7 +57,7 @@ const Index = (props) => {
 
     let child;
 
-    if ((items === undefined) || (isLoading || isFetching) && ((items.length === 0) || ((dataPage - 1) !== selectedPage) || ((items[0] as any).chains as Array<number>).indexOf(app.chainId) === -1))
+    if ((items === undefined) || (isLoading || isFetching) && ((items.length === 0) || ((dataPage - 1) !== selectedPage) || (((items[0] as any).chains as Array<number>) === null) || ((items[0] as any).chains as Array<number>).indexOf(app.chainId) === -1))
         return <PageLayout>
             <div>
                 <div className="bg-border-color w-[240px] h-[32px] my-4" />
