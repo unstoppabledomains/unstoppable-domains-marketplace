@@ -39,13 +39,12 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": null,
-      "utm": null,
-      "title": null,
-      "subtitle": null,
-      "button": null
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable-back-online.png",
+      "utm": "https://unstoppabledomains.com/blog/unstoppabledomains.com-back-and-stronger",
+      "title": "Unstoppabledomains.com Is Back and Stronger Than Ever - Your Data Is Secure",
+      "subtitle": "We're pleased to report that our website unstoppabledomains.com and communications from @unstoppabledomains.com are secure and fully operational.",
+      "button": "Learn More"
     },
-    /*
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
       "utm": "https://unstoppableweb.co/3VQbmZw",
@@ -74,14 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Buy and Sell tokenized .com and web3 domains directly from our website. Featuring an easy-to-use interface, flexible payment options and automatic transfers!",
       "button": "Check it Out!"
     },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-hive3.png",
-      "utm": "https://hive3.tech/",
-      "title": "Login to Hive3 with your Domain",
-      "subtitle": "Level up your tech education! Login to Hive3’s blockchain-based learning platform with your Unstoppable domain.",
-      "button": "Give it a Try!"
-    },
-    */
   ]
 
   const urlRedirect = (url) => {
