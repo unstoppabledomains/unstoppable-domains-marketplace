@@ -39,11 +39,11 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-unstoppable-back-online.png",
-      "utm": "https://unstoppabledomains.com/blog/unstoppabledomains.com-back-and-stronger",
-      "title": "Unstoppabledomains.com Is Back and Stronger Than Ever - Your Data Is Secure",
-      "subtitle": "We're pleased to report that our website unstoppabledomains.com and communications from @unstoppabledomains.com are secure and fully operational.",
-      "button": "Learn More"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-kryptic.png",
+      "utm": "https://kryptic.com/domains",
+      "title": "Crack The Code With .Kryptic",
+      "subtitle": "We've teamed up with Kryptic, a quantum-immune wallet solution, to launch .kryptic domains: Enabling simplified crypto transactions and personalized identity.",
+      "button": "Get a .Kryptic!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
