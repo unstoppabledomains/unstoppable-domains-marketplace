@@ -60,11 +60,11 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Shop the Drop!"
     },
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pudgyworld.png",
-      "utm": "https://unstoppableweb.co/3OHW7yS",
-      "title": "Access Pudgy World With Your .Pudgy Domain",
-      "subtitle": "Starting Q4 2024, you'll be able to enter the whimsical Pudgy World using your very own .Pudgy domain (e.g., Luca.Pudgy).",
-      "button": "Get your .Pudgy domain!"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-namemaxi.png",
+      "utm": "https://www.namemaxi.com/",
+      "title": "Name Maxi Integrates Unstoppable Marketplace for Tokenized .Com Domains",
+      "subtitle": "As the first partner platform to offer tokenized .com domains from UD, Name Maxi users can effortlessly browse the “Unstoppable” sub-category to discover a wide range of tokenized .com domains.",
+      "button": "Give it a try!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/marketplace-announcement.png",
