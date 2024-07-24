@@ -39,18 +39,18 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
+      "utm": "https://get.unstoppabledomains.com/ubu/",
+      "title": ".Ubu: The First Onchain TLD in Africa Launches",
+      "subtitle": "In partnership with Africarare, an AI-powered mixed-reality environment, we've launched ,Ubu domains. Embody the spirit of Ubuntu—an African philosophy centered on community and interconnectedness.",
+      "button": "Unite & Thrive with .Ubu!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-kryptic.png",
       "utm": "https://kryptic.com/domains",
       "title": "Crack The Code With .Kryptic",
       "subtitle": "We've teamed up with Kryptic, a quantum-immune wallet solution, to launch .kryptic domains: Enabling simplified crypto transactions and personalized identity.",
       "button": "Get a .Kryptic!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/stepnbanner.png",
-      "utm": "https://unstoppableweb.co/3VQbmZw",
-      "title": "A .Stepn the Right Direction",
-      "subtitle": "We're hitting the track with STEPN, the Web3 lifestyle app that rewards people for walking, jogging, and running, to launch .stepn domains!",
-      "button": "Get a .Stepn Domain!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-drop.png",
