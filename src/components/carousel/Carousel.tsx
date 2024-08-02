@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-stepn-discount.png",
+      "utm": "https://unstoppableweb.co/3VQbb0i",
+      "title": ".Stepn Integrated within FSL ID, Plus 10% Off Discount",
+      "subtitle": ".stepn domains are now supported within FSL ID! 🚀 Simply enter a .stepn domain as the receiving address, and the app will resolve it to your assigned Solana or Polygon address!",
+      "button": "Get 10% off!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
       "utm": "https://get.unstoppabledomains.com/ubu/",
       "title": ".Ubu: The First Onchain TLD in Africa Launches",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Name Maxi Integrates Unstoppable Marketplace for Tokenized .Com Domains",
       "subtitle": "As the first partner platform to offer tokenized .com domains from UD, Name Maxi users can effortlessly browse the “Unstoppable” sub-category to discover a wide range of tokenized .com domains.",
       "button": "Give it a try!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/marketplace-announcement.png",
-      "utm": "https://unstoppablemarketplace.com/",
-      "title": "A Brand New Unstoppable Marketplace Has Arrived!",
-      "subtitle": "Buy and Sell tokenized .com and web3 domains directly from our website. Featuring an easy-to-use interface, flexible payment options and automatic transfers!",
-      "button": "Check it Out!"
     },
   ]
 
