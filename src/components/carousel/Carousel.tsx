@@ -39,11 +39,11 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-stepn-discount.png",
-      "utm": "https://unstoppableweb.co/3VQbb0i",
-      "title": ".Stepn Integrated within FSL ID, Plus 10% Off Discount",
-      "subtitle": ".stepn domains are now supported within FSL ID! 🚀 Simply enter a .stepn domain as the receiving address, and the app will resolve it to your assigned Solana or Polygon address!",
-      "button": "Get 10% off!"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-tball.png",
+      "utm": "https://get.unstoppabledomains.com/tball/",
+      "title": "Introducing .TBALL, our first meme coin branded TLD!",
+      "subtitle": "We've partnered with Tetherball, a female-founded meme coin to launch .TBALL. Get in the game with a new .TBALL domain.",
+      "button": "Get a .TBALL!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
