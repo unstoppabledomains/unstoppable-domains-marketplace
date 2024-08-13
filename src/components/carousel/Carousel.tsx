@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-farmsent.png",
+      "utm": "https://get.unstoppabledomains.com/farms/",
+      "title": "Grow Your Future With .Farms!",
+      "subtitle": "We've teamed up with Farmsent to enable over 20M food producers worldwide to establish a secure digital identity and accept crypto transactions.",
+      "button": "Get a .Farms Domain!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-tball.png",
       "utm": "https://get.unstoppabledomains.com/tball/",
       "title": "Introducing .TBALL, our first meme coin branded TLD!",
@@ -58,13 +65,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Crack The Code With .Kryptic",
       "subtitle": "We've teamed up with Kryptic, a quantum-immune wallet solution, to launch .kryptic domains: Enabling simplified crypto transactions and personalized identity.",
       "button": "Get a .Kryptic!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-drop.png",
-      "utm": "https://crypto.com/nft/drops-event/c14edda7cb07d48fb9a36015d31057da?tab=shop",
-      "title": "Premium Onchain Domains at Special Prices",
-      "subtitle": "We've collaborated with Crypto.com to drop 200 never-before-released domains. For 30 days only, enjoy special prices on domains like .crypto, x.x, .bitcoin and more.",
-      "button": "Shop the Drop!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-namemaxi.png",
