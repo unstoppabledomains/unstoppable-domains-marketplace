@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-icann.png",
+      "utm": "https://unstoppabledomains.com/blog/categories/announcements/article/icann-accredited",
+      "title": "Unstoppable Domains: ICANN Accredited Registrar, With Innovative Onchain Solutions",
+      "subtitle": "Unstoppable Domains has gained official ICANN accreditation, becoming the largest onchain registrar to receive accreditation. We're proud to roll out a comprehensive suite of onchain products for the domain industry.",
+      "button": "Learn More!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-farmsent.png",
       "utm": "https://get.unstoppabledomains.com/farms/",
       "title": "Grow Your Future With .Farms!",
@@ -53,25 +60,18 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Get a .TBALL!"
     },
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-readyplayerme.png",
+      "utm": "https://portal.readyplayer.me/",
+      "title": "Unleash Your Inner Gamer with Ready Player Me",
+      "subtitle": "Build your custom avatar and dive into a world of thrilling games like Rampage Riders, Angry Birds, Sky Dive, Backstreet Mayhem, and more—your ultimate gaming adventure starts here!",
+      "button": "Play Now!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
       "utm": "https://get.unstoppabledomains.com/ubu/",
       "title": ".Ubu: The First Onchain TLD in Africa Launches",
       "subtitle": "In partnership with Africarare, an AI-powered mixed-reality environment, we've launched ,Ubu domains. Embody the spirit of Ubuntu—an African philosophy centered on community and interconnectedness.",
       "button": "Unite & Thrive with .Ubu!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-kryptic.png",
-      "utm": "https://kryptic.com/domains",
-      "title": "Crack The Code With .Kryptic",
-      "subtitle": "We've teamed up with Kryptic, a quantum-immune wallet solution, to launch .kryptic domains: Enabling simplified crypto transactions and personalized identity.",
-      "button": "Get a .Kryptic!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-namemaxi.png",
-      "utm": "https://www.namemaxi.com/",
-      "title": "Name Maxi Integrates Unstoppable Marketplace for Tokenized .Com Domains",
-      "subtitle": "As the first partner platform to offer tokenized .com domains from UD, Name Maxi users can effortlessly browse the “Unstoppable” sub-category to discover a wide range of tokenized .com domains.",
-      "button": "Give it a try!"
     },
   ]
 
