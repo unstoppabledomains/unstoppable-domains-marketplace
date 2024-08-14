@@ -59,6 +59,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "We've partnered with Tetherball, a female-founded meme coin to launch .TBALL. Get in the game with a new .TBALL domain.",
       "button": "Get a .TBALL!"
     },
+    /*
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-readyplayerme.png",
       "utm": "https://portal.readyplayer.me/",
@@ -66,6 +67,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "Build your custom avatar and dive into a world of thrilling games like Rampage Riders, Angry Birds, Sky Dive, Backstreet Mayhem, and more—your ultimate gaming adventure starts here!",
       "button": "Play Now!"
     },
+    */
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
       "utm": "https://get.unstoppabledomains.com/ubu/",
