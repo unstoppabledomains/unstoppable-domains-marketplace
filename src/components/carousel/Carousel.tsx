@@ -46,6 +46,13 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Learn More!"
     },
     {
+      "image": "    https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/dfz.png",
+      "utm": "https://get.unstoppabledomains.com/dfz/",
+      "title": "Enter The Deadfellaz Zone with .DFZ",
+      "subtitle": "We've partnered with Deadfellaz, the trailblazing NFT brand and gaming pioneer to launch .DFZ domains—just in time for their 3rd anniversary!",
+      "button": "Join the Horde"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-farmsent.png",
       "utm": "https://get.unstoppabledomains.com/farms/",
       "title": "Grow Your Future With .Farms!",
@@ -68,13 +75,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Play Now!"
     },
     */
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-ubu.png",
-      "utm": "https://get.unstoppabledomains.com/ubu/",
-      "title": ".Ubu: The First Onchain TLD in Africa Launches",
-      "subtitle": "In partnership with Africarare, an AI-powered mixed-reality environment, we've launched ,Ubu domains. Embody the spirit of Ubuntu—an African philosophy centered on community and interconnectedness.",
-      "button": "Unite & Thrive with .Ubu!"
-    },
   ]
 
   const urlRedirect = (url) => {
