@@ -673,10 +673,9 @@ export default function Layout(props) {
                                 </div>
                             </Row>
                             <Slider ref={slider} {...settings}>
-                                {/* data ? <Link
+                                {/*data && <Link
                                     key={"rpm"}
-                                    href={`https://portal.readyplayer.me/`}
-                                    target="_blank"
+                                    href={`/rpm`}
                                     draggable={false}
                                     onClick={(e) =>
                                         dragging &&
@@ -684,8 +683,7 @@ export default function Layout(props) {
                                     }
                                 >
                                     <FeaturedCard app={rpm} />
-                                </Link>
-                                : buildLoadingCard(5) */}
+                                </Link>*/}
                                 {data
                                     ? data.map((dapp) => {
                                         // console.log("dapp", dapp)
