@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/spritz.png",
+      "utm": "https://www.spritz.finance/",
+      "title": "Spritz Finance Integrates Unstoppable!",
+      "subtitle": "Reverse Resolution is Live",
+      "button": "Check Out Spritz!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-icann.png",
       "utm": "https://unstoppabledomains.com/blog/categories/announcements/article/icann-accredited",
       "title": "Unstoppable Domains: ICANN Accredited Registrar, With Innovative Onchain Solutions",
