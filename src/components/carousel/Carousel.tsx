@@ -39,11 +39,11 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/spritz.png",
-      "utm": "https://www.spritz.finance/",
-      "title": "Spritz Finance Integrates Unstoppable!",
-      "subtitle": "Reverse Resolution is Live",
-      "button": "Check Out Spritz!"
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-ai.png",
+      "utm": "https://crypto.com/nft/drops-event/a30ecbf68a9c0aa2ba97f8660c9488f7?tab=shop",
+      "title": "Live Now: AI-Themed Premium Drop with Crypto.com!",
+      "subtitle": "Our second drop is selling out fast! Priced at special crypto.com rates, domains are flying off the shelves. Get your hands on the remaining gems…",
+      "button": "Shop the drop!"
     },
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-icann.png",
