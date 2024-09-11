@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pw.png",
+      "utm": "https://unstoppableweb.co/3B85unt",
+      "title": "Introducing .PW: The Future of Public Wallets",
+      "subtitle": "We've partnered with Radix to launch .PW domains. Get a FREE .PW domain for 1 year with a purchase of a .crypto domain.",
+      "button": "Get a .PW!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-cryptocom-ai.png",
       "utm": "https://crypto.com/nft/drops-event/a30ecbf68a9c0aa2ba97f8660c9488f7?tab=shop",
       "title": "Live Now: AI-Themed Premium Drop with Crypto.com!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Grow Your Future With .Farms!",
       "subtitle": "We've teamed up with Farmsent to enable over 20M food producers worldwide to establish a secure digital identity and accept crypto transactions.",
       "button": "Get a .Farms Domain!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-tball.png",
-      "utm": "https://get.unstoppabledomains.com/tball/",
-      "title": "Introducing .TBALL, our first meme coin branded TLD!",
-      "subtitle": "We've partnered with Tetherball, a female-founded meme coin to launch .TBALL. Get in the game with a new .TBALL domain.",
-      "button": "Get a .TBALL!"
     },
     /*
     {
