@@ -73,15 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "We've teamed up with Farmsent to enable over 20M food producers worldwide to establish a secure digital identity and accept crypto transactions.",
       "button": "Get a .Farms Domain!"
     },
-    /*
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-readyplayerme.png",
-      "utm": "https://portal.readyplayer.me/",
-      "title": "Unleash Your Inner Gamer with Ready Player Me",
-      "subtitle": "Build your custom avatar and dive into a world of thrilling games like Rampage Riders, Angry Birds, Sky Dive, Backstreet Mayhem, and more—your ultimate gaming adventure starts here!",
-      "button": "Play Now!"
-    },
-    */
   ]
 
   const urlRedirect = (url) => {
