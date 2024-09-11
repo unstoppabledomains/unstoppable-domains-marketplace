@@ -53,6 +53,13 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Shop the drop!"
     },
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-readyplayerme.png",
+      "utm": "/rpm",
+      "title": "Unleash Your Inner Gamer with Ready Player Me",
+      "subtitle": "Build your custom avatar and dive into a world of thrilling games like Rampage Riders, Angry Birds, Sky Dive, Backstreet Mayhem, and more—your ultimate gaming adventure starts here!",
+      "button": "Play Now!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-icann.png",
       "utm": "https://unstoppabledomains.com/blog/categories/announcements/article/icann-accredited",
       "title": "Unstoppable Domains: ICANN Accredited Registrar, With Innovative Onchain Solutions",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Enter The Deadfellaz Zone with .DFZ",
       "subtitle": "We've partnered with Deadfellaz, the trailblazing NFT brand and gaming pioneer to launch .DFZ domains—just in time for their 3rd anniversary!",
       "button": "Join the Horde"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-farmsent.png",
-      "utm": "https://get.unstoppabledomains.com/farms/",
-      "title": "Grow Your Future With .Farms!",
-      "subtitle": "We've teamed up with Farmsent to enable over 20M food producers worldwide to establish a secure digital identity and accept crypto transactions.",
-      "button": "Get a .Farms Domain!"
     },
   ]
 

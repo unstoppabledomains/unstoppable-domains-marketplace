@@ -570,7 +570,16 @@ export default function Layout(props) {
         },
       ];
 
-    useEffect(() => {
+    const rpm = {
+        name: "Ready Player Me",
+        images: {
+            banner: "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ready-player-me-banner.png",
+            logo: "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/ready-player-me-logo.svg",
+        },
+        tags: ["Click here to play!"]
+    }
+
+      useEffect(() => {
         getStats()
         .then(stats => {
             setTickers(stats.tickers)
@@ -664,6 +673,17 @@ export default function Layout(props) {
                                 </div>
                             </Row>
                             <Slider ref={slider} {...settings}>
+                                {data && <Link
+                                    key={"rpm"}
+                                    href={`/rpm`}
+                                    draggable={false}
+                                    onClick={(e) =>
+                                        dragging &&
+                                        e.preventDefault()
+                                    }
+                                >
+                                    <FeaturedCard app={rpm} />
+                                </Link>}
                                 {data
                                     ? data.map((dapp) => {
                                         if (dapp) {
