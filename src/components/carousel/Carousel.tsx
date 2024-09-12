@@ -60,7 +60,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "button": "Learn More!"
     },
     {
-      "image": "    https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/dfz.png",
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/dfz.png",
       "utm": "https://get.unstoppabledomains.com/dfz/",
       "title": "Enter The Deadfellaz Zone with .DFZ",
       "subtitle": "We've partnered with Deadfellaz, the trailblazing NFT brand and gaming pioneer to launch .DFZ domains—just in time for their 3rd anniversary!",
