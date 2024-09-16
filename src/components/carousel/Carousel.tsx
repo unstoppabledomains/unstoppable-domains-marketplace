@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-smobler.png",
+      "utm": "https://unstoppableweb.co/3XCqrQi",
+      "title": "Step Into A New Dimension With .Smobler",
+      "subtitle": "Together with Smobler, we've launched the first Base TLD tailored for immersive web3 experiences.",
+      "button": "Get Yours!"
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pw.png",
       "utm": "https://unstoppableweb.co/3B85unt",
       "title": "Introducing .PW: The Future of Public Wallets",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Enter The Deadfellaz Zone with .DFZ",
       "subtitle": "We've partnered with Deadfellaz, the trailblazing NFT brand and gaming pioneer to launch .DFZ domains—just in time for their 3rd anniversary!",
       "button": "Join the Horde"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-farmsent.png",
-      "utm": "https://get.unstoppabledomains.com/farms/",
-      "title": "Grow Your Future With .Farms!",
-      "subtitle": "We've teamed up with Farmsent to enable over 20M food producers worldwide to establish a secure digital identity and accept crypto transactions.",
-      "button": "Get a .Farms Domain!"
     },
   ]
 
