@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/LFG%20Launch%20Asset%20-%20Rectangular%20(4).png",
+      "utm" : "https://unstoppableweb.co/3zekfoe",
+      "title" : "Rise Up and Game On with .LFG",
+      "subtitle": "We’ve partnered with LFG Incorporated to launch .LFG, “Let’s Fight Giants”, giving gamers and crypto enthusiasts a unique digital identity that represents web3 culture.",
+      "button": "Get a .LFG", 
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-smobler.png",
       "utm": "https://unstoppableweb.co/3XCqrQi",
       "title": "Step Into A New Dimension With .Smobler",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Unstoppable Domains: ICANN Accredited Registrar, With Innovative Onchain Solutions",
       "subtitle": "Unstoppable Domains has gained official ICANN accreditation, becoming the largest onchain registrar to receive accreditation. We're proud to roll out a comprehensive suite of onchain products for the domain industry.",
       "button": "Learn More!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/dfz.png",
-      "utm": "https://get.unstoppabledomains.com/dfz/",
-      "title": "Enter The Deadfellaz Zone with .DFZ",
-      "subtitle": "We've partnered with Deadfellaz, the trailblazing NFT brand and gaming pioneer to launch .DFZ domains—just in time for their 3rd anniversary!",
-      "button": "Join the Horde"
     },
   ]
 
