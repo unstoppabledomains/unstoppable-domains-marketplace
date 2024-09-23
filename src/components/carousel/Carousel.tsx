@@ -40,7 +40,7 @@ const Carousel: React.FC<PropType> = (props) => {
   const bannerData = [
     {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Dream%20Launch%20Asset%20-%20Rectangular%20(1).png",
-      "utm" : "https://unstoppableweb.co/3XDIq9g",
+      "utm" : "https://domain.somnia.network/",
       "title" : " Awaken Your Imagination with .Dream",
       "subtitle": "We’ve partnered with Somnia, the innovative Dream Computer that’s transforming the landscape of Web3 to launch .dream!",
       "button": "Get a .Dream", 
