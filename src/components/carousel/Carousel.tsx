@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Dream%20Launch%20Asset%20-%20Rectangular%20(1).png",
+      "utm" : "https://unstoppableweb.co/3XDIq9g",
+      "title" : " Awaken Your Imagination with .Dream",
+      "subtitle": "We’ve partnered with Somnia, the innovative Dream Computer that’s transforming the landscape of Web3 to launch .dream!",
+      "button": "Get a .Dream", 
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/LFG%20Launch%20Asset%20-%20Rectangular%20(4).png",
       "utm" : "https://unstoppableweb.co/3zekfoe",
       "title" : "Rise Up and Game On with .LFG",
@@ -65,14 +72,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Live Now: AI-Themed Premium Drop with Crypto.com!",
       "subtitle": "Our second drop is selling out fast! Priced at special crypto.com rates, domains are flying off the shelves. Get your hands on the remaining gems…",
       "button": "Shop the drop!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-icann.png",
-      "utm": "https://unstoppabledomains.com/blog/categories/announcements/article/icann-accredited",
-      "title": "Unstoppable Domains: ICANN Accredited Registrar, With Innovative Onchain Solutions",
-      "subtitle": "Unstoppable Domains has gained official ICANN accreditation, becoming the largest onchain registrar to receive accreditation. We're proud to roll out a comprehensive suite of onchain products for the domain industry.",
-      "button": "Learn More!"
-    },
+    }
   ]
 
   const urlRedirect = (url) => {
