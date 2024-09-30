@@ -38,7 +38,14 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi, onButtonClick)
 */
   const bannerData = [
-     {
+    {
+      "image": "https://dxk8hwnj7akaq.cloudfront.net/mumu-tld.app/images/banner-cd080bcc-d15a-4757-8022-df2075b4c7ce.png",
+      "utm": "https://get.unstoppabledomains.com/mumu/",
+      "title": "Join the Bullish Muuvement with .MUMU!",
+      "subtitle": "We’ve teamed up with MUMU, a top ten memecoin on the Solana blockchain inspired by the bull market's mascot, to introduce .MUMU domains! - Join the MUMU community today with .MUMU!",
+      "button": "Get a .MUMU!"
+    }, 
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/benjisplash.png",
       "utm": "https://get.unstoppabledomains.com/benji/",
       "title": "Who let the .Benji out?!!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Step Into A New Dimension With .Smobler",
       "subtitle": "Together with Smobler, we've launched the first Base TLD tailored for immersive web3 experiences.",
       "button": "Get Yours!"
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-pw.png",
-      "utm": "https://unstoppableweb.co/3B85unt",
-      "title": "Introducing .PW: The Future of Public Wallets",
-      "subtitle": "We've partnered with Radix to launch .PW domains. Get a FREE .PW domain for 1 year with a purchase of a .crypto domain.",
-      "button": "Get a .PW!"
     }
   ]
 
