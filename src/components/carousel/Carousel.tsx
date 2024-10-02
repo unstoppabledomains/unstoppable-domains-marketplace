@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-propykeys.png",
+      "utm": "https://unstoppableweb.co/4ePQE3R",
+      "title": "Own It with .Propykeys!",
+      "subtitle": "We’ve teamed up with Propykeys, our first dApp on Base network, to launch .Propykeys - the innovative domain for the onchain real estate revolution.",
+      "button": "Get a .Propykeys!"
+    }, 
+    {
       "image": "https://dxk8hwnj7akaq.cloudfront.net/mumu-tld.app/images/banner-cd080bcc-d15a-4757-8022-df2075b4c7ce.png",
       "utm": "https://get.unstoppabledomains.com/mumu/",
       "title": "Join the Bullish Muuvement with .MUMU!",
@@ -65,13 +72,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "title" : "Rise Up and Game On with .LFG",
       "subtitle": "We’ve partnered with LFG Incorporated to launch .LFG, “Let’s Fight Giants”, giving gamers and crypto enthusiasts a unique digital identity that represents web3 culture.",
       "button": "Get a .LFG", 
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-smobler.png",
-      "utm": "https://unstoppableweb.co/3XCqrQi",
-      "title": "Step Into A New Dimension With .Smobler",
-      "subtitle": "Together with Smobler, we've launched the first Base TLD tailored for immersive web3 experiences.",
-      "button": "Get Yours!"
     }
   ]
 
