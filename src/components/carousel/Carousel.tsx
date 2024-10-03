@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-bald-new.png",
+      "utm" : "https://unstoppableweb.co/3N8r3XN",
+      "title" : "Make a Bold Statement with .BALD!",
+      "subtitle": "We’ve teamed up with Base God, the vibrant memecoin platform on the Base blockchain, to introduce .bald domains! - Join the Base God community today with .Bald!",
+      "button": "Get a .Bald!", 
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-propykeys.png",
       "utm": "https://unstoppableweb.co/4ePQE3R",
       "title": "Own It with .Propykeys!",
@@ -64,14 +71,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "utm" : "https://domain.somnia.network/",
       "title" : " Awaken Your Imagination with .Dream",
       "subtitle": "We’ve partnered with Somnia, the innovative Dream Computer that’s transforming the landscape of Web3 to launch .dream!",
-      "button": "Get a .Dream", 
-    },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/LFG%20Launch%20Asset%20-%20Rectangular%20(4).png",
-      "utm" : "https://unstoppableweb.co/3zekfoe",
-      "title" : "Rise Up and Game On with .LFG",
-      "subtitle": "We’ve partnered with LFG Incorporated to launch .LFG, “Let’s Fight Giants”, giving gamers and crypto enthusiasts a unique digital identity that represents web3 culture.",
-      "button": "Get a .LFG", 
+      "button": "Get a .Dream!", 
     }
   ]
 
