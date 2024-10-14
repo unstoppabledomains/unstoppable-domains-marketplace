@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Next.js](https://nextjs.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
+This is hosted at https://unstoppableapps.com/ and (coming in Oct 2024) supported by [unstoppable-apps-api](https://github.com/unstoppabledomains/unstoppable-apps-api)
+
+![image](https://github.com/user-attachments/assets/b5b20a33-1048-4c3f-9931-c438340c3d2d)
+
+
+
 ---
 
 ## Authors
