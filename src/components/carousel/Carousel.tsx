@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/chomp-splash.png",
+      "utm" : "https://unstoppableweb.co/3XPL9eD",
+      "title" : "Get Chompin' with .CHOMP!",
+      "subtitle": "Feast on Possibilities with .Chomp!  Minted on Base. Sink your teeth into a .Chomp domain today",
+      "button": "Get a .Chomp!", 
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/carousel-bald-new.png",
       "utm" : "https://unstoppableweb.co/3N8r3XN",
       "title" : "Make a Bold Statement with .BALD!",
@@ -66,13 +73,6 @@ const Carousel: React.FC<PropType> = (props) => {
       "subtitle": "We’ve teamed up with Basenji for our first-ever TLD partnership with a memecoin on Base network - Join the Basenji community today with .Benji!",
       "button": "Get a .Benji!"
     },
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/Dream%20Launch%20Asset%20-%20Rectangular%20(1).png",
-      "utm" : "https://domain.somnia.network/",
-      "title" : " Awaken Your Imagination with .Dream",
-      "subtitle": "We’ve partnered with Somnia, the innovative Dream Computer that’s transforming the landscape of Web3 to launch .dream!",
-      "button": "Get a .Dream!", 
-    }
   ]
 
   const urlRedirect = (url) => {
