@@ -72,14 +72,7 @@ const Carousel: React.FC<PropType> = (props) => {
       "title": "Join the Bullish Muuvement with .MUMU!",
       "subtitle": "We’ve teamed up with MUMU, a top ten memecoin on the Solana blockchain inspired by the bull market's mascot, to introduce .MUMU domains! - Join the MUMU community today with .MUMU!",
       "button": "Get a .MUMU!"
-    }, 
-    {
-      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/benjisplash.png",
-      "utm": "https://get.unstoppabledomains.com/benji/",
-      "title": "Who let the .Benji out?!!",
-      "subtitle": "We’ve teamed up with Basenji for our first-ever TLD partnership with a memecoin on Base network - Join the Basenji community today with .Benji!",
-      "button": "Get a .Benji!"
-    },
+    }
   ]
 
   const urlRedirect = (url) => {
