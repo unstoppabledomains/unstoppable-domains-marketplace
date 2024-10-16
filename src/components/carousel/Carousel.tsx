@@ -39,6 +39,13 @@ const Carousel: React.FC<PropType> = (props) => {
 */
   const bannerData = [
     {
+      "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/metamask-banner.png",
+      "utm" : "https://snaps.metamask.io/snap/npm/unstoppabledomains/unstoppable-resolution-snap/",
+      "title" : "Download the Unstoppable Snap to resolve domains in MetaMask!",
+      "subtitle": "You asked, we delivered, Join the largest naming service provider community supporting MetaMask. You can send & receive coins and tokens with your Unstoppable Domain via the Unstoppable Snap. Works across 23 blockchains. Setup takes less than 1 minute, install today!",
+      "button": "Download Unstoppable Snap", 
+    },
+    {
       "image": "https://storage.googleapis.com/unstoppable-client-assets-staging/campaigns/Unstoppable%20Marketplace/chomp-splash.png",
       "utm" : "https://unstoppableweb.co/3XPL9eD",
       "title" : "Get Chompin' with .CHOMP!",
