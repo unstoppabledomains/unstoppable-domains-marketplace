@@ -36,7 +36,6 @@ export default function App({ Component, pageProps }: AppProps<{
                     </Layout>
                 </PersistGate>
             </Provider>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-5F6J2HCKK1" ></Script>
             <Script id='ga'>
                 {
                     analyticsScript

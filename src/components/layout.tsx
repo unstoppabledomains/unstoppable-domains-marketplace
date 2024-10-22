@@ -510,6 +510,20 @@ export function PageLayout(props) {
 }
 
 export default function Layout(props) {
+
+    return (
+        <div>
+            <div className="fixed h-[50px] w-full z-20">
+                <NavBar />
+            </div>
+            <main className="flex h-screen justify-center items-center text-[24px] leading-[32px] lg:text-[60px] lg:leading-[72px] font-[500]">
+                <div>
+                    <h1>Under Construction</h1>
+                </div>
+            </main >
+        </div >
+    )
+
     const app = useSelector(getApp);
     const router = useRouter();
     const { data, isLoading } = useGetFeaturedDappsQuery();
